@@ -31,7 +31,7 @@ export default function LanguageWidget() {
           {currentLanguages.map((currentLanguage) => (
             <ListItem>
               <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={2}>
+                <Grid container spacing={2} style={{ alignItems: 'center' }}>
                   <Grid item xs={2} style={{ textAlign: 'center' }}>
                     {currentLanguage.name}
                   </Grid>

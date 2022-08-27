@@ -27,12 +27,23 @@ export default function Languages() {
         elevation={5}
         style={{ margin: '10px', padding: '10px', textAlign: 'center' }}
       >
-        Willkommen zurück Alex ! Lerne dort weiter wo du aufgehört hast.
+        Willkommen ! Tipp: Melde Dich an um hier immer deine aktuellen
+        Lernsprachen zu sehen.
       </Paper>
       <Paper elevation={5} style={{ margin: '10px' }}>
         <List style={{ maxHeight: '250px', overflowY: 'scroll' }}>
           {languages.map((language) => (
-            <ListItem>{language}</ListItem>
+            <Grid container spacing={1} style={{ alignItems: 'center' }}>
+              <Grid item xs>
+                <ListItem style={{ textAlign: 'center' }}>{language}</ListItem>
+              </Grid>
+              <Grid item xs>
+                <Button variant="contained" color="secondary" size="small">
+                  {' '}
+                  lernen{' '}
+                </Button>
+              </Grid>
+            </Grid>
           ))}
         </List>
       </Paper>
