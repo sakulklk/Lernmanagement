@@ -8,7 +8,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
 export default function LanguageWidget() {
-  const test = false
+  const loggedIn = false;
   const currentLanguages = [
     { name: 'JavaScript', progress: 78, learningMark: 'JSON' },
     { name: 'Python', progress: 65, learningMark: 'Tkinter' },
@@ -17,15 +17,9 @@ export default function LanguageWidget() {
     { name: 'PHP', progress: 9, learningMark: 'Anwendungsbereiche' },
     { name: 'C++', progress: 13, learningMark: 'Variablen' },
     { name: 'Prolog', progress: 55, learningMark: 'Arithmetik' },
-  ]; // if loggedIn
-  const languages =['JavaScript','Ruby','Python','C#','HTML', 'CSS', 'PHP', 'C++','Prolog'] // if not loggedIn
-
+  ];
   return (
-    <p> test </p>
- 
-    { test ? 
-      <>
-      <div>
+    <>
       <Paper
         elevation={5}
         style={{ margin: '10px', padding: '10px', textAlign: 'center' }}
@@ -76,10 +70,6 @@ export default function LanguageWidget() {
           ))}
         </List>
       </Paper>
-    </div>)
     </>
-      : 'no'
-    }
-  
   );
 }
