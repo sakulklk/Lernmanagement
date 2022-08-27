@@ -6,7 +6,9 @@ import Footer from '../components/Footer.js';
 import Dashboard from '../components/home/Dashboard.js';
 
 export default function Home() {
+  
   return (
+
     <body>
       <NavBar></NavBar>
       <Bild></Bild>
