@@ -33,17 +33,19 @@ export default function Languages() {
       <Paper elevation={5} style={{ margin: '10px' }}>
         <List style={{ maxHeight: '250px', overflowY: 'scroll' }}>
           {languages.map((language) => (
-            <Grid container spacing={1} style={{ alignItems: 'center' }}>
-              <Grid item xs>
-                <ListItem style={{ textAlign: 'center' }}>{language}</ListItem>
+            <ListItem>
+              <Grid container spacing={1}>
+                <Grid item xs style={{ textAlign: 'center' }}>
+                  {language}
+                </Grid>
+                <Grid item xs style={{ textAlign: 'center' }}>
+                  <Button variant="contained" color="secondary" size="small">
+                    {' '}
+                    lernen{' '}
+                  </Button>
+                </Grid>
               </Grid>
-              <Grid item xs>
-                <Button variant="contained" color="secondary" size="small">
-                  {' '}
-                  lernen{' '}
-                </Button>
-              </Grid>
-            </Grid>
+            </ListItem>
           ))}
         </List>
       </Paper>

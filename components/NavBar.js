@@ -15,7 +15,7 @@ import MenuItem from '@mui/material/MenuItem';
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 
 export default function NavBar() {
-  const loggedIn = false;
+  const loggedIn = true;
   const pages = [
     { name: 'Home', route: '/' },
     { name: 'Programmiersprachen', route: '/programmiersprachen' },

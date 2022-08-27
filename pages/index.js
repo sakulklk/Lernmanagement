@@ -6,15 +6,20 @@ import Footer from '../components/Footer.js';
 import Dashboard from '../components/home/Dashboard.js';
 
 export default function Home() {
-  
+  const loggedIn = true;
   return (
-
     <body>
       <NavBar></NavBar>
       <Bild></Bild>
-      <LanguageWidget></LanguageWidget>
-      <Languages></Languages>
-      <Dashboard></Dashboard>
+      {loggedIn ? (
+        <>
+          <LanguageWidget></LanguageWidget>
+          <Dashboard></Dashboard>
+        </>
+      ) : (
+        <Languages></Languages>
+      )}
+
       <Footer></Footer>
     </body>
   );
