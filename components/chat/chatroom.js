@@ -14,7 +14,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Fab from '@material-ui/core/Fab';
 import SendIcon from '@material-ui/icons/Send';
 
-const useStyles = makeStyles({
+/*const useStyles = makeStyles({
   table: {
     minWidth: 650,
   },
@@ -32,13 +32,32 @@ const useStyles = makeStyles({
     height: '70vh',
     overflowY: 'auto',
   },
-});
+});*/
 
-const Chat = () => {
-  const classes = useStyles();
-
+/*const Chat = () => {
+  const classes = useStyles();*/
+export default function Chat(){
   return (
     <div>
+       <style jsx>{`
+    table: {
+      minWidth: 650,
+    },
+    chatSection: {
+      width: '100%',
+      height: '80vh',
+    },
+    headBG: {
+      backgroundColor: '#e0e0e0',
+    },
+    borderRight500: {
+      borderRight: '1px solid #e0e0e0',
+    },
+    messageArea: {
+      height: '70vh',
+      overflowY: 'auto',
+    },
+    `}</style>
       <Grid container>
         <Grid item xs={12}>
           <Typography variant="h5" className="header-message">
@@ -46,14 +65,14 @@ const Chat = () => {
           </Typography>
         </Grid>
       </Grid>
-      <Grid container component={Paper} className={classes.chatSection}>
-        <Grid item xs={3} className={classes.borderRight500}>
+      <Grid container component={Paper} className=/*{classes.*/'chatSection'/*}*/>
+        <Grid item xs={3} className=/*{classes.*/'borderRight500'/*}*/>
           <List>
-            <ListItem button key="AleynaKoc">
+            <ListItem button key="JessicaPrall">
               <ListItemIcon>
                 <Avatar
-                  alt="Aleyna Koc"
-                  src="https://material-ui.com/static/images/avatar/1.jpg"
+                  alt="Jessica Prall"
+                  src="https://material-ui.com/avatar/1.jpg"
                 />
               </ListItemIcon>
               <ListItemText primary="Jessica Prall"></ListItemText>
@@ -62,7 +81,7 @@ const Chat = () => {
           <Divider />
           <Grid item xs={12} style={{ padding: '10px' }}>
             <TextField
-              id="outlined-basic-email"
+              /*id="outlined-basic-email"*/
               label="Search"
               variant="outlined"
               fullWidth
@@ -74,7 +93,7 @@ const Chat = () => {
               <ListItemIcon>
                 <Avatar
                   alt="Aleyna Koc"
-                  src="https://material-ui.com/static/images/avatar/1.jpg"
+                  src="https://material-ui.com/avatar/1.jpg"
                 />
               </ListItemIcon>
               <ListItemText primary="Aleyna Koc">Aleyna Koc</ListItemText>
@@ -84,7 +103,7 @@ const Chat = () => {
               <ListItemIcon>
                 <Avatar
                   alt="Khemjira Sakulkla"
-                  src="https://material-ui.com/static/images/avatar/3.jpg"
+                  src="https://material-ui.com/avatar/3.jpg"
                 />
               </ListItemIcon>
               <ListItemText primary="KhemjiraSakulkla">
@@ -95,7 +114,7 @@ const Chat = () => {
               <ListItemIcon>
                 <Avatar
                   alt="Meline Broutin"
-                  src="https://material-ui.com/static/images/avatar/2.jpg"
+                  src="https://material-ui.com/avatar/2.jpg"
                 />
               </ListItemIcon>
               <ListItemText primary="Meline Broutin">
@@ -105,7 +124,7 @@ const Chat = () => {
           </List>
         </Grid>
         <Grid item xs={9}>
-          <List className={classes.messageArea}>
+          <List className=/*{classes.*/'messageArea'/*}*/>
             <ListItem key="1">
               <Grid container>
                 <Grid item xs={12}>
@@ -124,7 +143,7 @@ const Chat = () => {
                 <Grid item xs={12}>
                   <ListItemText
                     align="left"
-                    primary="Hey, Iam Good! What about you ?"
+                    primary="Hey, A Good! What about you ?"
                   ></ListItemText>
                 </Grid>
                 <Grid item xs={12}>
@@ -165,6 +184,7 @@ const Chat = () => {
       </Grid>
     </div>
   );
-};
+/*};*/
+}
 
-export default Chat;
+/*export default Chat;*/
