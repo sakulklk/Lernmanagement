@@ -7,6 +7,8 @@ import Accordion from '@mui/material/Accordion';
 import Typography from '@mui/material/Typography';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 
 const theme = createTheme({
   palette: {
@@ -94,19 +96,22 @@ export default function ShibbolethLogin() {
           />
         </div>
         <ThemeProvider theme={theme}>
-          <Button variant="contained" color="primary">
-            <Link
-              style={{
-                color: 'white',
-                display: 'block',
-                textDecoration: 'none',
-              }}
-              href={'/'}
-            >
-              {'Login'}
-            </Link>
+          <Button
+            variant="contained"
+            color="primary"
+            type="submit"
+            fullWidth
+            variant="contained"
+            href={'/'}
+            sx={{ mt: 3, mb: 2 }}
+          >
+            Login
           </Button>
         </ThemeProvider>
+        <FormControlLabel
+          control={<Checkbox value="remember" color="primary" />}
+          label="Angemeldet bleiben"
+        />
 
         <div className="accordion">
           <Accordion style={{ border: 'white' }}>
