@@ -5,11 +5,13 @@ import Footer from '../components/Footer.js';
 import Dashboard from '../components/home/Dashboard.js';
 
 export default function Home() {
+  const loggedIn = false;
   return (
     <body>
       <NavBar></NavBar>
       <Bild></Bild>
-      <CurrentLanguages></CurrentLanguages>
+      {loggedIn ? <CurrentLanguages></CurrentLanguages> : 'nicht'}
+
       <Dashboard></Dashboard>
       <Footer></Footer>
     </body>
