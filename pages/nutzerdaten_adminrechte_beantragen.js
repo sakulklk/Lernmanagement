@@ -1,16 +1,18 @@
 import NavBar from '../components/NavBar.js';
 import Footer from '../components/Footer.js';
-import NestedList from '../components/admin/adminrechte.js';
+import NestedList from '../components/admin/Liste.js';
 <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/icon?family=Material+Icons"
 />;
+import BasicButton from '../components/button.js';
 
-export default function Home() {
+export default function adminrechte() {
   return (
     <>
       <NavBar></NavBar>
       <NestedList></NestedList>
+      <BasicButton> </BasicButton>
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/icon?family=Material+Icons"
