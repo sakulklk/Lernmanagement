@@ -1,8 +1,9 @@
-import NestedList from '../components/adminrechte.js';
+import NestedList from '../components/Liste.js';
 <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/icon?family=Material+Icons"
 />;
+import BasicButtons from '../components/button.js';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         rel="stylesheet"
         href="https://fonts.googleapis.com/icon?family=Material+Icons"
       />
+      <BasicButtons> <BasicButtons/>
     </>
   );
 }
