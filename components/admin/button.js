@@ -1,13 +1,22 @@
 import * as React from 'react';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 
-export default function BasicButton() {
+export default function BasicTextFields() {
   return (
-    <Stack spacing={2} direction="row">
-      <Button variant="text">Text</Button>
-      <Button variant="contained">Contained</Button>
-      <Button variant="outlined">Outlined</Button>
-    </Stack>
+    <Box
+      component="form"
+      sx={{
+        '& > :not(style)': { m: 1, width: '40ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField
+        id="outlined-basic"
+        label="Bitte geben sie ihre E-Mail hier ein"
+        variant="outlined"
+      />
+    </Box>
   );
 }
