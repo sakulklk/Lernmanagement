@@ -76,7 +76,6 @@ export default function SignIn() {
               </a>
             </Typography>
             </div>
-          </div>
           <Button
             type="submit"
             fullWidth
