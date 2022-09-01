@@ -7,7 +7,7 @@ export default function login() {
   return (
     <>
       <Head>
-        <title>Login / Logout</title>
+        <title>Login / SignUp</title>
       </Head>
 
       <Box
