@@ -83,6 +83,10 @@ export default function ShibbolethLogin() {
             id="outlined-basic"
             className="username"
             variant="outlined"
+            label="username"
+            fullWidth
+            margin="normal"
+            required
           />
         </div>
         <div className="password">
@@ -92,7 +96,9 @@ export default function ShibbolethLogin() {
             variant="outlined"
             label="password"
             className="password"
-            style={{ width: 'auto' }}
+            fullWidth
+            margin="normal"
+            required
           />
         </div>
         <ThemeProvider theme={theme}>
