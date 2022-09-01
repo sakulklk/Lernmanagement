@@ -25,7 +25,7 @@ export default function NavBar() {
   const settings = [
     { name: 'Logout', route: '/' },
     { name: 'Shibboleth', route: '/shibboleth' },
-    { name: 'Login', route: '/login'}
+    { name: 'Login', route: '/signUp' },
   ];
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);

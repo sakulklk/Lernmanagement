@@ -10,11 +10,11 @@ export default function sigUp() {
     <div className="column">
       <style jsx>{`
       .column{
-        margin-top: 25px;
+        margin-top: 70px;;
         margin-bottom: 25px;
         text-align: center;
-        padding-right: 40px;
-        padding-left: 40px;
+        padding-right: 55px;
+        padding-left: 55px;
       }
 
       h1{
@@ -30,13 +30,18 @@ export default function sigUp() {
           variant="outlined"
           label="First Name"
           fullWidth
+          margin="normal"
+          required
         />
+
         <TextField
           id="outlined-basic"
           className="Last Name"
           variant="outlined"
           label="Last Name"
           fullWidth
+          margin="normal"
+          required
         />
         <TextField
           id="outlined-basic"
@@ -44,6 +49,8 @@ export default function sigUp() {
           variant="outlined"
           label="Email"
           fullWidth
+          margin="normal"
+          required
         />
         <TextField
           id="outlined-basic"
@@ -51,6 +58,8 @@ export default function sigUp() {
           variant="outlined"
           label="Password"
           fullWidth
+          margin="normal"
+          required
         />
         <TextField
           id="outlined-basic"
@@ -58,6 +67,7 @@ export default function sigUp() {
           variant="outlined"
           label="Pratice Field"
           fullWidth
+          margin="normal"
         />
         <TextField
           id="outlined-basic"
@@ -65,12 +75,14 @@ export default function sigUp() {
           variant="outlined"
           label="Course"
           fullWidth
+          margin="normal"
         />
       </div>
       <FormControlLabel
         control={<Checkbox value="remember" color="primary" />}
         label="You agree to our Terms and Privacy Policy"
       />
+      
       <Button
         variant="contained"
         type="submit"

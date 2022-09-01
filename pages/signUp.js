@@ -8,12 +8,12 @@ export default function Test() {
   return (
     <>
       <NavBar></NavBar>
-      <Grid contaner spacing={1}>
+      <Grid container spacing={1}>
         <Grid item xs={6}>
-          <Login></Login>
+          <SignUp id='signUp'></SignUp>
         </Grid>
         <Grid item xs={6}>
-          <SignUp></SignUp>
+        <Login id='login'></Login>
         </Grid>
       </Grid>
       <Footer></Footer>

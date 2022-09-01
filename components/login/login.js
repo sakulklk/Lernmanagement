@@ -25,7 +25,7 @@ export default function SignIn() {
     <Container component="main" maxWidth="xs">
       <Box
         sx={{
-          marginTop: 8,
+          marginTop: 7,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -76,13 +76,13 @@ export default function SignIn() {
               </a>
             </Typography>
             <div classname="signUp">
-            <Typography>
-              <a classname="hover" href="/signUp">
-                {' '}
-                Neu hier?
-              </a>
-            </Typography>
-          </div>
+              <Typography>
+                <a classname="hover" href="/signUp">
+                  {' '}
+                  Neu hier?
+                </a>
+              </Typography>
+            </div>
           </div>
           <Button
             type="submit"
