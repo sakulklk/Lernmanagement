@@ -18,8 +18,9 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            Wenn ein Nutzer Adminrechte hat,kann er mehr Funktionen der Seite
+            nutzen als ein Nutzer ohne Adminrechte. Beispiele für Funktionen
+            wären das Erstellen und löschen von Aufgaben.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -33,8 +34,8 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            Wir benötigen den Namen ihre E-Mail um sie als ein Dozent der
+            Hochschule zu identifizieren.
           </Typography>
         </AccordionDetails>
       </Accordion>
