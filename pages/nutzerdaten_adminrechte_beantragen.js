@@ -5,14 +5,18 @@ import NestedList from '../components/admin/Liste.js';
   rel="stylesheet"
   href="https://fonts.googleapis.com/icon?family=Material+Icons"
 />;
-import BasicTextFields from '../components/admin/button.js';
-import SimpleAccordion from '../components/admin/akkordion.js';
+import BasicTextFields from '../components/admin/Button.js';
+import SimpleAccordion from '../components/admin/Akkordion.js';
+import Textfield from '../components/admin/Textfeld.js';
+import Field from 'components/admin/Feld.js';
 
 export default function adminrechte() {
   return (
     <>
       <NavBar></NavBar>
+      <Textfield></Textfield>
       <BasicTextFields></BasicTextFields>
+      <Field></Field>
       <NestedList></NestedList>
 
       <link
