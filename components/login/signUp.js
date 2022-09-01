@@ -3,7 +3,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import DatePicker from '@mui/x-date-pickers-pro/DatePicker';
+/*import DatePicker from '@mui/x-date-pickers-pro/DatePicker';*/
 
 export default function sigUp() {
   return (
