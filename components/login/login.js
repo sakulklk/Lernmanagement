@@ -75,6 +75,14 @@ export default function SignIn() {
                 Sind Sie ein Teil von DHBW Lörrach?
               </a>
             </Typography>
+            <div classname="signUp">
+            <Typography>
+              <a classname="hover" href="/signUp">
+                {' '}
+                Neu hier?
+              </a>
+            </Typography>
+          </div>
           </div>
           <Button
             type="submit"
