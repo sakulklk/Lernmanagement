@@ -8,6 +8,7 @@ export default function Home() {
   return (
     <body>
       <NavBar></NavBar>
+      
       <Bild></Bild>
       <CurrentLanguages></CurrentLanguages>
       <Dashboard></Dashboard>

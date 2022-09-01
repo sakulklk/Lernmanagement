@@ -8,16 +8,20 @@ import NestedList from '../components/admin/Liste.js';
 import BasicTextFields from '../components/admin/Button.js';
 import SimpleAccordion from '../components/admin/Akkordion.js';
 import Textfield from '../components/admin/Textfeld.js';
-import Field from 'components/admin/Feld.js';
+import Field from '../components/admin/Bestätigungscode.js';
+import BasicButtons from '../components/admin/BestätigenButton.js';
+import BasicBreadcrumbs from '../components/admin/Breadcrumb.js';
 
 export default function adminrechte() {
   return (
     <>
       <NavBar></NavBar>
+      <BasicBreadcrumbs></BasicBreadcrumbs>
       <Textfield></Textfield>
       <BasicTextFields></BasicTextFields>
-      <Field></Field>
       <NestedList></NestedList>
+      <Field></Field>
+      <BasicButtons></BasicButtons>
 
       <link
         rel="stylesheet"
