@@ -8,7 +8,7 @@ import Dashboard from '../components/home/Dashboard.js';
 export default function Home() {
   const loggedIn = true;
   return (
-    <body>
+    <>
       <NavBar></NavBar>
       <Bild></Bild>
       {loggedIn ? (
@@ -21,6 +21,6 @@ export default function Home() {
       )}
 
       <Footer></Footer>
-    </body>
+    </>
   );
 }

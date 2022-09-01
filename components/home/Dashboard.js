@@ -4,8 +4,14 @@ import Paper from '@mui/material/Paper';
 import TextField from '@mui/joy/TextField';
 import SendIcon from '@mui/icons-material/Send';
 import Button from '@mui/material/Button';
-
+import Box from '@mui/material/Box';
+import TextareaAutosize from '@mui/material/TextareaAutosize';
 export default function Dashboard() {
+  const [value, setValue] = React.useState('Controlled');
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
   return (
     <>
       <Grid
@@ -46,7 +52,6 @@ export default function Dashboard() {
           </Paper>
         </Grid>
       </Grid>
-
       <Paper
         elevation={5}
         style={{
@@ -55,7 +60,14 @@ export default function Dashboard() {
           textAlign: 'center',
         }}
       >
-        <Button size="small">n</Button>
+        {' '}
+        <TextareaAutosize
+          placeholder="Frage ? Ab damit ins Forum..."
+          style={{ width: '100%', padding: '20px', border: '2px solid gray' }}
+        />
+        <Button size="small">
+          <SendIcon />
+        </Button>
       </Paper>
     </>
   );
