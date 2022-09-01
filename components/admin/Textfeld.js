@@ -16,7 +16,7 @@ export default function Textfield() {
         <TextField
           id="outlined-read-only-input"
           label="Read Only"
-          defaultValue="Um Adminrechte zu beantragen  geben sie uns bitte im folgenden Feld ihre E-Mail an. Wir schicken ihnen asnchliessend einen Bestätigungscode."
+          defaultValue="Um Adminrechte zu beantragen  geben sie uns bitte im folgenden Feld ihre E-Mail an. Wir schicken ihnen anschliessend einen Bestätigungscode."
           InputProps={{
             readOnly: true,
           }}
