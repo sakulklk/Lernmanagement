@@ -25,13 +25,25 @@ export default function Languages() {
     <>
       <Paper
         elevation={5}
-        style={{ margin: '10px', padding: '10px', textAlign: 'center' }}
+        style={{
+          margin: '10px',
+          padding: '10px',
+          textAlign: 'center',
+          fontFamily: " 'Chakra Petch', sans-serif",
+        }}
       >
-        Willkommen ! Tipp: Melde Dich an um hier immer deine aktuellen
-        Lernsprachen zu sehen.
+        <Typography fontFamily=" 'Chakra Petch', sans-serif">
+          Willkommen ! Tipp: Melde Dich an um hier immer deine aktuellen
+          Lernsprachen zu sehen.
+        </Typography>
       </Paper>
-      <Paper elevation={5} style={{ margin: '10px' }}>
-        <List style={{ maxHeight: '250px', overflowY: 'scroll' }}>
+      <Paper
+        elevation={5}
+        style={{
+          margin: '10px',
+        }}
+      >
+        <List>
           {languages.map((language) => (
             <ListItem>
               <Grid container spacing={1}>
