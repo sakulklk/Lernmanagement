@@ -5,7 +5,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 /*import DatePicker from '@mui/x-date-pickers-pro/DatePicker';*/
 
-export default function sigUp() {
+export default function singUp() {
+  const checked = false;
   return (
     <div className="column">
       <style jsx>{`
@@ -79,7 +80,7 @@ export default function sigUp() {
         />
       </div>
       <FormControlLabel
-        control={<Checkbox value="remember" color="primary" />}
+        control={<Checkbox value="remember" color="primary" checked={checked ? 'checked' : ''} />}
         label="You agree to our Terms and Privacy Policy"
       />
       
