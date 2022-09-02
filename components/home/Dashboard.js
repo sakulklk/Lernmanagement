@@ -28,7 +28,7 @@ export default function Dashboard() {
               textAlign: 'center',
             }}
           >
-            <Button size="small">Übungen</Button>
+            <Button size="small">Zufällige Übungen</Button>
           </Paper>
         </Grid>
         <Grid item xs={4}>
