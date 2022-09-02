@@ -4,6 +4,14 @@ import TextField from '@mui/material/TextField';
 
 export default function Textfield() {
   return (
+    //ich mache hier jetzt einfach header rein falls es nicht gut ist wieder raus machen
+    <div>
+      <h4>
+        Um Adminrechte zu beantragen, geben Sie uns bitte im folgenden Feld Ihre
+        E-Mail an. <br></br> Wir schicken Ihnen anschliessend einen Bestätigungscode.
+      </h4>
+    </div>
+    /*
     <Box
       component="form"
       sx={{
@@ -23,5 +31,6 @@ export default function Textfield() {
         />
       </div>
     </Box>
+    */
   );
 }
