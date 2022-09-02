@@ -6,10 +6,10 @@ export default function Textfield() {
   return (
     //ich mache hier jetzt einfach header rein falls es nicht gut ist wieder raus machen
     <div>
-      <h4>
+      <h3>
         Um Adminrechte zu beantragen, geben Sie uns bitte im folgenden Feld Ihre
         E-Mail an. <br></br> Wir schicken Ihnen anschliessend einen Bestätigungscode.
-      </h4>
+      </h3>
     </div>
     /*
     <Box

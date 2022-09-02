@@ -7,6 +7,18 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function SimpleAccordion() {
   return (
+    <div className='style'>
+      <style jsx>{`
+      .accordion:hover{
+        color: red;
+      }
+
+      .hover:hover{
+        color: red;
+      }
+
+
+     `}</style>
     <div>
       <Accordion>
         <AccordionSummary
@@ -18,9 +30,7 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Wenn ein Nutzer Adminrechte hat,kann er mehr Funktionen der Seite
-            nutzen als ein Nutzer ohne Adminrechte. Beispiele für Funktionen
-            wären das Erstellen und löschen von Aufgaben.
+            Wenn ein/e Nutzer/in Adminrechte hat,kann diese/r Übungen und Lernkapital erstellen, löschen und aktualisieren. Außerdem können Admins Ihre DHBW Kurse verwalten.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -30,15 +40,31 @@ export default function SimpleAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Weshalb benötigen wir ihre E-mail</Typography>
+          <Typography>Weshalb benötigen wir Ihre E-mail</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Wir benötigen den Namen ihre E-Mail um sie als ein Dozent der
+            Wir benötigen den Namen ihre E-Mail um Sie als ein Dozent der
             Hochschule zu identifizieren.
           </Typography>
         </AccordionDetails>
       </Accordion>
+      <Accordion>
+      <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+      <Typography>Sind Sie ein Teil der DHBW?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Dann melden Sie sich bitte über <a className='hover' href='/shibboleth'>
+              Shibboleth </a> an.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+    </div>
     </div>
   );
 }

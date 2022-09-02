@@ -4,20 +4,25 @@ import TextField from '@mui/material/TextField';
 
 export default function Field() {
   return (
-    <Box
+    /*<Box
       component="form"
       sx={{
         '& > :not(style)': { m: 1, width: '25ch' },
       }}
       noValidate
       autoComplete="off"
-    >
+    >*/
+    <>
       <TextField
         id="outlined-basic"
         label="Bestätigunscode"
         variant="outlined"
+        text-align='rigth'
+        margin="normal"
+
       />
-    </Box>
+      </>
+    //  </Box> 
   );
 }
 
