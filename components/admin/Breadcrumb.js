@@ -8,6 +8,8 @@ function handleClick(event) {
   console.info('You clicked a breadcrumb.');
 }
 
+//deine Links funktionieren nicht!! willst du, dass man von den breadcrumbs aus wieder zu home kommt? 
+
 export default function BasicBreadcrumbs() {
   return (
     <div role="presentation" onClick={handleClick}>
@@ -18,6 +20,7 @@ export default function BasicBreadcrumbs() {
         <Link
           underline="hover"
           color="inherit"
+          // den href brauchst du nicht, der ist nur als Beispiel auf der Mui Seite gewesen villeicht hast du ihn vergessen zu ändern?
           href="/material-ui/getting-started/installation/"
         >
           Nutzerdaten
