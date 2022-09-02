@@ -42,13 +42,20 @@ export default function adminrechte() {
       .accordion{
         text-align: left;
       }
+
+      .sendIcon{
+        font-size: 100;
+      }
      `}</style>
 
         <Textfield></Textfield>
 
-        <BasicTextFields></BasicTextFields>
-
-        <NestedList></NestedList>
+        
+        <Grid container spacing={1}>
+          <Grid item xs={6}>
+          <NestedList></NestedList>
+      </Grid>
+      </Grid>
         <div className="confirm">
           <Field></Field>
         </div>
