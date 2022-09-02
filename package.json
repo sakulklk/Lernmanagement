@@ -18,6 +18,8 @@
     "@mui/icons-material": "^5.8.4",
     "@mui/joy": "*",
     "@mui/material": "^5.9.3",
+    "@mui/x-date-pickers": "*",
+    "@mui/x-date-pickers-pro": "*",
     "material-ui": "^0.20.2",
     "next": "^12.1.0",
     "react": "17.0.1",

@@ -12,14 +12,22 @@ import Field from '../components/admin/Bestätigungscode.js';
 import BasicButtons from '../components/admin/BestätigenButton.js';
 import BasicBreadcrumbs from '../components/admin/Breadcrumb.js';
 
-
 export default function adminrechte() {
   return (
     <>
       <NavBar></NavBar>
-      <BasicBreadcrumbs></BasicBreadcrumbs>
-        <div className="column">
-          <style jsx>{`
+      <div className="bread">
+        <style jsx>{`
+      .bread{
+        margin-left: 30px;
+        margin-top: 18px;
+      }
+     `}</style>
+
+        <BasicBreadcrumbs></BasicBreadcrumbs>
+      </div>
+      <div className="column">
+        <style jsx>{`
       .column{
         margin-top: 100px;;
         margin-bottom: 25px;
@@ -36,24 +44,25 @@ export default function adminrechte() {
       }
      `}</style>
 
-          <Textfield></Textfield>
+        <Textfield></Textfield>
 
-          <BasicTextFields></BasicTextFields>
+        <BasicTextFields></BasicTextFields>
 
-          <NestedList></NestedList>
-          <div className="confirm">
-            <Field></Field>
-          </div>
-          <BasicButtons></BasicButtons>
-
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          />
-          <div className="accordion">
-            <SimpleAccordion></SimpleAccordion>
-          </div>
+        <NestedList></NestedList>
+        <div className="confirm">
+          <Field></Field>
         </div>
+        <BasicButtons></BasicButtons>
+
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+        <div className="accordion">
+          <SimpleAccordion></SimpleAccordion>
+        </div>
+      </div>
+
       <Footer></Footer>
     </>
   );
