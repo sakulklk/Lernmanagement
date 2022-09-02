@@ -13,11 +13,15 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Avatar from '@material-ui/core/Avatar';
 import Fab from '@material-ui/core/Fab';
 import SendIcon from '@material-ui/icons/Send';
+import NavBar from '../NavBar.js';
 
-export default function Chat(){
+
+export default function Chat() {
   return (
+
     <div>
-       <style jsx>{`
+      
+      <style jsx>{`
     table: {
       minWidth: 650,
     },
@@ -25,15 +29,12 @@ export default function Chat(){
       width: '100%',
       height: '80vh',
     },
-    headBG: {
-      backgroundColor: '#960e0e',
-    },
     borderRight500: {
       borderRight: '1px solid #e0e0e0',
     },
     messageArea: {
       height: '70vh',
-      overflowY: 'auto',
+      overflow: 'auto',
     },
     `}</style>
       <Grid container>
@@ -43,8 +44,8 @@ export default function Chat(){
           </Typography>
         </Grid>
       </Grid>
-      <Grid container component={Paper} className='chatSection'>
-        <Grid item xs={3} className='borderRight500'>
+      <Grid container component={Paper} className="chatSection">
+        <Grid item xs={3} className="borderRight500">
           <List>
             <ListItem button key="JessicaPrall">
               <ListItemIcon>
@@ -58,12 +59,7 @@ export default function Chat(){
           </List>
           <Divider />
           <Grid item xs={12} style={{ padding: '10px' }}>
-            <TextField
-              
-              label="Search"
-              variant="outlined"
-              fullWidth
-            />
+            <TextField label="Search" variant="outlined" fullWidth />
           </Grid>
           <Divider />
           <List>
@@ -102,7 +98,7 @@ export default function Chat(){
           </List>
         </Grid>
         <Grid item xs={9}>
-          <List className='messageArea'>
+          <List className="messageArea">
             <ListItem key="1">
               <Grid container>
                 <Grid item xs={12}>
@@ -161,8 +157,6 @@ export default function Chat(){
         </Grid>
       </Grid>
     </div>
+    
   );
-
 }
-
-
