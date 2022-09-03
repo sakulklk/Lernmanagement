@@ -18,7 +18,7 @@ import AvatarGroup from '@mui/material/AvatarGroup';
 export default function Chat() {
   return (
     <div>
-      <style jsx>{`
+      {/* <style jsx>{`
     table: {
       minWidth: 650,
     },
@@ -33,18 +33,11 @@ export default function Chat() {
       height: '70vh',
       overflow: 'auto',
     },
-    `}</style>
-      <Grid container>
-        <Grid item xs={12}>
-          <Typography variant="h5" className="header-message">
-            Chat
-          </Typography>
-        </Grid>
-      </Grid>
+    `}</style> */}
       <Grid container>
         <Grid item xs={3}>
           <List>
-            <ListItem button key="AlexanderAnderson">
+            <ListItem>
               <ListItemIcon>
                 <Avatar
                   alt="Alexander Anderson"
@@ -54,6 +47,7 @@ export default function Chat() {
               <ListItemText primary="Alexander Anderson"></ListItemText>
             </ListItem>
           </List>
+          <Divider />
           <Grid item xs={3} style={{ padding: '10px' }}>
             <TextField label="Search" variant="outlined" fullWidth />
           </Grid>
@@ -121,91 +115,140 @@ export default function Chat() {
           </List>
         </Grid>
         <Grid item xs={9}>
-          <List className="messageArea">
-            <ListItem key="1">
-              <Grid container direction="column" alignItems="flex-end">
-                <Grid item xs={12}>
-                  <Paper
-                    elevation={1}
-                    style={{
-                      textAlign: 'left',
-                      width: '650px',
-                      padding: '10px',
-                      background: '#8FB1CC',
-                    }}
-                  >
-                    Hey, wie geht es euch?
-                  </Paper>
-                </Grid>
-                <Grid item xs={12}>
-                  <ListItemText align="right" secondary="09:30"></ListItemText>
-                </Grid>
-              </Grid>
-            </ListItem>
-            <ListItem key="2">
-              <Grid container>
-                <Grid item xs={12}>
-                  <ListItemText
-                    align="left"
-                    primary="Evan Adams"
-                  ></ListItemText>
-                </Grid>
-                <Grid item xs={12}>
-                  <Paper
-                    elevation={1}
-                    style={{
-                      textAlign: 'left',
-                      width: '650px',
-                      padding: '10px',
-                      background: '#EEECF1',
-                    }}
-                  >
-                    Hey Alex, alles gut und dir? Hast du dir schon den neuen
-                    Stoff durchgelesen?
-                  </Paper>
-                </Grid>
-                <Grid item xs={12}>
-                  <ListItemText align="left" secondary="09:31"></ListItemText>
-                </Grid>
-              </Grid>
-            </ListItem>
-            <ListItem key="3">
-              <Grid container direction="column" alignItems="flex-end">
-                <Grid item xs={12}>
-                  <Paper
-                    elevation={1}
-                    style={{
-                      textAlign: 'left',
-                      width: '650px',
-                      padding: '10px',
-                      background: '#8FB1CC',
-                    }}
-                  >
-                    Bei mir auch alles super! Nein, tätsachlich noch nicht...
-                    wollen wir es zusammen machen? Josh bist du dabei?
-                  </Paper>
-                </Grid>
-                <Grid item xs={12}>
-                  <ListItemText align="right" secondary="10:30"></ListItemText>
-                </Grid>
-              </Grid>
+          <List>
+            <ListItem button key="Group">
+              <ListItemIcon>
+                <AvatarGroup max={3}>
+                  <Avatar
+                    alt="Alexander Anderson"
+                    src="https://material-ui.com/avatar/1.jpg"
+                  />
+                  <Avatar
+                    alt="Evan Adams"
+                    src="https://material-ui.com/avatar/1.jpg"
+                  />
+                  <Avatar
+                    alt="Josh Smith"
+                    src="https://material-ui.com/avatar/3.jpg"
+                  />
+                </AvatarGroup>
+              </ListItemIcon>
+              <ListItemText
+                secondary="Evan Adams, Josh Smith, Me"
+                primary="3 Musketiere"
+              >
+                Evan Adams, Josh Smith, Me
+              </ListItemText>
             </ListItem>
           </List>
-          <Divider />
-          <Grid container style={{ padding: '20px' }}>
-            <Grid item xs={11}>
-              <TextField
-                id="outlined-basic-email"
-                label="Type Something"
-                fullWidth
-              />
+  
+
+          <Box
+            sx={{
+              marginTop: 100,
+              width: 'auto',
+              height: 'auto',
+              backgroundColor: 'blue',
+              '&:hover': {
+                backgroundColor: 'blue',
+                opacity: [0.9, 0.8, 0.7],
+              },
+            }}
+          >
+            {/* <Grid item xs={9}> */}
+            <List className="messageArea">
+              <ListItem key="1">
+                <Grid container direction="column" alignItems="flex-end">
+                  <Grid item xs={12}>
+                    <Paper
+                      elevation={1}
+                      style={{
+                        textAlign: 'left',
+                        width: '650px',
+                        padding: '10px',
+                        background: '#8FB1CC',
+                      }}
+                    >
+                      Hey, wie geht es euch?
+                    </Paper>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <ListItemText
+                      align="right"
+                      secondary="09:30"
+                    ></ListItemText>
+                  </Grid>
+                </Grid>
+              </ListItem>
+              <ListItem key="2">
+                <Grid container>
+                  <Grid item xs={12}>
+                    <ListItemText
+                      align="left"
+                      primary="Evan Adams"
+                    ></ListItemText>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Paper
+                      elevation={1}
+                      style={{
+                        textAlign: 'left',
+                        width: '650px',
+                        padding: '10px',
+                        background: '#EEECF1',
+                      }}
+                    >
+                      Hey Alex, alles gut und dir? Hast du dir schon den neuen
+                      Stoff durchgelesen?
+                    </Paper>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <ListItemText align="left" secondary="09:31"></ListItemText>
+                  </Grid>
+                </Grid>
+              </ListItem>
+              <ListItem key="3">
+                <Grid container direction="column" alignItems="flex-end">
+                  <Grid item xs={12}>
+                    <Paper
+                      elevation={1}
+                      style={{
+                        textAlign: 'left',
+                        width: '650px',
+                        padding: '10px',
+                        background: '#8FB1CC',
+                      }}
+                    >
+                      Bei mir auch alles super! Nein, tätsachlich noch nicht...
+                      wollen wir es zusammen machen? Josh bist du dabei?
+                    </Paper>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <ListItemText
+                      align="right"
+                      secondary="10:30"
+                    ></ListItemText>
+                  </Grid>
+                </Grid>
+              </ListItem>
+            </List>
+            <Divider />
+            <Grid container style={{ padding: '20px' }}>
+              <Grid item xs={11}>
+                <TextField
+                  id="outlined-basic-email"
+                  label="Type Something"
+                  fullWidth
+                />
+              </Grid>
+              <Grid xs={1} align="right">
+                <Fab color="primary" aria-label="add">
+                  <SendIcon />
+                </Fab>
+              </Grid>
+              {/* </Grid> */}
             </Grid>
-            <Grid xs={1} align="right">
-              <Fab color="primary" aria-label="add">
-                <SendIcon />
-              </Fab>
-            </Grid>
-          </Grid>
+          </Box>
         </Grid>
       </Grid>
     </div>
