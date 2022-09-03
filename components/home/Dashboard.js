@@ -30,7 +30,7 @@ export default function Dashboard() {
             }}
           >
             <Button href="/home_dashboard_random_challenge" size="small">
-              <Typography variant="string" color="primary">
+              <Typography variant="string" color="black">
                 Zufällige Übungen
               </Typography>
             </Button>
@@ -46,7 +46,7 @@ export default function Dashboard() {
             }}
           >
             <Button href="/home_dashboard_daily" size="small">
-              <Typography variant="string" color="primary">
+              <Typography variant="string" color="black">
                 Daily
               </Typography>
             </Button>
@@ -58,7 +58,7 @@ export default function Dashboard() {
             style={{ margin: '10px', padding: '10px', textAlign: 'center' }}
           >
             <Button href="/home_dashboard_challenge_categories" size="small">
-              <Typography variant="string" color="primary">
+              <Typography variant="string" color="black">
                 Challenges
               </Typography>
             </Button>

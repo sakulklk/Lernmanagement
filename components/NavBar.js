@@ -47,7 +47,7 @@ export default function NavBar() {
   };
 
   return (
-    <AppBar position="static" color="info">
+    <AppBar position="sticky" color="info">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <BookOutlinedIcon

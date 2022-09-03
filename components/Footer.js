@@ -12,7 +12,7 @@ export default function Footer({}) {
         height: 55,
         bottom: 0,
         padding: 0.8,
-        position: 'fixed',
+        position: 'static',
         backgroundColor: 'primary.main',
       }}
     >
