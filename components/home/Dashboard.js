@@ -28,7 +28,9 @@ export default function Dashboard() {
               textAlign: 'center',
             }}
           >
-            <Button size="small">Zufällige Übungen</Button>
+            <Button href="/home_dashboard_random_challenge" size="small">
+              Zufällige Übungen
+            </Button>
           </Paper>
         </Grid>
         <Grid item xs={4}>
@@ -36,7 +38,7 @@ export default function Dashboard() {
             elevation={5}
             style={{ margin: '10px', padding: '10px', textAlign: 'center' }}
           >
-            <Button size="small">Challenges</Button>
+            <Button href="/home_dashboard_random_challenge" size="small">Challenges</Button>
           </Paper>
         </Grid>
         <Grid item xs={4}>
