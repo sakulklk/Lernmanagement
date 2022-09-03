@@ -19,7 +19,7 @@ export default function Dashboard() {
         spacing={1}
         style={{ fontFamily: " 'Chakra Petch', sans-serif" }}
       >
-        <Grid item xs={3}>
+        <Grid item xs={4}>
           <Paper
             elevation={5}
             style={{
@@ -33,7 +33,7 @@ export default function Dashboard() {
             </Button>
           </Paper>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={4}>
           <Paper
             elevation={5}
             style={{ margin: '10px', padding: '10px', textAlign: 'center' }}
@@ -43,7 +43,7 @@ export default function Dashboard() {
             </Button>
           </Paper>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={4}>
           <Paper
             elevation={5}
             style={{
@@ -54,20 +54,6 @@ export default function Dashboard() {
           >
             <Button href="/home_dashboard_daily" size="small">
               Daily
-            </Button>
-          </Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Paper
-            elevation={5}
-            style={{
-              margin: '10px',
-              padding: '10px',
-              textAlign: 'center',
-            }}
-          >
-            <Button href="/home_dashboard_fight_your_friends" size="small">
-              Fight your friends
             </Button>
           </Paper>
         </Grid>
