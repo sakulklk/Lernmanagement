@@ -160,7 +160,7 @@ export default function Chat() {
                 <ListItem key="1">
                   <Grid container direction="column" alignItems="flex-end">
                     <Grid item xs={12}>
-                      <Paper
+                      {/* <Paper
                         elevation={1}
                         style={{
                           textAlign: 'left',
@@ -170,7 +170,7 @@ export default function Chat() {
                         }}
                       >
                         Hey, wie geht es euch?
-                      </Paper>
+                      </Paper> */}
                     </Grid>
                     <Grid item xs={12}>
                       <ListItemText
@@ -189,7 +189,7 @@ export default function Chat() {
                       ></ListItemText>
                     </Grid>
                     <Grid item xs={12}>
-                      <Paper
+                      {/* <Paper
                         elevation={1}
                         style={{
                           textAlign: 'left',
@@ -200,7 +200,7 @@ export default function Chat() {
                       >
                         Hey Alex, alles gut und dir? Hast du dir schon den neuen
                         Stoff durchgelesen?
-                      </Paper>
+                      </Paper> */}
                     </Grid>
                     <Grid item xs={12}>
                       <ListItemText
@@ -213,7 +213,7 @@ export default function Chat() {
                 <ListItem key="3">
                   <Grid container direction="column" alignItems="flex-end">
                     <Grid item xs={12}>
-                      <Paper
+                      {/* <Paper
                         elevation={1}
                         style={{
                           textAlign: 'left',
@@ -225,7 +225,7 @@ export default function Chat() {
                         Bei mir auch alles super! Nein, tätsachlich noch
                         nicht... wollen wir es zusammen machen? Josh bist du
                         dabei?
-                      </Paper>
+                      </Paper> */}
                     </Grid>
                     <Grid item xs={12}>
                       <ListItemText
