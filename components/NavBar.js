@@ -24,7 +24,7 @@ export default function NavBar() {
   ];
   const settings = [
     { name: 'Logout', route: '/' },
-    { name: 'Shibboleth', route: '/shibboleth' },
+
     { name: 'Login', route: '/signUp' },
   ];
 
