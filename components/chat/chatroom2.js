@@ -141,7 +141,6 @@ export default function Chat() {
               </ListItemText>
             </ListItem>
           </List>
-  
 
           <Box
             sx={{
@@ -149,6 +148,7 @@ export default function Chat() {
               width: 'auto',
               height: 'auto',
               backgroundColor: 'blue',
+              position: 'fixed',
               '&:hover': {
                 backgroundColor: 'blue',
                 opacity: [0.9, 0.8, 0.7],

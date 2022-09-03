@@ -6,10 +6,10 @@ import Grid from '@mui/material/Grid';
 export default function Test() {
   return (
     <>
-      <NavBar></NavBar>
-
+    <NavBar></NavBar>
       <Chat></Chat>
-
+      
+      
       <Footer></Footer>
     </>
   );
