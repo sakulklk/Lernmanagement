@@ -6,6 +6,7 @@ import LinearProgress from '@mui/material/LinearProgress';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 export default function LanguageWidget() {
   const loggedIn = false;
@@ -24,7 +25,9 @@ export default function LanguageWidget() {
         elevation={5}
         style={{ margin: '10px', padding: '10px', textAlign: 'center' }}
       >
-        Willkommen zurück Alex ! Lerne dort weiter wo du aufgehört hast.
+        <Typography variant="subtitle1">
+          Willkommen zurück Alex ! Lerne dort weiter wo du aufgehört hast.
+        </Typography>
       </Paper>
       <Paper elevation={5} style={{ margin: '10px' }}>
         <List style={{ maxHeight: '250px', overflowY: 'scroll' }}>
@@ -33,10 +36,15 @@ export default function LanguageWidget() {
               <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={2} style={{ alignItems: 'center' }}>
                   <Grid item xs={2} style={{ textAlign: 'center' }}>
-                    {currentLanguage.name}
+                    <Typography variant="subtitle1">
+                      {currentLanguage.name}{' '}
+                    </Typography>
                   </Grid>
                   <Grid item xs={4} style={{ textAlign: 'center' }}>
-                    {currentLanguage.learningMark}
+                    <Typography variant="subtitle1">
+                      {' '}
+                      {currentLanguage.learningMark}{' '}
+                    </Typography>
                   </Grid>
                   <Grid
                     item
@@ -46,7 +54,10 @@ export default function LanguageWidget() {
                       alignSelf: 'center',
                     }}
                   >
-                    {currentLanguage.progress}%
+                    <Typography variant="subtitle1">
+                      {' '}
+                      {currentLanguage.progress}%{' '}
+                    </Typography>
                   </Grid>
                   <Grid item xs={3} alignSelf="center">
                     <Box sx={{ width: '100%', padding: 'auto' }}>

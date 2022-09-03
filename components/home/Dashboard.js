@@ -6,6 +6,7 @@ import SendIcon from '@mui/icons-material/Send';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
+import Typography from '@mui/material/Typography';
 export default function Dashboard() {
   const [value, setValue] = React.useState('Controlled');
 
@@ -29,17 +30,9 @@ export default function Dashboard() {
             }}
           >
             <Button href="/home_dashboard_random_challenge" size="small">
-              Zufällige Übungen
-            </Button>
-          </Paper>
-        </Grid>
-        <Grid item xs={4}>
-          <Paper
-            elevation={5}
-            style={{ margin: '10px', padding: '10px', textAlign: 'center' }}
-          >
-            <Button href="/home_dashboard_challenge_categories" size="small">
-              Challenges
+              <Typography variant="string" color="primary">
+                Zufällige Übungen
+              </Typography>
             </Button>
           </Paper>
         </Grid>
@@ -53,7 +46,21 @@ export default function Dashboard() {
             }}
           >
             <Button href="/home_dashboard_daily" size="small">
-              Daily
+              <Typography variant="string" color="primary">
+                Daily
+              </Typography>
+            </Button>
+          </Paper>
+        </Grid>
+        <Grid item xs={4}>
+          <Paper
+            elevation={5}
+            style={{ margin: '10px', padding: '10px', textAlign: 'center' }}
+          >
+            <Button href="/home_dashboard_challenge_categories" size="small">
+              <Typography variant="string" color="primary">
+                Challenges
+              </Typography>
             </Button>
           </Paper>
         </Grid>

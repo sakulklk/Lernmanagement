@@ -23,7 +23,7 @@ export default function RandomQuestionPicker() {
 
   const random = Math.floor(Math.random() * randomQuestions.length);
   return (
-    <Paper elevation={5} style={{ margin: '35px', height: '500px' }}>
+    <Paper elevation={5} style={{ margin: '40px', height: '500px' }}>
       <Grid container style={{ height: '100%' }}>
         <Grid item xs={12} style={{ height: '80%', textAlign: 'center' }}>
           <Paper style={{ height: '100%', textAlign: 'center' }}>
