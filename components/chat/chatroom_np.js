@@ -166,6 +166,7 @@ export default function Chat() {
                           textAlign: 'left',
                           width: '650px',
                           padding: '10px',
+                          margin: '10px',
                           background: '#8FB1CC',
                         }}
                       >
