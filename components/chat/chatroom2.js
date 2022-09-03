@@ -125,13 +125,10 @@ export default function Chat() {
                   ></ListItemText>
                 </Grid>
                 <Grid item xs={12}>
-                  <Typography primary="fadfa" align="left"></Typography>
-                  /*{' '}
                   <ListItemText
                     align="left"
                     primary="Hey, A Good! What about you ?"
-                  ></ListItemText>{' '}
-                  */
+                  ></ListItemText>
                 </Grid>
                 <Grid item xs={12}>
                   <ListItemText align="left" secondary="09:31"></ListItemText>
