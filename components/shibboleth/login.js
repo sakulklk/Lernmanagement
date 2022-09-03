@@ -85,7 +85,7 @@ export default function ShibbolethLogin() {
             variant="outlined"
             label="username"
             fullWidth
-            margin="normal"
+            margin="10px"
             required
           />
         </div>
@@ -97,7 +97,7 @@ export default function ShibbolethLogin() {
             label="password"
             className="password"
             fullWidth
-            margin="normal"
+            margin="10px"
             required
           />
         </div>
