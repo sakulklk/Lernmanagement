@@ -3,10 +3,14 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
+import * as React from 'react';
 /*import DatePicker from '@mui/x-date-pickers-pro/DatePicker';*/
 
 export default function singUp() {
-  const checked = false;
+  let [checked, setChecked] = React.useState(false);
+  function toggleChecked() {
+    setChecked((checked = !checked));
+  }
   return (
     <div className="column">
       <style jsx>{`
@@ -80,7 +84,8 @@ export default function singUp() {
         />
       </div>
       <FormControlLabel
-        control={<Checkbox value="remember" color="primary" checked={checked ? 'checked' : ''} />}
+        control={<Checkbox value="remember" color="primary" />}
+        onChange={toggleChecked}
         label="You agree to our Terms and Privacy Policy"
       />
       

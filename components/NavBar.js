@@ -98,18 +98,19 @@ export default function NavBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Link
-                    style={{
-                      my: 2,
-                      color: 'black',
-                      display: 'block',
-                      textDecoration: 'none',
-                    }}
-                    href={page.route}
-                  >
-                    {page.name}
-                  </Link>
+                <MenuItem
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  component={Link}
+                  style={{
+                    my: 2,
+                    color: 'black',
+                    display: 'block',
+                    textDecoration: 'none',
+                  }}
+                  href={page.route}
+                >
+                  {page.name}
                 </MenuItem>
               ))}
             </Menu>
@@ -178,18 +179,19 @@ export default function NavBar() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Link
-                    style={{
-                      my: 2,
-                      color: 'black',
-                      display: 'block',
-                      textDecoration: 'none',
-                    }}
-                    href={setting.route}
-                  >
-                    {setting.name}
-                  </Link>
+                <MenuItem
+                  key={setting}
+                  onClick={handleCloseUserMenu}
+                  component={Link}
+                  style={{
+                    my: 2,
+                    color: 'black',
+                    display: 'block',
+                    textDecoration: 'none',
+                  }}
+                  href={setting.route}
+                >
+                  {setting.name}
                 </MenuItem>
               ))}
             </Menu>
