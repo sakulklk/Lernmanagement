@@ -28,8 +28,6 @@ export default function adminrechte() {
         margin-top: 18px;
       }
      `}</style>
-
-        <BasicBreadcrumbs></BasicBreadcrumbs>
       </div>
       <div className="column">
         <style jsx>{`
