@@ -15,15 +15,86 @@ import Fab from '@material-ui/core/Fab';
 import SendIcon from '@material-ui/icons/Send';
 import NavBar from '../NavBar.js';
 
-
 export default function Chat() {
   return (
-
     <div>
-      
       <style jsx>{`
-    
+    table: {
+      minWidth: 650,
+    },
+    chatSection:{
+      width:'100%',
+      height: '80vh',
+    },
+    borderRight500: {
+      borderRight: '1px solid #e0e0e0',
+    },
+    messageArea: {
+      height: '70vh',
+      overflow: 'auto',
+    },
     `}</style>
+      <Grid container>
+        <Grid item xs={12}>
+          <Typography variant="h5" className="header-message">
+            Chat
+          </Typography>
+        </Grid>
+      </Grid>
+      <Grid container>
+        <Grid item xs={3}>
+          <List>
+            <ListItem button key="AlexanderAnderson">
+              <ListItemIcon>
+                <Avatar
+                  alt="Alexander Anderson"
+                  src="https://material-ui.com/avatar/1.jpg"
+                />
+              </ListItemIcon>
+              <ListItemText primary="Alexander Anderson"></ListItemText>
+            </ListItem>
+          </List>
+        </Grid>
+      </Grid>
+      <Grid item xs={3} style={{ padding: '10px' }}>
+        <TextField label="Search" variant="outlined" fullWidth />
+      </Grid>
+      <Divider />
+      <List>
+        <ListItem button key="Evan Adams">
+          <ListItemIcon>
+            <Avatar
+              alt="Evan Adams"
+              src="https://material-ui.com/avatar/1.jpg"
+            />
+          </ListItemIcon>
+          <ListItemText secondary="Dozent" primary="Evan Adams">
+            Evan Adams
+          </ListItemText>
+        </ListItem>
+        <ListItem button key="Josh Smith">
+          <ListItemIcon>
+            <Avatar
+              alt="Josh Smith"
+              src="https://material-ui.com/avatar/3.jpg"
+            />
+          </ListItemIcon>
+          <ListItemText secondary="TIF21D" primary="Josh Smith">
+            Josh Smith
+          </ListItemText>
+        </ListItem>
+        <ListItem button key="Frank Hills">
+          <ListItemIcon>
+            <Avatar
+              alt="Frank Hills"
+              src="https://material-ui.com/avatar/2.jpg"
+            />
+          </ListItemIcon>
+          <ListItemText secondary=" TIF21C" primary="Frank Hills">
+            Frank Hills
+          </ListItemText>
+        </ListItem>
+      </List>
     </div>
   );
 }
