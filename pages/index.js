@@ -9,16 +9,18 @@ export default function Home() {
   const loggedIn = true;
   return (
     <>
-      <NavBar></NavBar>
-      <Bild></Bild>
-      {loggedIn ? (
-        <>
-          <LanguageWidget></LanguageWidget>
-          <Dashboard></Dashboard>
-        </>
-      ) : (
-        <Languages></Languages>
-      )}
+      <div style={{ marginBottom: '65px' }}>
+        <NavBar></NavBar>
+        <Bild></Bild>
+        {loggedIn ? (
+          <>
+            <LanguageWidget></LanguageWidget>
+            <Dashboard></Dashboard>
+          </>
+        ) : (
+          <Languages></Languages>
+        )}
+      </div>
 
       <Footer></Footer>
     </>
