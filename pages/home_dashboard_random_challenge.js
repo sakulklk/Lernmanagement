@@ -1,11 +1,11 @@
 import NavBar from '../components/NavBar.js';
 import Footer from '../components/Footer.js';
-import randomQuestionPicker from '../components/home/dashboard/randomQuestionPicker.js';
+import RandomQuestionPicker from '../components/home/dashboard/RandomQuestionPicker.js';
 export default function Test() {
   return (
     <>
       <NavBar></NavBar>
-      <randomQuestionPicker></randomQuestionPicker>
+      <RandomQuestionPicker></RandomQuestionPicker>
       <Footer></Footer>
     </>
   );

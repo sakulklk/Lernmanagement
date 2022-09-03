@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import RedoOutlinedIcon from '@mui/icons-material/RedoOutlined';
 
-export default function randomQuestionPicker() {
+export default function RandomQuestionPicker() {
   const randomQuestions = [
     'Random Übung 1 (Lukas)',
     'Random Übung 2 (Lukas)',
