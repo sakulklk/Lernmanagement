@@ -14,6 +14,15 @@ import Avatar from '@material-ui/core/Avatar';
 import Fab from '@material-ui/core/Fab';
 import SendIcon from '@material-ui/icons/Send';
 import NavBar from '../NavBar.js';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: 'rgb(226, 0, 26)',
+    },
+  },
+});
 
 export default function Chat() {
   return (
@@ -125,10 +134,18 @@ export default function Chat() {
                   ></ListItemText>
                 </Grid>
                 <Grid item xs={12}>
-                  <ListItemText
+                  {/* <ListItemText
                     align="left"
                     primary="Hey, A Good! What about you ?"
-                  ></ListItemText>
+                  ></ListItemText> */}
+                  <Paper
+                    elevation={2}
+                    style={{
+                      textAlign: 'left',
+                    }}
+                  >
+                    Test
+                  </Paper>
                 </Grid>
                 <Grid item xs={12}>
                   <ListItemText align="left" secondary="09:31"></ListItemText>
