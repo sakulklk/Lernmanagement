@@ -13,16 +13,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Avatar from '@material-ui/core/Avatar';
 import Fab from '@material-ui/core/Fab';
 import SendIcon from '@material-ui/icons/Send';
-import NavBar from '../NavBar.js';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: 'rgb(226, 0, 26)',
-    },
-  },
-});
+import AvatarGroup from '@mui/material/AvatarGroup';
 
 export default function Chat() {
   return (
@@ -102,24 +93,50 @@ export default function Chat() {
               </ListItemText>
             </ListItem>
           </List>
+          <List>
+            <ListItem button key="Group">
+              <ListItemIcon>
+                <AvatarGroup max={3}>
+                  <Avatar
+                    alt="Alexander Anderson"
+                    src="https://material-ui.com/avatar/1.jpg"
+                  />
+                  <Avatar
+                    alt="Evan Adams"
+                    src="https://material-ui.com/avatar/1.jpg"
+                  />
+                  <Avatar
+                    alt="Josh Smith"
+                    src="https://material-ui.com/avatar/3.jpg"
+                  />
+                </AvatarGroup>
+              </ListItemIcon>
+              <ListItemText
+                secondary="Evan Adams, Josh Smith, Me"
+                primary="3 Musketiere"
+              >
+                Evan Adams, Josh Smith, Me
+              </ListItemText>
+            </ListItem>
+          </List>
         </Grid>
         <Grid item xs={9}>
           <List className="messageArea">
             <ListItem key="1">
-              <Grid container>
+              <Grid container direction="column" alignItems="flex-end">
                 <Grid item xs={12}>
-                  <ListItemText
-                    align="right"
-                    primary="Hey man, What's up ?"
-                  ></ListItemText>
+                  <Paper
+                    elevation={1}
+                    style={{
+                      textAlign: 'left',
+                      width: '650px',
+                      padding: '10px',
+                      background: '#8FB1CC',
+                    }}
+                  >
+                    Hey, wie geht es euch?
+                  </Paper>
                 </Grid>
-                {/* <Grid item xs={6}>
-                  <ListItemText
-                    align="center"
-                    secondary="john"
-                    primary="prim"
-                  ></ListItemText>
-                </Grid> */}
                 <Grid item xs={12}>
                   <ListItemText align="right" secondary="09:30"></ListItemText>
                 </Grid>
@@ -134,17 +151,17 @@ export default function Chat() {
                   ></ListItemText>
                 </Grid>
                 <Grid item xs={12}>
-                  {/* <ListItemText
-                    align="left"
-                    primary="Hey, A Good! What about you ?"
-                  ></ListItemText> */}
                   <Paper
-                    elevation={2}
+                    elevation={1}
                     style={{
                       textAlign: 'left',
+                      width: '650px',
+                      padding: '10px',
+                      background: '#EEECF1',
                     }}
                   >
-                    Test
+                    Hey Alex, alles gut und dir? Hast du dir schon den neuen
+                    Stoff durchgelesen?
                   </Paper>
                 </Grid>
                 <Grid item xs={12}>
@@ -153,12 +170,20 @@ export default function Chat() {
               </Grid>
             </ListItem>
             <ListItem key="3">
-              <Grid container>
+              <Grid container direction="column" alignItems="flex-end">
                 <Grid item xs={12}>
-                  <ListItemText
-                    align="right"
-                    primary="Cool. i am good, let's catch up!"
-                  ></ListItemText>
+                  <Paper
+                    elevation={1}
+                    style={{
+                      textAlign: 'left',
+                      width: '650px',
+                      padding: '10px',
+                      background: '#8FB1CC',
+                    }}
+                  >
+                    Bei mir auch alles super! Nein, tätsachlich noch nicht...
+                    wollen wir es zusammen machen? Josh bist du dabei?
+                  </Paper>
                 </Grid>
                 <Grid item xs={12}>
                   <ListItemText align="right" secondary="10:30"></ListItemText>
