@@ -56,8 +56,8 @@ export default function CustomizedAccordions() {
       margin-top: 100px;
       margin-bpttom: 25px;
       text-align: center;
-      padding-right: 350px;
-      padding-left: 350px;
+      padding-right: 100px;
+      padding-left: 100px;
     }
 
     h1{
