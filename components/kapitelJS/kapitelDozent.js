@@ -11,14 +11,14 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SaveIcon from '@mui/icons-material/Save';
-import PrintIcon from '@mui/icons-material/Print';
-import ShareIcon from '@mui/icons-material/Share';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+import UpgradeIcon from '@mui/icons-material/Upgrade';
 
 const actions = [
   { icon: <DeleteIcon />, name: 'Löschen' },
-  { icon: <SaveIcon />, name: 'Save' },
-  { icon: <PrintIcon />, name: 'Print' },
-  { icon: <ShareIcon />, name: 'Share' },
+  { icon: <SaveIcon />, name: 'Speichern' },
+  { icon: <AddCircleIcon />, name: 'Hinzufügen' },
+  { icon: <UpgradeIcon />, name: 'Aktualisieren' },
 ];
 
 const Accordion = styled((props) => (
