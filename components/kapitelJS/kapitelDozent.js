@@ -97,14 +97,10 @@ export default function CustomizedAccordions() {
         <h1> Wilkommen auf der JavaScript Lernseite! </h1>
         <h3>
           {' '}
-          Melde Dich bitte an um alle Funktionen nutzen zu können! Dein
-          Fortschritt geht bei schließen der Seite sonst <b>verloren</b> und Du
-          musst alle Kapitel erneut freischalten!
-          <br />
-          <a href="signUp" className="hover">
-            {' '}
-            Hier geht es zum Login!
-          </a>
+          Sie können die Lernkapitel{' '}
+          <b> bearbeiten, löschen und neue ersetllen </b>. <br /> Für Sie gibt
+          es keine <i> Freischalte-Funktion</i>. Sie haben jeder Zeit Zugriff
+          auf alle Kapitel.
         </h3>
       </Typography>
       <div className="acc">

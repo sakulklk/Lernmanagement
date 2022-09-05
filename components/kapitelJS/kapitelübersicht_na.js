@@ -1,10 +1,18 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
+import Button from '@mui/material/Button';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
+import LockIcon from '@mui/icons-material/Lock';
+import LockOpenIcon from '@mui/icons-material/LockOpen';
+
+const actions = [
+  { icon: <LockIcon />, name: 'nicht freigeschalten!' },
+  { icon: <LockOpenIcon />, name: 'freigeschalten' },
+];
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -75,8 +83,6 @@ export default function CustomizedAccordions() {
       color: #0288d1;
       text-decoration: underline;
     }
-
-        
       `}</style>
       <Typography>
         <h1> Wilkommen auf der JavaScript Lernseite! </h1>
@@ -98,6 +104,7 @@ export default function CustomizedAccordions() {
           onChange={handleChange('panel1')}
         >
           <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+            <LockOpenIcon></LockOpenIcon>
             <Typography>Collapsible Group Item #1</Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -108,6 +115,14 @@ export default function CustomizedAccordions() {
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
               eget.
             </Typography>
+            <br />
+            <Button
+              id="button"
+              variant="contained"
+              startIcon={<LockOpenIcon />}
+            >
+              Contained
+            </Button>
           </AccordionDetails>
         </Accordion>
         <Accordion
@@ -115,6 +130,7 @@ export default function CustomizedAccordions() {
           onChange={handleChange('panel2')}
         >
           <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
+            <LockIcon></LockIcon>
             <Typography>Collapsible Group Item #2</Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -125,6 +141,10 @@ export default function CustomizedAccordions() {
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
               eget.
             </Typography>
+            <br />
+            <Button id="button" variant="contained" startIcon={<LockIcon />}>
+              Contained
+            </Button>
           </AccordionDetails>
         </Accordion>
         <Accordion
@@ -132,6 +152,7 @@ export default function CustomizedAccordions() {
           onChange={handleChange('panel3')}
         >
           <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
+            <LockIcon></LockIcon>
             <Typography>Collapsible Group Item #3</Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -142,6 +163,10 @@ export default function CustomizedAccordions() {
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
               eget.
             </Typography>
+            <br />
+            <Button id="button" variant="contained" startIcon={<LockIcon />}>
+              Contained
+            </Button>
           </AccordionDetails>
         </Accordion>
         <Accordion
@@ -149,6 +174,7 @@ export default function CustomizedAccordions() {
           onChange={handleChange('panel4')}
         >
           <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
+            <LockIcon></LockIcon>
             <Typography>Collapsible Group Item #4</Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -159,6 +185,10 @@ export default function CustomizedAccordions() {
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
               eget.
             </Typography>
+            <br />
+            <Button id="button" variant="contained" startIcon={<LockIcon />}>
+              Contained
+            </Button>
           </AccordionDetails>
         </Accordion>
         <Accordion
@@ -166,6 +196,7 @@ export default function CustomizedAccordions() {
           onChange={handleChange('panel5')}
         >
           <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
+            <LockIcon></LockIcon>
             <Typography>Collapsible Group Item #5</Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -176,6 +207,10 @@ export default function CustomizedAccordions() {
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
               eget.
             </Typography>
+            <br />
+            <Button id="button" variant="contained" startIcon={<LockIcon />}>
+              Contained
+            </Button>
           </AccordionDetails>
         </Accordion>
         <Accordion
@@ -183,6 +218,7 @@ export default function CustomizedAccordions() {
           onChange={handleChange('panel6')}
         >
           <AccordionSummary aria-controls="panel6d-content" id="panel6d-header">
+            <LockIcon></LockIcon>
             <Typography>Collapsible Group Item #6</Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -193,6 +229,10 @@ export default function CustomizedAccordions() {
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
               eget.
             </Typography>
+            <br />
+            <Button id="button" variant="contained" startIcon={<LockIcon />}>
+              Contained
+            </Button>
           </AccordionDetails>
         </Accordion>
       </div>

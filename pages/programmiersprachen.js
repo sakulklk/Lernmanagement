@@ -6,7 +6,7 @@ export default function Test() {
     <>
       <NavBar></NavBar>
       <p>Hier entsteht die Programmiersprachen-Seite</p>
-      <a href="kapitelJS"> Test JS</a>
+      <a href="kapitelJS_na"> Test JS</a>
       <br />
       <a href="kapitelJSD"> Test JS Dozent</a>
       <Footer></Footer>
