@@ -18,7 +18,7 @@ import AvatarGroup from '@mui/material/AvatarGroup';
 export default function Chat() {
   return (
     <div>
-      {/* <style jsx>{`
+      <style jsx>{`
     table: {
       minWidth: 650,
     },
@@ -33,7 +33,7 @@ export default function Chat() {
       height: '70vh',
       overflow: 'auto',
     },
-    `}</style> */}
+    `}</style>
       <Grid container>
         <Grid item xs={3}>
           <List>
@@ -142,7 +142,7 @@ export default function Chat() {
             </ListItem>
           </List>
 
-          <Box
+          {/* <Box
             sx={{
               marginTop: 100,
               width: 'auto',
@@ -154,7 +154,7 @@ export default function Chat() {
                 opacity: [0.9, 0.8, 0.7],
               },
             }}
-          >
+          > */}
             <Grid item xs={9}>
               <List className="messageArea">
                 <ListItem key="1">
@@ -252,7 +252,7 @@ export default function Chat() {
                 </Grid>
               </Grid>
             </Grid>
-          </Box>
+          {/* </Box> */}
         </Grid>
       </Grid>
     </div>
