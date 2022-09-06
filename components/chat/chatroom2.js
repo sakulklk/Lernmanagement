@@ -32,6 +32,7 @@ export default function Chat() {
     messageArea: {
       height: '70vh',
       overflow: 'auto',
+      width: '100%',
     },
     `}</style>
       <Grid container>
@@ -155,103 +156,99 @@ export default function Chat() {
               },
             }}
           > */}
-            <Grid item xs={9}>
-              <List className="messageArea">
-                <ListItem key="1">
-                  <Grid container direction="column" alignItems="flex-end">
-                    <Grid item xs={12}>
-                      <Paper
-                        elevation={1}
-                        style={{
-                          textAlign: 'left',
-                          width: '650px',
-                          padding: '10px',
-                          background: '#8FB1CC',
-                        }}
-                      >
-                        Hey, wie geht es euch?
-                      </Paper>
-                    </Grid>
-                    <Grid item xs={12}>
-                      <ListItemText
-                        align="right"
-                        secondary="09:30"
-                      ></ListItemText>
-                    </Grid>
+          <Grid item xs={9}>
+            <List className="messageArea">
+              <ListItem key="1">
+                <Grid container direction="column" alignItems="flex-end">
+                  <Grid item xs={12}>
+                    <Paper
+                      elevation={1}
+                      style={{
+                        textAlign: 'rigth',
+                        width: '650px',
+                        padding: '10px',
+                        background: '#8FB1CC',
+                      }}
+                    >
+                      Hey, wie geht es euch?
+                    </Paper>
                   </Grid>
-                </ListItem>
-                <ListItem key="2">
-                  <Grid container>
-                    <Grid item xs={12}>
-                      <ListItemText
-                        align="left"
-                        primary="Evan Adams"
-                      ></ListItemText>
-                    </Grid>
-                    <Grid item xs={12}>
-                      <Paper
-                        elevation={1}
-                        style={{
-                          textAlign: 'left',
-                          width: '650px',
-                          padding: '10px',
-                          background: '#EEECF1',
-                        }}
-                      >
-                        Hey Alex, alles gut und dir? Hast du dir schon den neuen
-                        Stoff durchgelesen?
-                      </Paper>
-                    </Grid>
-                    <Grid item xs={12}>
-                      <ListItemText
-                        align="left"
-                        secondary="09:31"
-                      ></ListItemText>
-                    </Grid>
+                  <Grid item xs={12}>
+                    <ListItemText
+                      align="right"
+                      secondary="09:30"
+                    ></ListItemText>
                   </Grid>
-                </ListItem>
-                <ListItem key="3">
-                  <Grid container direction="column" alignItems="flex-end">
-                    <Grid item xs={12}>
-                      <Paper
-                        elevation={1}
-                        style={{
-                          textAlign: 'left',
-                          width: '650px',
-                          padding: '10px',
-                          background: '#8FB1CC',
-                        }}
-                      >
-                        Bei mir auch alles super! Nein, tätsachlich noch
-                        nicht... wollen wir es zusammen machen? Josh bist du
-                        dabei?
-                      </Paper>
-                    </Grid>
-                    <Grid item xs={12}>
-                      <ListItemText
-                        align="right"
-                        secondary="10:30"
-                      ></ListItemText>
-                    </Grid>
-                  </Grid>
-                </ListItem>
-              </List>
-              <Divider />
-              <Grid container style={{ padding: '20px' }}>
-                <Grid item xs={11}>
-                  <TextField
-                    id="outlined-basic-email"
-                    label="Type Something"
-                    fullWidth
-                  />
                 </Grid>
-                <Grid xs={1} align="right">
-                  <Fab color="primary" aria-label="add">
-                    <SendIcon />
-                  </Fab>
+              </ListItem>
+              <ListItem key="2">
+                <Grid container>
+                  <Grid item xs={12}>
+                    <ListItemText
+                      align="left"
+                      primary="Evan Adams"
+                    ></ListItemText>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Paper
+                      elevation={1}
+                      style={{
+                        textAlign: 'left',
+                        width: '650px',
+                        padding: '10px',
+                        background: '#EEECF1',
+                      }}
+                    >
+                      Hey Alex, alles gut und dir? Hast du dir schon den neuen
+                      Stoff durchgelesen?
+                    </Paper>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <ListItemText align="left" secondary="09:31"></ListItemText>
+                  </Grid>
                 </Grid>
+              </ListItem>
+              <ListItem key="3">
+                <Grid container direction="column" alignItems="flex-end">
+                  <Grid item xs={12}>
+                    <Paper
+                      elevation={1}
+                      style={{
+                        textAlign: 'left',
+                        width: '650px',
+                        padding: '10px',
+                        background: '#8FB1CC',
+                      }}
+                    >
+                      Bei mir auch alles super! Nein, tätsachlich noch nicht...
+                      wollen wir es zusammen machen? Josh bist du dabei?
+                    </Paper>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <ListItemText
+                      align="right"
+                      secondary="10:30"
+                    ></ListItemText>
+                  </Grid>
+                </Grid>
+              </ListItem>
+            </List>
+            <Divider />
+            <Grid container style={{ padding: '20px' }}>
+              <Grid item xs={11}>
+                <TextField
+                  id="outlined-basic-email"
+                  label="Type Something"
+                  fullWidth
+                />
+              </Grid>
+              <Grid xs={1} align="right">
+                <Fab color="primary" aria-label="add">
+                  <SendIcon />
+                </Fab>
               </Grid>
             </Grid>
+          </Grid>
           {/* </Box> */}
         </Grid>
       </Grid>

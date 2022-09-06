@@ -19,7 +19,6 @@ import Box from '@mui/material/Box';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-
 const actions = [
   { icon: <LockIcon />, name: 'nicht freigeschalten!' },
   { icon: <LockOpenIcon />, name: 'freigeschalten' },
@@ -79,8 +78,8 @@ export default function CustomizedAccordions() {
     <div>
       <style jsx>{`
     .acc{
-      margin-top: 75px;
-      margin-bpttom: 25px;
+      margin-top: 50px;
+      margin-bpttom: 80px;
       text-align: center;
       padding-right: 100px;
       padding-left: 100px;
@@ -136,9 +135,9 @@ export default function CustomizedAccordions() {
                 </a>
               </h3>
               <FormControlLabel
-          control={<Checkbox value="remember" color="primary" />}
-          label="Diese Info nicht mehr anzeigen"
-        />
+                control={<Checkbox value="remember" color="primary" />}
+                label="Diese Info nicht mehr anzeigen"
+              />
               {/* <Checkbox
                 checked={checked}
                 onChange={handleChangeCheck}
