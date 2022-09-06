@@ -10,6 +10,12 @@ import LockIcon from '@mui/icons-material/Lock';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
+import AlertTitle from '@mui/material/AlertTitle';
+
+import IconButton from '@mui/material/IconButton';
+import Collapse from '@mui/material/Collapse';
+import CloseIcon from '@mui/icons-material/Close';
+import Box from '@mui/material/Box';
 
 const actions = [
   { icon: <LockIcon />, name: 'nicht freigeschalten!' },
@@ -55,6 +61,8 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 export default function CustomizedAccordions() {
   const [expanded, setExpanded] = React.useState('panel1');
 
+  const [open, setOpen] = React.useState(true);
+
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
@@ -63,7 +71,7 @@ export default function CustomizedAccordions() {
     <div>
       <style jsx>{`
     .acc{
-      margin-top: 100px;
+      margin-top: 75px;
       margin-bpttom: 25px;
       text-align: center;
       padding-right: 100px;
@@ -82,15 +90,61 @@ export default function CustomizedAccordions() {
       text-align: center;
     }
     .hover:hover{
-      color: white;
+      color: #0288d1;
       text-decoration: underline;
     }
       `}</style>
 
       <h1> Wilkommen auf der JavaScript Lernseite! </h1>
-      <Stack sx={{ width: '100%' }} spacing={2}>
-        <Alert variant="filled" severity="info">
+      <Box sx={{ width: '100%' }}>
+        <Collapse in={open}>
+          <Alert
+            severity="info"
+            action={
+              <IconButton
+                aria-label="close"
+                color="inherit"
+                size="small"
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
+                <CloseIcon fontSize="inherit" />
+              </IconButton>
+            }
+            sx={{ mb: 2 }}
+          >
+            <Typography>
+              <AlertTitle>Info</AlertTitle>
+              <h3>
+                {' '}
+                Melde Dich bitte an um alle Funktionen nutzen zu können! 
+                <br />{' '}
+                Dein Fortschritt geht bei schließen der Seite sonst{' '}
+                <b>verloren</b> und Du musst alle Kapitel erneut freischalten!
+                <br />
+                <a href="signUp" className="hover">
+                  {' '}
+                  Hier geht es zum Login!
+                </a>
+              </h3>
+            </Typography>
+          </Alert>
+        </Collapse>
+        {/* <Button
+          disabled={open}
+          variant="outlined"
+          onClick={() => {
+            setOpen(true);
+          }}
+        >
+          Info
+        </Button> */}
+      </Box>
+      {/* <Stack sx={{ width: '100%' }} spacing={2}>
+        <Alert severity="info">
           <Typography>
+            <AlertTitle>Info</AlertTitle>
             <h3>
               {' '}
               Melde Dich bitte an um alle Funktionen nutzen zu können! Dein
@@ -104,7 +158,7 @@ export default function CustomizedAccordions() {
             </h3>
           </Typography>
         </Alert>
-      </Stack>
+      </Stack> */}
       <div className="acc">
         <Accordion
           expanded={expanded === 'panel1'}
