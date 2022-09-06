@@ -18,7 +18,7 @@ export default function NavBar() {
   const loggedIn = true;
   const pages = [
     { name: 'Home', route: '/' },
-    { name: 'Programmiersprachen', route: '/programmiersprachen' },
+    { name: 'Programmiersprachen', route: '/programmiersprachen_uebersicht' },
     { name: 'Forum', route: '/forum' },
     { name: 'Nutzerdaten', route: '/nutzerdaten_kontoinformationen' },
     { name: 'Chat', route: '/chat' },
