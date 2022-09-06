@@ -64,7 +64,6 @@ export default function Test() {
               padding: '0px',
             }}
           >
-            <LernsprachenKategorie />
             {learningLanguages.map((learningLanguage) => (
               <LernsprachenPaper
                 name={learningLanguage.name}
