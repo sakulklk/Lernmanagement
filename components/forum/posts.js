@@ -26,6 +26,15 @@ export default function Posts() {
             <Grid item xs={5}>
               <ListItemText align="left" primary="Preview"></ListItemText>
             </Grid>
+            <Grid item xs={2}>
+              <Button
+                variant="contained"
+                href="./post"
+                style={{ textAlign: 'center' }}
+              >
+                +
+              </Button>
+            </Grid>
             <Grid item xs={2}></Grid>
           </Grid>
         </ListItem>
