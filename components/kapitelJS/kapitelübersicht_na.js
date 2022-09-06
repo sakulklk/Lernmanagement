@@ -16,6 +16,7 @@ import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
 import CloseIcon from '@mui/icons-material/Close';
 import Box from '@mui/material/Box';
+import Checkbox from '@mui/material/Checkbox';
 
 const actions = [
   { icon: <LockIcon />, name: 'nicht freigeschalten!' },
@@ -62,6 +63,11 @@ export default function CustomizedAccordions() {
   const [expanded, setExpanded] = React.useState('panel1');
 
   const [open, setOpen] = React.useState(true);
+
+  const [checked, setChecked] = React.useState(false);
+  const handleChangeCheck = (event) => {
+    setChecked(event.target.checked);
+  };
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -118,9 +124,8 @@ export default function CustomizedAccordions() {
               <AlertTitle>Info</AlertTitle>
               <h3>
                 {' '}
-                Melde Dich bitte an um alle Funktionen nutzen zu können! 
-                <br />{' '}
-                Dein Fortschritt geht bei schließen der Seite sonst{' '}
+                Melde Dich bitte an um alle Funktionen nutzen zu können!
+                <br /> Dein Fortschritt geht bei schließen der Seite sonst{' '}
                 <b>verloren</b> und Du musst alle Kapitel erneut freischalten!
                 <br />
                 <a href="signUp" className="hover">
@@ -128,6 +133,12 @@ export default function CustomizedAccordions() {
                   Hier geht es zum Login!
                 </a>
               </h3>
+              <Checkbox
+                checked={checked}
+                onChange={handleChangeCheck}
+                inputProps={{ 'aria-label': 'controlled' }}
+                input="annnn"
+              />
             </Typography>
           </Alert>
         </Collapse>
