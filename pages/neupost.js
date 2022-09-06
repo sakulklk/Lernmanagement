@@ -4,15 +4,13 @@ import Overview from '../components/forum/overview.js';
 import Faqpost from '../components/forum/faqpost.js';
 import Fragenpost from '../components/forum/fragenpost.js';
 import Updatepost from '../components/forum/updatepost.js';
+import Neu from '../components/forum/neu.js';
 
 export default function Test() {
   return (
     <>
       <NavBar></NavBar>
-      <Overview> </Overview>
-      <Faqpost></Faqpost>
-      <Fragenpost></Fragenpost>
-      <Updatepost></Updatepost>
+      <Neu></Neu>
       <Footer></Footer>
     </>
   );

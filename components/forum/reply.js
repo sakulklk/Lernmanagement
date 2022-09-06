@@ -44,6 +44,39 @@ export default function Reply() {
         <Divider />
 
         <ListItem key="3">
+          <Grid container>
+            <ListItemIcon>
+              <Avatar
+                alt="Alex Anderson"
+                src="https://material-ui.com/avatar/1.jpg"
+              />
+            </ListItemIcon>
+            <ListItemText primary="Alex Anderson"></ListItemText>
+            <Grid item xs={2}>
+              <Button
+                variant="contained"
+                href="./post"
+                style={{ textAlign: 'center' }}
+              >
+                bearbeiten
+              </Button>
+            </Grid>
+          </Grid>
+        </ListItem>
+        <ListItem key="4">
+          <Grid container>
+            <Grid item xs={2}></Grid>
+            <Grid item xs={10}>
+              <ListItemText
+                align="left"
+                secondary="............................"
+              ></ListItemText>
+            </Grid>
+          </Grid>
+        </ListItem>
+        <Divider />
+
+        <ListItem key="5">
           <Grid container style={{ padding: '20px' }}>
             <Grid item xs={11}>
               <TextField label="Antworten" fullWidth />

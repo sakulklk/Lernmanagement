@@ -11,8 +11,6 @@ export default function Test() {
       <NavBar></NavBar>
       <Overview> </Overview>
       <Faqpost></Faqpost>
-      <Fragenpost></Fragenpost>
-      <Updatepost></Updatepost>
       <Footer></Footer>
     </>
   );

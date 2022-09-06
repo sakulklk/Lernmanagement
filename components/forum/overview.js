@@ -13,26 +13,71 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 export default function Overview() {
   return (
-    <Grid container spacing={3}>
-      <Grid item xs={3}>
-        <Button variant="text" style={{ textAlign: 'center' }}>
+    <Grid container spacing={2}>
+      <Grid item xs={2} style={{ textAlign: 'center' }}>
+        <Button
+          variant="text"
+          href="./faqposts"
+          style={{ textAlign: 'center' }}
+        >
           FAQ
         </Button>
       </Grid>
-      <Grid item xs={3}>
-        <Button variant="text" style={{ textAlign: 'center' }}>
-          Bugfixes
-        </Button>
-      </Grid>
-      <Grid item xs={3}>
-        <Button variant="text" style={{ textAlign: 'center' }}>
+
+      <Grid item xs={2}>
+        <Button
+          variant="text"
+          href="./fragenposts"
+          style={{ textAlign: 'center' }}
+        >
           Fragen
         </Button>
       </Grid>
-      <Grid item xs={3}>
-        <Button variant="text" style={{ textAlign: 'center' }}>
-          Updates
+      <Grid item xs={2}>
+        <Button
+          variant="text"
+          href="./updateposts"
+          style={{ textAlign: 'center' }}
+        >
+          Kommentare zu Updates
         </Button>
+      </Grid>
+      <Grid item xs={2} style={{ textAlign: 'center' }}>
+        <Button
+          variant="text"
+          href="./forumadmin"
+          style={{ textAlign: 'center' }}
+        >
+          +
+        </Button>
+      </Grid>
+      <Grid item xs={12}>
+        <List>
+          <ListItem key="1">
+            <Grid container>
+              <Grid item xs={2}>
+                <ListItemText align="left" primary="Typ"></ListItemText>
+              </Grid>
+              <Grid item xs={3}>
+                <ListItemText align="left" primary="Titel"></ListItemText>
+              </Grid>
+              <Grid item xs={5}>
+                <ListItemText align="left" primary=""></ListItemText>
+              </Grid>
+              <Grid item xs={2} style={{ textAlign: 'center' }}>
+                <Button
+                  variant="contained"
+                  align="left"
+                  href="./neupost"
+                  style={{ textAlign: 'center' }}
+                >
+                  Neu
+                </Button>
+              </Grid>
+            </Grid>
+          </ListItem>
+        </List>
+        <Divider />
       </Grid>
     </Grid>
   );
