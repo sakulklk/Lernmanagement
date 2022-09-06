@@ -8,6 +8,8 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import LockIcon from '@mui/icons-material/Lock';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
 
 const actions = [
   { icon: <LockIcon />, name: 'nicht freigeschalten!' },
@@ -80,24 +82,29 @@ export default function CustomizedAccordions() {
       text-align: center;
     }
     .hover:hover{
-      color: #0288d1;
+      color: white;
       text-decoration: underline;
     }
       `}</style>
-      <Typography>
-        <h1> Wilkommen auf der JavaScript Lernseite! </h1>
-        <h3>
-          {' '}
-          Melde Dich bitte an um alle Funktionen nutzen zu können! Dein
-          Fortschritt geht bei schließen der Seite sonst <b>verloren</b> und Du
-          musst alle Kapitel erneut freischalten!
-          <br />
-          <a href="signUp" className="hover">
-            {' '}
-            Hier geht es zum Login!
-          </a>
-        </h3>
-      </Typography>
+
+      <h1> Wilkommen auf der JavaScript Lernseite! </h1>
+      <Stack sx={{ width: '100%' }} spacing={2}>
+        <Alert variant="filled" severity="info">
+          <Typography>
+            <h3>
+              {' '}
+              Melde Dich bitte an um alle Funktionen nutzen zu können! Dein
+              Fortschritt geht bei schließen der Seite sonst <b>verloren</b> und
+              Du musst alle Kapitel erneut freischalten!
+              <br />
+              <a href="signUp" className="hover">
+                {' '}
+                Hier geht es zum Login!
+              </a>
+            </h3>
+          </Typography>
+        </Alert>
+      </Stack>
       <div className="acc">
         <Accordion
           expanded={expanded === 'panel1'}
