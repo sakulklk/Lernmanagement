@@ -17,6 +17,8 @@ import Collapse from '@mui/material/Collapse';
 import CloseIcon from '@mui/icons-material/Close';
 import Box from '@mui/material/Box';
 import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
+
 
 const actions = [
   { icon: <LockIcon />, name: 'nicht freigeschalten!' },
@@ -133,12 +135,15 @@ export default function CustomizedAccordions() {
                   Hier geht es zum Login!
                 </a>
               </h3>
-              <Checkbox
+              <FormControlLabel
+          control={<Checkbox value="remember" color="primary" />}
+          label="Diese Info nicht mehr anzeigen"
+        />
+              {/* <Checkbox
                 checked={checked}
                 onChange={handleChangeCheck}
                 inputProps={{ 'aria-label': 'controlled' }}
-                input="annnn"
-              />
+              /> */}
             </Typography>
           </Alert>
         </Collapse>
