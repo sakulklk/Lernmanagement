@@ -50,7 +50,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
-export default function CustomizedAccordions() {
+export default function CustomizedAccordions1() {
   const [expanded, setExpanded] = React.useState('panel1');
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -88,9 +88,7 @@ export default function CustomizedAccordions() {
         <h1> Wilkommen auf der JavaScript Lernseite! </h1>
         <h3>
           {' '}
-          Melde Dich bitte an um alle Funktionen nutzen zu können! Dein
-          Fortschritt geht bei schließen der Seite sonst <b>verloren</b> und Du
-          musst alle Kapitel erneut freischalten!
+          Hallo Alex! Hier kannst du die Programmiersprache Javascript lernen.
           <br />
           <a href="signUp" className="hover">
             {' '}
