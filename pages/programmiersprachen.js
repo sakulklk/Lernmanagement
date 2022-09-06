@@ -1,14 +1,14 @@
 import NavBar from '../components/NavBar.js';
 import Footer from '../components/Footer.js';
 
-// import LearnProgLangLoggedIn from '../components/ProgrammingLanguages/LearnProgLang.js';
-
 export default function Test() {
   return (
     <>
       <NavBar></NavBar>
-      <p> Welche Programmiersprache möchtest du lernen </p>
-
+      <p>Hier entsteht die Programmiersprachen-Seite</p>
+      <a href="kapitelJS_na"> Test JS</a>
+      <br />
+      <a href="kapitelJSD"> Test JS Dozent</a>
       <Footer></Footer>
     </>
   );
