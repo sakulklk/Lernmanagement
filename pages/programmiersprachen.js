@@ -9,6 +9,8 @@ export default function Test() {
       <a href="kapitelJS_na"> Test JS</a>
       <br />
       <a href="kapitelJSD"> Test JS Dozent</a>
+      <br />
+      <a href="inhaltJSK1"> Test Inhalt</a>
       <Footer></Footer>
     </>
   );
