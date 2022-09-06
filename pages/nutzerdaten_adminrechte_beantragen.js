@@ -12,6 +12,7 @@ import Field from '../components/admin/Bestätigungscode.js';
 import BasicButtons from '../components/admin/BestätigenButton.js';
 import BasicBreadcrumbs from '../components/admin/Breadcrumb.js';
 import Grid from '@mui/material/Grid';
+import BasicBreadcrumbs1 from '../components/admin/Breadcrumb.js';
 
 // deine Namen sind nicht sehr gut würde ziemlich vieles umbenennen ( breadcrumbs ist zB ein guter Name, da man gleich weißt was es ist bei den anderen Sachen keine Ahnung)
 // habe Textfield in Header umbenannt und basictextfield in mail
@@ -21,6 +22,8 @@ export default function adminrechte() {
   return (
     <>
       <NavBar></NavBar>
+      <BasicBreadcrumbs1></BasicBreadcrumbs1>
+
       <div className="bread">
         <style jsx>{`
       .bread{
