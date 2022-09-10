@@ -7,17 +7,19 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Uebersicht from '../Uebersicht/acc.js';
 
 export default function Sidemenu() {
   return (
     <div>
+      <Uebersicht />
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Kapitel 1</Typography>
+          <Typography>1 - Grundlagen</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <MenuList>
@@ -27,13 +29,13 @@ export default function Sidemenu() {
               href="/nutzerdaten_kontoinformationen"
             >
               <Typography variant="inherit" noWrap>
-                1
+                Hello, World!
               </Typography>
             </MenuItem>
 
             <MenuItem component={Link} href="/nutzerdaten_daten_aendern">
               <Typography variant="inherit" noWrap>
-                2
+                Grundbegriffe
               </Typography>
             </MenuItem>
             <MenuItem
@@ -41,7 +43,7 @@ export default function Sidemenu() {
               href="/nutzerdaten_adminrechte_beantragen"
             >
               <Typography variant="inherit" noWrap>
-                3
+                Variablen und Konstanten
               </Typography>
             </MenuItem>
           </MenuList>
@@ -51,7 +53,25 @@ export default function Sidemenu() {
             href="/nutzerdaten_kontoinformationen"
           >
             <Typography variant="inherit" noWrap>
-              4
+              Ein- und Ausgabe
+            </Typography>
+          </MenuItem>
+          <MenuItem
+            MenuItem
+            component={Link}
+            href="/nutzerdaten_kontoinformationen"
+          >
+            <Typography variant="inherit" noWrap>
+              Datentypen
+            </Typography>
+          </MenuItem>
+          <MenuItem
+            MenuItem
+            component={Link}
+            href="/nutzerdaten_kontoinformationen"
+          >
+            <Typography variant="inherit" noWrap>
+              Übungen
             </Typography>
           </MenuItem>
         </AccordionDetails>

@@ -13,7 +13,7 @@ export default function Sidemenu() {
     <MenuList>
       <MenuItem MenuItem component={Link} href="/uebersichtJS">
         <Typography variant="inherit" noWrap>
-          Übersicht
+          JavaScript
         </Typography>
       </MenuItem>
     </MenuList>
