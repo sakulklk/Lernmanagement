@@ -17,7 +17,7 @@ export default function Sidemenu() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Accordion 1</Typography>
+          <Typography>Kapitel 1</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <MenuList>
@@ -27,25 +27,33 @@ export default function Sidemenu() {
               href="/nutzerdaten_kontoinformationen"
             >
               <Typography variant="inherit" noWrap>
-                Kontoinformationen und Statistiken
+                1
               </Typography>
             </MenuItem>
 
             <MenuItem component={Link} href="/nutzerdaten_daten_aendern">
               <Typography variant="inherit" noWrap>
-                Daten ändern
+                2
               </Typography>
             </MenuItem>
-            <Divider />
             <MenuItem
               component={Link}
               href="/nutzerdaten_adminrechte_beantragen"
             >
               <Typography variant="inherit" noWrap>
-                Adminrechte beantragen
+                3
               </Typography>
             </MenuItem>
           </MenuList>
+          <MenuItem
+            MenuItem
+            component={Link}
+            href="/nutzerdaten_kontoinformationen"
+          >
+            <Typography variant="inherit" noWrap>
+              4
+            </Typography>
+          </MenuItem>
         </AccordionDetails>
       </Accordion>
     </div>
