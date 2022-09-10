@@ -1,16 +1,7 @@
 import * as React from 'react';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import MenuList from '@mui/material/MenuList';
-import ButtonGroup from '@mui/material/ButtonGroup';
-import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
-import ListItemText from '@mui/material/ListItemText';
-import Divider from '@mui/material/Divider';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
 import Link from '@mui/material/Link';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -29,7 +20,6 @@ export default function Sidemenu() {
           <Typography>Accordion 1</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          {/* <Paper elevation={5}> */}
           <MenuList>
             <MenuItem
               MenuItem
@@ -56,7 +46,6 @@ export default function Sidemenu() {
               </Typography>
             </MenuItem>
           </MenuList>
-          {/* </Paper> */}
         </AccordionDetails>
       </Accordion>
     </div>
