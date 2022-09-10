@@ -33,19 +33,13 @@ export default function StatusBar() {
               width: 100%;
               height: 312px;
             }
-
-            .linearProgress{
-              height: 312px;
-              width: 100%;
-            }
-        
             `}</style>
       <div className="bar">
         <LinearProgress
+          style={{ height: '9px' }}
           variant="determinate"
           value={progress}
           color="secondary"
-          className="linearProgress"
         />
       </div>
     </div>
