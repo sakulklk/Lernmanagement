@@ -11,8 +11,6 @@ export default function Test() {
       <a href="kapitelJSD"> Test JS Dozent</a>
       <br />
       <a href="inhaltJSK1"> Test Inhalt</a>
-      <br />
-      <a href="test"> Test</a>
       <Footer></Footer>
     </>
   );

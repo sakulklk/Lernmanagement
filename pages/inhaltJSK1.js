@@ -1,9 +1,9 @@
 import NavBar from '../components/NavBar.js';
 import Footer from '../components/Footer.js';
-import SideMenu from '../components/inhalt/accJSK1.js';
+import SideMenu from '../components/inhalt/K1/accJSK1.js';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Content from '../components/inhalt/inhaltJSK1.js';
+import Content from '../components/inhalt/K1/inhaltJSK1.js';
 
 export default function Test() {
   return (
