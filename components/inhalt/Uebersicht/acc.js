@@ -10,12 +10,21 @@ import Link from '@mui/material/Link';
 
 export default function Sidemenu() {
   return (
-    <MenuList>
-      <MenuItem MenuItem component={Link} href="/uebersichtJS">
-        <Typography variant="inherit" noWrap>
-          JavaScript
-        </Typography>
-      </MenuItem>
-    </MenuList>
+    <div className="text">
+      <style jsx>{`
+            .text{
+              position: fixed;
+              width: 15%;
+            }
+            `}</style>
+
+      <MenuList>
+        <MenuItem MenuItem component={Link} href="/uebersichtJS">
+          <Typography variant="inherit" noWrap>
+            JavaScript
+          </Typography>
+        </MenuItem>
+      </MenuList>
+    </div>
   );
 }

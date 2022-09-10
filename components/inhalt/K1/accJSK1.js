@@ -11,8 +11,15 @@ import Uebersicht from '../Uebersicht/acc.js';
 
 export default function Sidemenu() {
   return (
-    <div>
+    <div className="text">
       <Uebersicht />
+      <style jsx>{`
+            .text{
+              position: fixed;
+              width: 15%;
+            }
+            `}</style>
+
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}

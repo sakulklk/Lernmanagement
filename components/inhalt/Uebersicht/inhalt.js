@@ -22,6 +22,11 @@ export default function Sidemenu() {
             h2{
               font-weight: 600;
               font-size: 32px;
+              margin-bottom: 9px;
+              margin-top: 35px;
+            }
+            p{
+              line-height: 1.6;
             }
             `}</style>
       <div className="content">
