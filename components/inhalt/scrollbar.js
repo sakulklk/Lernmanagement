@@ -31,7 +31,6 @@ export default function StatusBar() {
             .bar{
               position: fixed;
               width: 100%;
-              height: 312px;
             }
             `}</style>
       <div className="bar">
