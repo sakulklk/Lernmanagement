@@ -10,6 +10,11 @@ export default function Sidemenu() {
               width: 100%;
               height: 312px;
             }
+            .content{
+              margin-right: 50px;
+              margin-left: 50px;
+
+            }
             `}</style>
       <div className="content">
         <h3>Scroll Down to See The Effect</h3>

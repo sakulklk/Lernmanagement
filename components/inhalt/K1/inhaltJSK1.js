@@ -13,6 +13,8 @@ export default function Sidemenu() {
 
             .content{
               margin-right: 50px;
+              margin-left: 50px;
+
             }
             `}</style>
       <div className="content">
