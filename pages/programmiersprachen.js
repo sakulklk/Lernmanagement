@@ -12,7 +12,7 @@ export default function Test() {
       <br />
       <a href="JSK1"> Test Inhalt</a>
       <br />
-      <a href="übersichtJS"> Test Inhalt</a>
+      <a href="uebersichtJS"> Test Übersicht</a>
       <Footer></Footer>
     </>
   );
