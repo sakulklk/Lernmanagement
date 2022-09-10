@@ -4,21 +4,24 @@ import SideMenu from '../components/inhalt/K1/accJSK1.js';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Content from '../components/inhalt/K1/inhaltJSK1.js';
+import ScrollBar from '../components/inhalt/scrollbar.js';
 
 export default function Test() {
   return (
     <>
       <NavBar></NavBar>
-      <Box sx={{ p: 2 }}>
-        <Grid container spacing={1}>
-          <Grid item xs={2}>
+      <Grid container spacing={1}>
+        <Grid item xs={2}>
+          <Box sx={{ p: 2 }}>
             <SideMenu></SideMenu>
-          </Grid>
-          <Grid item xs={10}>
-            <Content></Content>
-          </Grid>
+          </Box>
         </Grid>
-      </Box>
+        <Grid item xs={10}>
+          <ScrollBar></ScrollBar>
+          <Content></Content>
+        </Grid>
+      </Grid>
+
       <Footer></Footer>
     </>
   );

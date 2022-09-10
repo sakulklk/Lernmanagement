@@ -10,7 +10,9 @@ export default function Test() {
       <br />
       <a href="kapitelJSD"> Test JS Dozent</a>
       <br />
-      <a href="inhaltJSK1"> Test Inhalt</a>
+      <a href="JSK1"> Test Inhalt</a>
+      <br />
+      <a href="übersichtJS"> Test Inhalt</a>
       <Footer></Footer>
     </>
   );
