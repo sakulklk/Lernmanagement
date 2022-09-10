@@ -5,6 +5,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Content from '../components/inhalt/K1/inhaltJSK1.js';
 import ScrollBar from '../components/inhalt/scrollbar.js';
+// import Uebersicht from '../components/inhalt/Uebersicht/acc.js';
 
 export default function Test() {
   return (
@@ -13,6 +14,7 @@ export default function Test() {
       <Grid container spacing={1}>
         <Grid item xs={2}>
           <Box sx={{ p: 2 }}>
+            {/* <Uebersicht></Uebersicht> */}
             <SideMenu></SideMenu>
           </Box>
         </Grid>

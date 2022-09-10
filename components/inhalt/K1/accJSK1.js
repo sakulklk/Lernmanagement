@@ -12,7 +12,7 @@ import Uebersicht from '../Uebersicht/acc.js';
 export default function Sidemenu() {
   return (
     <div className="text">
-      <Uebersicht />
+      
       <style jsx>{`
             .text{
               position: fixed;
