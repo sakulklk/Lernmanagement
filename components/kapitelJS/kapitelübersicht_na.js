@@ -16,7 +16,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import Box from '@mui/material/Box';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import Tabs from '@mui/material/Tabs';
+import Tabs, { tabsClasses } from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
@@ -65,7 +65,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export default function CustomizedAccordions() {
-  const [expanded, setExpanded] = React.useState('panel1');
+  const [expanded, setExpanded] = React.useState(0);
 
   const [open, setOpen] = React.useState(true);
 
@@ -78,7 +78,7 @@ export default function CustomizedAccordions() {
     setExpanded(newExpanded ? panel : false);
   };
 
-  const [value, setValue] = React.useState('1');
+  const [value, setValue] = React.useState(0);
 
   const handleChangeTabs = (event, newValue) => {
     setValue(newValue);
@@ -189,6 +189,39 @@ export default function CustomizedAccordions() {
       </Stack> */}
       <div className="acc">
         <Accordion
+          expanded={expanded === 'panel0'}
+          onChange={handleChangePanel('panel0')}
+        >
+          <AccordionSummary aria-controls="panel0d-content" id="panel0d-header">
+            <Typography>Einführung in JavaScript</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              <Box sx={{ width: '100%', typography: 'body1' }}>
+                <TabContext value={value}>
+                  <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                    <TabList
+                      onChange={handleChangeTabs}
+                      variant="scrollable"
+                      aria-label="lab API tabs example"
+                    >
+                      <Tab label="Geschichte von JavaScript" value="1" />
+                    </TabList>
+                  </Box>
+                  <TabPanel value="1">
+                    Geschichte von JavaScript. Interessiert? Na dann lies Dich
+                    doch mal ein!
+                  </TabPanel>
+                </TabContext>
+              </Box>
+            </Typography>
+            <br />
+            <Button id="button" variant="contained" href={'/uebersichtJS'}>
+              Erfahre etwas über die Geschichte von Javascript!{' '}
+            </Button>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
           expanded={expanded === 'panel1'}
           onChange={handleChangePanel('panel1')}
         >
@@ -201,18 +234,21 @@ export default function CustomizedAccordions() {
               <Box sx={{ width: '100%', typography: 'body1' }}>
                 <TabContext value={value}>
                   <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <TabList
+                    <Tabs
+                      value={value}
                       onChange={handleChangeTabs}
-                      centered
-                      aria-label="lab API tabs example"
+                      variant="scrollable"
+                      scrollButtons
+                      allowScrollButtonsMobile
+                      aria-label="scrollable force tabs example"
                     >
                       <Tab label="Hello, World!" value="1" />
                       <Tab label="Grundbegriffe" value="2" />
                       <Tab label="Variablen und Konstanten" value="3" />
-                      <Tab label="Ein- und Ausgabe" value="4" />
+                      <Tab label="Ein- und Ausgaben" value="4" />
                       <Tab label="Datentypen" value="5" />
                       <Tab label="Abfrage" value="6" />
-                    </TabList>
+                    </Tabs>
                   </Box>
                   <TabPanel value="1">Inhalt</TabPanel>
                   <TabPanel value="2">Inhalt </TabPanel>
@@ -230,8 +266,9 @@ export default function CustomizedAccordions() {
               id="button"
               variant="contained"
               startIcon={<LockOpenIcon />}
+              href={'/uebersichtJS'}
             >
-              Contained
+              Fange an zu lernen!
             </Button>
           </AccordionDetails>
         </Accordion>
@@ -248,31 +285,36 @@ export default function CustomizedAccordions() {
               <Box sx={{ width: '100%', typography: 'body1' }}>
                 <TabContext value={value}>
                   <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <TabList
+                    <Tabs
+                      value={value}
                       onChange={handleChangeTabs}
-                      centered
-                      aria-label="lab API tabs example"
+                      variant="scrollable"
+                      scrollButtons
+                      allowScrollButtonsMobile
+                      aria-label="scrollable force tabs example"
                     >
-                      <Tab label="Item One" value="1" />
-                      <Tab label="Item Two" value="2" />
-                      <Tab label="Item Three" value="3" />
-                      <Tab label="Item One" value="4" />
-                      <Tab label="Item Two" value="5" />
-                      <Tab label="Item Three" value="6" />
-                    </TabList>
+                      <Tab label="Hello, World!" value="1" />
+                      <Tab label="Grundbegriffe" value="2" />
+                      <Tab label="Variablen und Konstanten" value="3" />
+                      <Tab label="Ein- und Ausgaben" value="4" />
+                      <Tab label="Datentypen" value="5" />
+                      <Tab label="Abfrage" value="6" />
+                    </Tabs>
                   </Box>
-                  <TabPanel value="1">Item One</TabPanel>
-                  <TabPanel value="2">Item Two</TabPanel>
-                  <TabPanel value="3">Item Three</TabPanel>
-                  <TabPanel value="4">Item One</TabPanel>
-                  <TabPanel value="5">Item Two</TabPanel>
-                  <TabPanel value="6">Item Three</TabPanel>
+                  <TabPanel value="1">Inhalt</TabPanel>
+                  <TabPanel value="2">Inhalt </TabPanel>
+                  <TabPanel value="3">Inhalt </TabPanel>
+                  <TabPanel value="4">Inhalt </TabPanel>
+                  <TabPanel value="5">Inhalt </TabPanel>
+                  <TabPanel value="6">
+                    Übungen die weiterführen zum nächsten Kapitel{' '}
+                  </TabPanel>
                 </TabContext>
               </Box>
             </Typography>
             <br />
             <Button id="button" variant="contained" startIcon={<LockIcon />}>
-              Contained
+              Bitte bearbeite erst das vorherige Kapitel!
             </Button>
           </AccordionDetails>
         </Accordion>
@@ -289,31 +331,36 @@ export default function CustomizedAccordions() {
               <Box sx={{ width: '100%', typography: 'body1' }}>
                 <TabContext value={value}>
                   <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <TabList
+                    <Tabs
+                      value={value}
                       onChange={handleChangeTabs}
-                      centered
-                      aria-label="lab API tabs example"
+                      variant="scrollable"
+                      scrollButtons
+                      allowScrollButtonsMobile
+                      aria-label="scrollable force tabs example"
                     >
-                      <Tab label="Item One" value="1" />
-                      <Tab label="Item Two" value="2" />
-                      <Tab label="Item Three" value="3" />
-                      <Tab label="Item One" value="4" />
-                      <Tab label="Item Two" value="5" />
-                      <Tab label="Item Three" value="6" />
-                    </TabList>
+                      <Tab label="Hello, World!" value="1" />
+                      <Tab label="Grundbegriffe" value="2" />
+                      <Tab label="Variablen und Konstanten" value="3" />
+                      <Tab label="Ein- und Ausgaben" value="4" />
+                      <Tab label="Datentypen" value="5" />
+                      <Tab label="Abfrage" value="6" />
+                    </Tabs>
                   </Box>
-                  <TabPanel value="1">Item One</TabPanel>
-                  <TabPanel value="2">Item Two</TabPanel>
-                  <TabPanel value="3">Item Three</TabPanel>
-                  <TabPanel value="4">Item One</TabPanel>
-                  <TabPanel value="5">Item Two</TabPanel>
-                  <TabPanel value="6">Item Three</TabPanel>
+                  <TabPanel value="1">Inhalt</TabPanel>
+                  <TabPanel value="2">Inhalt </TabPanel>
+                  <TabPanel value="3">Inhalt </TabPanel>
+                  <TabPanel value="4">Inhalt </TabPanel>
+                  <TabPanel value="5">Inhalt </TabPanel>
+                  <TabPanel value="6">
+                    Übungen die weiterführen zum nächsten Kapitel{' '}
+                  </TabPanel>
                 </TabContext>
               </Box>
             </Typography>
             <br />
             <Button id="button" variant="contained" startIcon={<LockIcon />}>
-              Contained
+              Bitte bearbeite erst das vorherige Kapitel!
             </Button>
           </AccordionDetails>
         </Accordion>
@@ -330,31 +377,36 @@ export default function CustomizedAccordions() {
               <Box sx={{ width: '100%', typography: 'body1' }}>
                 <TabContext value={value}>
                   <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <TabList
+                    <Tabs
+                      value={value}
                       onChange={handleChangeTabs}
-                      centered
-                      aria-label="lab API tabs example"
+                      variant="scrollable"
+                      scrollButtons
+                      allowScrollButtonsMobile
+                      aria-label="scrollable force tabs example"
                     >
-                      <Tab label="Item One" value="1" />
-                      <Tab label="Item Two" value="2" />
-                      <Tab label="Item Three" value="3" />
-                      <Tab label="Item One" value="4" />
-                      <Tab label="Item Two" value="5" />
-                      <Tab label="Item Three" value="6" />
-                    </TabList>
+                      <Tab label="Hello, World!" value="1" />
+                      <Tab label="Grundbegriffe" value="2" />
+                      <Tab label="Variablen und Konstanten" value="3" />
+                      <Tab label="Ein- und Ausgaben" value="4" />
+                      <Tab label="Datentypen" value="5" />
+                      <Tab label="Abfrage" value="6" />
+                    </Tabs>
                   </Box>
-                  <TabPanel value="1">Item One</TabPanel>
-                  <TabPanel value="2">Item Two</TabPanel>
-                  <TabPanel value="3">Item Three</TabPanel>
-                  <TabPanel value="4">Item One</TabPanel>
-                  <TabPanel value="5">Item Two</TabPanel>
-                  <TabPanel value="6">Item Three</TabPanel>
+                  <TabPanel value="1">Inhalt</TabPanel>
+                  <TabPanel value="2">Inhalt </TabPanel>
+                  <TabPanel value="3">Inhalt </TabPanel>
+                  <TabPanel value="4">Inhalt </TabPanel>
+                  <TabPanel value="5">Inhalt </TabPanel>
+                  <TabPanel value="6">
+                    Übungen die weiterführen zum nächsten Kapitel{' '}
+                  </TabPanel>
                 </TabContext>
               </Box>
             </Typography>
             <br />
             <Button id="button" variant="contained" startIcon={<LockIcon />}>
-              Contained
+              Bitte bearbeite erst das vorherige Kapitel!
             </Button>
           </AccordionDetails>
         </Accordion>
@@ -371,31 +423,36 @@ export default function CustomizedAccordions() {
               <Box sx={{ width: '100%', typography: 'body1' }}>
                 <TabContext value={value}>
                   <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <TabList
+                    <Tabs
+                      value={value}
                       onChange={handleChangeTabs}
-                      centered
-                      aria-label="lab API tabs example"
+                      variant="scrollable"
+                      scrollButtons
+                      allowScrollButtonsMobile
+                      aria-label="scrollable force tabs example"
                     >
-                      <Tab label="Item One" value="1" />
-                      <Tab label="Item Two" value="2" />
-                      <Tab label="Item Three" value="3" />
-                      <Tab label="Item One" value="4" />
-                      <Tab label="Item Two" value="5" />
-                      <Tab label="Item Three" value="6" />
-                    </TabList>
+                      <Tab label="Hello, World!" value="1" />
+                      <Tab label="Grundbegriffe" value="2" />
+                      <Tab label="Variablen und Konstanten" value="3" />
+                      <Tab label="Ein- und Ausgaben" value="4" />
+                      <Tab label="Datentypen" value="5" />
+                      <Tab label="Abfrage" value="6" />
+                    </Tabs>
                   </Box>
-                  <TabPanel value="1">Item One</TabPanel>
-                  <TabPanel value="2">Item Two</TabPanel>
-                  <TabPanel value="3">Item Three</TabPanel>
-                  <TabPanel value="4">Item One</TabPanel>
-                  <TabPanel value="5">Item Two</TabPanel>
-                  <TabPanel value="6">Item Three</TabPanel>
+                  <TabPanel value="1">Inhalt</TabPanel>
+                  <TabPanel value="2">Inhalt </TabPanel>
+                  <TabPanel value="3">Inhalt </TabPanel>
+                  <TabPanel value="4">Inhalt </TabPanel>
+                  <TabPanel value="5">Inhalt </TabPanel>
+                  <TabPanel value="6">
+                    Übungen die weiterführen zum nächsten Kapitel{' '}
+                  </TabPanel>
                 </TabContext>
               </Box>
             </Typography>
             <br />
             <Button id="button" variant="contained" startIcon={<LockIcon />}>
-              Contained
+              Bitte bearbeite erst das vorherige Kapitel!
             </Button>
           </AccordionDetails>
         </Accordion>
@@ -405,15 +462,39 @@ export default function CustomizedAccordions() {
         >
           <AccordionSummary aria-controls="panel6d-content" id="panel6d-header">
             <LockIcon></LockIcon>
-            <Typography>Collapsible Group Item #6</Typography>
+            <Typography>Collapsible Group Item #5</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
+              <Box sx={{ width: '100%', typography: 'body1' }}>
+                <TabContext value={value}>
+                  <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                    <Tabs
+                      value={value}
+                      onChange={handleChangeTabs}
+                      variant="scrollable"
+                      scrollButtons
+                      allowScrollButtonsMobile
+                      aria-label="scrollable force tabs example"
+                    >
+                      <Tab label="Hello, World!" value="1" />
+                      <Tab label="Grundbegriffe" value="2" />
+                      <Tab label="Variablen und Konstanten" value="3" />
+                      <Tab label="Ein- und Ausgaben" value="4" />
+                      <Tab label="Datentypen" value="5" />
+                      <Tab label="Abfrage" value="6" />
+                    </Tabs>
+                  </Box>
+                  <TabPanel value="1">Inhalt</TabPanel>
+                  <TabPanel value="2">Inhalt </TabPanel>
+                  <TabPanel value="3">Inhalt </TabPanel>
+                  <TabPanel value="4">Inhalt </TabPanel>
+                  <TabPanel value="5">Inhalt </TabPanel>
+                  <TabPanel value="6">
+                    Übungen die weiterführen zum nächsten Kapitel{' '}
+                  </TabPanel>
+                </TabContext>
+              </Box>
             </Typography>
             <br />
             <Button id="button" variant="contained" startIcon={<LockIcon />}>
