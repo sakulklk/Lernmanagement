@@ -2,7 +2,6 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
-import Link from 'next/Link';
 
 function handleClick(event) {
   event.preventDefault();
@@ -14,12 +13,18 @@ export default function BasicBreadcrumbs1() {
     <div role="presentation" onClick={handleClick}>
       <Breadcrumbs aria-label="breadcrumb">
         <Link underline="hover" color="inherit" href="/">
-          MUI
+          Home
+        </Link>
+        <Link
+          underline="hover"
+          color="inherit"
+          href="nutzerdaten_kontoinformationen"
+        >
+          Nutzerdaten
         </Link>
         <Link underline="hover" color="inherit" href="/">
-          Core
+          Adminrechte beantragen
         </Link>
-        <Typography color="text.primary">Breadcrumbs</Typography>
       </Breadcrumbs>
     </div>
   );
