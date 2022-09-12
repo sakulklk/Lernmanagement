@@ -482,16 +482,11 @@ export default function CustomizedAccordions() {
               Contained
             </Button>
           </AccordionDetails>
-        </Accordion>
-
+        </Accordion>{' '}
         <Accordion
           expanded={expanded === 'panel7'}
           onChange={handleChangePanel('panel7')}
         >
-          {' '}
-          <Button id="button" variant="contained" startIcon={<LockIcon />}>
-            Contained
-          </Button>{' '}
           <AccordionSummary aria-controls="panel7d-content" id="panel7d-header">
             <LockIcon></LockIcon>
             <Typography>7 - Code organisieren</Typography>
