@@ -198,7 +198,8 @@ export default function CustomizedAccordions() {
                 <TabContext value={value}>
                   <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                     <TabList
-                      onChange={handleChange}
+                      onChange={handleChangeTabs}
+                      centered
                       aria-label="lab API tabs example"
                     >
                       <Tab label="Item One" value="1" />
