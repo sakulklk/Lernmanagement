@@ -8,7 +8,7 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import LockIcon from '@mui/icons-material/Lock';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
-import HorizontalNonLinearStepper from 'components/Menu.js';
+import HorizontalNonLinearStepper from '../components/kapitelJS/menu.js';
 
 const actions = [
   { icon: <LockIcon />, name: 'nicht freigeschalten!' },
@@ -107,7 +107,9 @@ export default function CustomizedAccordions1() {
             <Typography>Kapitel 1 </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography></Typography>
+            <Typography>
+              <HorizontalNonLinearStepper></HorizontalNonLinearStepper>
+            </Typography>
             <br />
           </AccordionDetails>
         </Accordion>
