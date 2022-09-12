@@ -21,6 +21,7 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
+import Stack from '@mui/material/Stack';
 
 const actions = [
   { icon: <LockIcon />, name: 'nicht freigeschalten!' },
@@ -102,8 +103,9 @@ export default function CustomizedAccordions() {
 
     h3{
       font-weight: lighter;
-      padding-left: 25px;
+      margin-left: auto;
       text-align: center;
+      margin-rigth: auto;
     }
     .hover:hover{
       color: #0288d1;
@@ -112,7 +114,13 @@ export default function CustomizedAccordions() {
       `}</style>
 
       <h1> Wilkommen auf der JavaScript Lernseite! </h1>
-      <Box sx={{ width: '100%' }}>
+      {/* <Box sx={{ width: '100%' }} alignItems="center" justifyContent="center"> */}
+      <Stack
+        sx={{ width: '100%' }}
+        alignItems="center"
+        justifyContent="center"
+        fullWidth
+      >
         <Collapse in={open}>
           <Alert
             severity="info"
@@ -129,17 +137,16 @@ export default function CustomizedAccordions() {
               </IconButton>
             }
             sx={{ mb: 2 }}
+            fullWidth
           >
             <Typography>
               <AlertTitle>Info</AlertTitle>
               <h3>
-                {' '}
                 Melde Dich bitte an um alle Funktionen nutzen zu können!
-                <br /> Dein Fortschritt geht bei schließen der Seite sonst{' '}
-                <b>verloren</b> und Du musst alle Kapitel erneut freischalten!
+                <br /> Dein Fortschritt geht bei schließen der Seite sonst
+                <b> verloren</b> und Du musst alle Kapitel erneut freischalten!
                 <br />
                 <a href="signUp" className="hover">
-                  {' '}
                   Hier geht es zum Login!
                 </a>
               </h3>
@@ -164,7 +171,8 @@ export default function CustomizedAccordions() {
         >
           Info
         </Button> */}
-      </Box>
+        {/* </Box> */}
+      </Stack>
       {/* <Stack sx={{ width: '100%' }} spacing={2}>
         <Alert severity="info">
           <Typography>
@@ -172,7 +180,8 @@ export default function CustomizedAccordions() {
             <h3>
               {' '}
               Melde Dich bitte an um alle Funktionen nutzen zu können! Dein
-              Fortschritt geht bei schließen der Seite sonst <b>verloren</b> und
+              Fortschritt geht bei
+               schließen der Seite sonst <b>verloren</b> und
               Du musst alle Kapitel erneut freischalten!
               <br />
               <a href="signUp" className="hover">
