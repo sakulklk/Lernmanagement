@@ -5,7 +5,7 @@ import ÜbersichtDozenten from '../components/kapitelJS/kapitelDozent.js';
 export default function KapitelJS() {
   return (
     <>
-      <div style={{ paddingBottom: '50px' }}>
+      <div style={{ paddingBottom: '65px' }}>
         <NavBar></NavBar>
         <ÜbersichtDozenten></ÜbersichtDozenten>
       </div>
