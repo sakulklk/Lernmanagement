@@ -205,11 +205,17 @@ export default function CustomizedAccordions() {
                       <Tab label="Item One" value="1" />
                       <Tab label="Item Two" value="2" />
                       <Tab label="Item Three" value="3" />
+                      <Tab label="Item One" value="4" />
+                      <Tab label="Item Two" value="5" />
+                      <Tab label="Item Three" value="6" />
                     </TabList>
                   </Box>
                   <TabPanel value="1">Item One</TabPanel>
                   <TabPanel value="2">Item Two</TabPanel>
                   <TabPanel value="3">Item Three</TabPanel>
+                  <TabPanel value="4">Item One</TabPanel>
+                  <TabPanel value="5">Item Two</TabPanel>
+                  <TabPanel value="6">Item Three</TabPanel>
                 </TabContext>
               </Box>
             </Typography>
