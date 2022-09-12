@@ -115,12 +115,7 @@ export default function CustomizedAccordions() {
 
       <h1> Wilkommen auf der JavaScript Lernseite! </h1>
       {/* <Box sx={{ width: '100%' }} alignItems="center" justifyContent="center"> */}
-      <Stack
-        sx={{ width: '100%' }}
-        alignItems="center"
-        justifyContent="center"
-        fullWidth
-      >
+      <Stack sx={{ width: '100%' }} alignItems="center" justifyContent="center">
         <Collapse in={open}>
           <Alert
             severity="info"
