@@ -9,19 +9,20 @@ import ScrollBar from '../components/inhalt/scrollbar.js';
 export default function Test() {
   return (
     <>
-      <NavBar></NavBar>
-      <Grid container spacing={1}>
-        <Grid item xs={2}>
-          <Box sx={{ p: 2 }}>
-            <SideMenu></SideMenu>
-          </Box>
+      <div style={{ paddingBottom: '65px' }}>
+        <NavBar></NavBar>
+        <Grid container spacing={1}>
+          <Grid item xs={2}>
+            <Box sx={{ p: 2 }}>
+              <SideMenu></SideMenu>
+            </Box>
+          </Grid>
+          <Grid item xs={10}>
+            <ScrollBar></ScrollBar>
+            <Content></Content>
+          </Grid>
         </Grid>
-        <Grid item xs={10}>
-          <ScrollBar></ScrollBar>
-          <Content></Content>
-        </Grid>
-      </Grid>
-
+      </div>
       <Footer></Footer>
     </>
   );
