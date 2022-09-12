@@ -247,7 +247,7 @@ export default function CustomizedAccordions() {
                       <Tab label="Variablen und Konstanten" value="3" />
                       <Tab label="Ein- und Ausgaben" value="4" />
                       <Tab label="Datentypen" value="5" />
-                      <Tab label="Abfrage" value="6" />
+                      <Tab label="Übungen" value="6" />
                     </Tabs>
                   </Box>
                   <TabPanel value="1">Inhalt</TabPanel>
@@ -278,7 +278,7 @@ export default function CustomizedAccordions() {
         >
           <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
             <LockIcon></LockIcon>
-            <Typography>Collapsible Group Item #2</Typography>
+            <Typography>2 - Logik und Struktur</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
@@ -293,20 +293,16 @@ export default function CustomizedAccordions() {
                       allowScrollButtonsMobile
                       aria-label="scrollable force tabs example"
                     >
-                      <Tab label="Hello, World!" value="1" />
-                      <Tab label="Grundbegriffe" value="2" />
-                      <Tab label="Variablen und Konstanten" value="3" />
-                      <Tab label="Ein- und Ausgaben" value="4" />
-                      <Tab label="Datentypen" value="5" />
-                      <Tab label="Abfrage" value="6" />
+                      <Tab label="Operatoren" value="1" />
+                      <Tab label="Funktionen (Teil 1)" value="2" />
+                      <Tab label="Verzweigungen (if/else)" value="3" />
+                      <Tab label="Übung (Smiley/Sadley)" value="4" />
                     </Tabs>
                   </Box>
                   <TabPanel value="1">Inhalt</TabPanel>
                   <TabPanel value="2">Inhalt </TabPanel>
                   <TabPanel value="3">Inhalt </TabPanel>
-                  <TabPanel value="4">Inhalt </TabPanel>
-                  <TabPanel value="5">Inhalt </TabPanel>
-                  <TabPanel value="6">
+                  <TabPanel value="4">
                     Übungen die weiterführen zum nächsten Kapitel{' '}
                   </TabPanel>
                 </TabContext>
@@ -324,7 +320,7 @@ export default function CustomizedAccordions() {
         >
           <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
             <LockIcon></LockIcon>
-            <Typography>Collapsible Group Item #3</Typography>
+            <Typography>3 - Vertiefung</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
@@ -339,20 +335,13 @@ export default function CustomizedAccordions() {
                       allowScrollButtonsMobile
                       aria-label="scrollable force tabs example"
                     >
-                      <Tab label="Hello, World!" value="1" />
-                      <Tab label="Grundbegriffe" value="2" />
-                      <Tab label="Variablen und Konstanten" value="3" />
-                      <Tab label="Ein- und Ausgaben" value="4" />
-                      <Tab label="Datentypen" value="5" />
-                      <Tab label="Abfrage" value="6" />
+                      <Tab label="Fallunterscheidungen (switch)" value="1" />
+                      <Tab label="Übungen" value="2" />
                     </Tabs>
                   </Box>
                   <TabPanel value="1">Inhalt</TabPanel>
-                  <TabPanel value="2">Inhalt </TabPanel>
-                  <TabPanel value="3">Inhalt </TabPanel>
-                  <TabPanel value="4">Inhalt </TabPanel>
-                  <TabPanel value="5">Inhalt </TabPanel>
-                  <TabPanel value="6">
+
+                  <TabPanel value="2">
                     Übungen die weiterführen zum nächsten Kapitel{' '}
                   </TabPanel>
                 </TabContext>
@@ -370,7 +359,7 @@ export default function CustomizedAccordions() {
         >
           <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
             <LockIcon></LockIcon>
-            <Typography>Collapsible Group Item #4</Typography>
+            <Typography>4 - Schleifen (while)</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
@@ -385,20 +374,13 @@ export default function CustomizedAccordions() {
                       allowScrollButtonsMobile
                       aria-label="scrollable force tabs example"
                     >
-                      <Tab label="Hello, World!" value="1" />
-                      <Tab label="Grundbegriffe" value="2" />
-                      <Tab label="Variablen und Konstanten" value="3" />
-                      <Tab label="Ein- und Ausgaben" value="4" />
-                      <Tab label="Datentypen" value="5" />
-                      <Tab label="Abfrage" value="6" />
+                      <Tab label="Schleifen (while)" value="1" />
+                      <Tab label="Übung" value="2" />
                     </Tabs>
                   </Box>
                   <TabPanel value="1">Inhalt</TabPanel>
-                  <TabPanel value="2">Inhalt </TabPanel>
-                  <TabPanel value="3">Inhalt </TabPanel>
-                  <TabPanel value="4">Inhalt </TabPanel>
-                  <TabPanel value="5">Inhalt </TabPanel>
-                  <TabPanel value="6">
+
+                  <TabPanel value="2">
                     Übungen die weiterführen zum nächsten Kapitel{' '}
                   </TabPanel>
                 </TabContext>
@@ -416,7 +398,52 @@ export default function CustomizedAccordions() {
         >
           <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
             <LockIcon></LockIcon>
-            <Typography>Collapsible Group Item #5</Typography>
+            <Typography>5 - Arrays</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              <Box sx={{ width: '100%', typography: 'body1' }}>
+                <TabContext value={value}>
+                  <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                    <Tabs
+                      value={value}
+                      onChange={handleChangeTabs}
+                      variant="scrollable"
+                      scrollButtons
+                      allowScrollButtonsMobile
+                      aria-label="scrollable force tabs example"
+                    >
+                      <Tab label="Arrays (Listen)" value="1" />
+                      <Tab label="Schleifen (for)" value="2" />
+                      <Tab label="Break/ Continue" value="3" />
+                      <Tab label="Übungen (Arrays)" value="4" />
+                      <Tab label="Übungen (for)" value="5" />
+                    </Tabs>
+                  </Box>
+                  <TabPanel value="1">Inhalt</TabPanel>
+                  <TabPanel value="2">Inhalt </TabPanel>
+                  <TabPanel value="3">Inhalt </TabPanel>
+                  <TabPanel value="4">Inhalt </TabPanel>
+
+                  <TabPanel value="5">
+                    Übungen die weiterführen zum nächsten Kapitel{' '}
+                  </TabPanel>
+                </TabContext>
+              </Box>
+            </Typography>
+            <br />
+            <Button id="button" variant="contained" startIcon={<LockIcon />}>
+              Bitte bearbeite erst das vorherige Kapitel!
+            </Button>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          expanded={expanded === 'panel6'}
+          onChange={handleChangePanel('panel6')}
+        >
+          <AccordionSummary aria-controls="panel6d-content" id="panel6d-header">
+            <LockIcon></LockIcon>
+            <Typography>6 - Objekte und Klassen</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
@@ -452,17 +479,114 @@ export default function CustomizedAccordions() {
             </Typography>
             <br />
             <Button id="button" variant="contained" startIcon={<LockIcon />}>
-              Bitte bearbeite erst das vorherige Kapitel!
+              Contained
+            </Button>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion
+          expanded={expanded === 'panel7'}
+          onChange={handleChangePanel('panel7')}
+        >
+          {' '}
+          <Button id="button" variant="contained" startIcon={<LockIcon />}>
+            Contained
+          </Button>{' '}
+          <AccordionSummary aria-controls="panel7d-content" id="panel7d-header">
+            <LockIcon></LockIcon>
+            <Typography>7 - Code organisieren</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              <Box sx={{ width: '100%', typography: 'body1' }}>
+                <TabContext value={value}>
+                  <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                    <Tabs
+                      value={value}
+                      onChange={handleChangeTabs}
+                      variant="scrollable"
+                      scrollButtons
+                      allowScrollButtonsMobile
+                      aria-label="scrollable force tabs example"
+                    >
+                      <Tab label="Hello, World!" value="1" />
+                      <Tab label="Grundbegriffe" value="2" />
+                      <Tab label="Variablen und Konstanten" value="3" />
+                      <Tab label="Ein- und Ausgaben" value="4" />
+                      <Tab label="Datentypen" value="5" />
+                      <Tab label="Abfrage" value="6" />
+                    </Tabs>
+                  </Box>
+                  <TabPanel value="1">Inhalt</TabPanel>
+                  <TabPanel value="2">Inhalt </TabPanel>
+                  <TabPanel value="3">Inhalt </TabPanel>
+                  <TabPanel value="4">Inhalt </TabPanel>
+                  <TabPanel value="5">Inhalt </TabPanel>
+                  <TabPanel value="6">
+                    Übungen die weiterführen zum nächsten Kapitel{' '}
+                  </TabPanel>
+                </TabContext>
+              </Box>
+            </Typography>
+            <br />
+            <Button id="button" variant="contained" startIcon={<LockIcon />}>
+              Contained
             </Button>
           </AccordionDetails>
         </Accordion>
         <Accordion
-          expanded={expanded === 'panel6'}
-          onChange={handleChangePanel('panel6')}
+          expanded={expanded === 'panel8'}
+          onChange={handleChangePanel('panel8')}
         >
-          <AccordionSummary aria-controls="panel6d-content" id="panel6d-header">
+          <AccordionSummary aria-controls="panel8d-content" id="panel8d-header">
             <LockIcon></LockIcon>
-            <Typography>Collapsible Group Item #5</Typography>
+            <Typography> 8 - Daten speichern</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              <Box sx={{ width: '100%', typography: 'body1' }}>
+                <TabContext value={value}>
+                  <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                    <Tabs
+                      value={value}
+                      onChange={handleChangeTabs}
+                      variant="scrollable"
+                      scrollButtons
+                      allowScrollButtonsMobile
+                      aria-label="scrollable force tabs example"
+                    >
+                      <Tab label="Hello, World!" value="1" />
+                      <Tab label="Grundbegriffe" value="2" />
+                      <Tab label="Variablen und Konstanten" value="3" />
+                      <Tab label="Ein- und Ausgaben" value="4" />
+                      <Tab label="Datentypen" value="5" />
+                      <Tab label="Abfrage" value="6" />
+                    </Tabs>
+                  </Box>
+                  <TabPanel value="1">Inhalt</TabPanel>
+                  <TabPanel value="2">Inhalt </TabPanel>
+                  <TabPanel value="3">Inhalt </TabPanel>
+                  <TabPanel value="4">Inhalt </TabPanel>
+                  <TabPanel value="5">Inhalt </TabPanel>
+                  <TabPanel value="6">
+                    Übungen die weiterführen zum nächsten Kapitel{' '}
+                  </TabPanel>
+                </TabContext>
+              </Box>
+            </Typography>
+            <br />
+            <Button id="button" variant="contained" startIcon={<LockIcon />}>
+              Contained
+            </Button>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          expanded={expanded === 'panel9'}
+          onChange={handleChangePanel('panel9')}
+        >
+          <AccordionSummary aria-controls="panel9d-content" id="panel9d-header">
+            <LockIcon></LockIcon>
+            <Typography>9 - Weiterführendes</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
