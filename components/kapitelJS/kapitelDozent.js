@@ -253,8 +253,8 @@ export default function CustomizedAccordions() {
       </div>
       <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1 }}>
         <SpeedDial
-          ariaLabel="SpeedDial basic example"
-          sx={{ position: 'absolute', bottom: 120, right: 20 }}
+          ariaLabel="SpeedDial CRUD"
+          sx={{ position: 'sticky' }}
           icon={<SpeedDialIcon />}
         >
           {actions.map((action) => (
