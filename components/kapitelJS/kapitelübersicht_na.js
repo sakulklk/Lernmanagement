@@ -194,7 +194,7 @@ export default function CustomizedAccordions() {
         >
           <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
             <LockOpenIcon></LockOpenIcon>
-            <Typography>Collapsible Group Item #1</Typography>
+            <Typography>1 - Einleitung</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
@@ -206,20 +206,22 @@ export default function CustomizedAccordions() {
                       centered
                       aria-label="lab API tabs example"
                     >
-                      <Tab label="Item One" value="1" />
-                      <Tab label="Item Two" value="2" />
-                      <Tab label="Item Three" value="3" />
-                      <Tab label="Item One" value="4" />
-                      <Tab label="Item Two" value="5" />
-                      <Tab label="Item Three" value="6" />
+                      <Tab label="Hello, World!" value="1" />
+                      <Tab label="Grundbegriffe" value="2" />
+                      <Tab label="Variablen und Konstanten" value="3" />
+                      <Tab label="Ein- und Ausgabe" value="4" />
+                      <Tab label="Datentypen" value="5" />
+                      <Tab label="Abfrage" value="6" />
                     </TabList>
                   </Box>
-                  <TabPanel value="1">Item One</TabPanel>
-                  <TabPanel value="2">Item Two</TabPanel>
-                  <TabPanel value="3">Item Three</TabPanel>
-                  <TabPanel value="4">Item One</TabPanel>
-                  <TabPanel value="5">Item Two</TabPanel>
-                  <TabPanel value="6">Item Three</TabPanel>
+                  <TabPanel value="1">Inhalt</TabPanel>
+                  <TabPanel value="2">Inhalt </TabPanel>
+                  <TabPanel value="3">Inhalt </TabPanel>
+                  <TabPanel value="4">Inhalt </TabPanel>
+                  <TabPanel value="5">Inhalt </TabPanel>
+                  <TabPanel value="6">
+                    Übungen die weiterführen zum nächsten Kapitel{' '}
+                  </TabPanel>
                 </TabContext>
               </Box>
             </Typography>
