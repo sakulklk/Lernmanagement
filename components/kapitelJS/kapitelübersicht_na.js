@@ -266,7 +266,7 @@ export default function CustomizedAccordions() {
               id="button"
               variant="contained"
               startIcon={<LockOpenIcon />}
-              href={'/uebersichtJS'}
+              href={'/JSK1'}
             >
               Fange an zu lernen!
             </Button>
