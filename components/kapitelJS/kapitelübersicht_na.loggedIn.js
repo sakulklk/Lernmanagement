@@ -8,7 +8,7 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import LockIcon from '@mui/icons-material/Lock';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
-import HorizontalNonLinearStepper from '../components/Menu.js';
+import HorizontalNonLinearStepper from '../Menu.js';
 
 import Box from '@mui/material/Box';
 import Stepper from '@mui/material/Stepper';
@@ -113,8 +113,8 @@ export default function CustomizedAccordions1() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-            {/* Folgendes soll Code für  stepper von Mui sein  */}
-            <HorizontalNonLinearStepper></HorizontalNonLinearStepper>
+              {/* Folgendes soll Code für  stepper von Mui sein  */}
+              <HorizontalNonLinearStepper></HorizontalNonLinearStepper>
             </Typography>
 
             <br />
