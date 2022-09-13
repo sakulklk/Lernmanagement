@@ -152,8 +152,12 @@ color: #863E15
                 Programmierung mit JavaScript einführt.
               </Box>
             </Box>
+            <br />
+            <br />
+            <br />
+            <Divider />
+            <br />
           </y>
-
           <Grid container justifyContent="flex-end">
             <a href="/JSK1">
               <Button variant="text" endIcon={<ArrowForwardIosIcon />}>
