@@ -17,7 +17,7 @@ export default function Test() {
         <List>
           <ListItem
             component={Link}
-            href="/"
+            href="/home_challenges_five"
             style={{
               display: 'flex',
               justifyContent: 'center',
