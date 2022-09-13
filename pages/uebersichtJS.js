@@ -21,6 +21,9 @@ export default function Test() {
           <Grid item xs={10}>
             <ScrollBar></ScrollBar>
             <Content></Content>
+          </Grid>
+
+          <Grid item xs={2}>
             <SideMenuRight></SideMenuRight>
           </Grid>
         </Grid>

@@ -8,13 +8,11 @@ export default function SimplePaper() {
     <Box
       sx={{
         display: 'flex',
-        flexWrap: 'wrap',
-        '& > :not(style)': {
-          width: 200,
-          height: 200,
-          position: 'fixed',
-        },
-        justifyContent: 'right',
+        flexDirection: 'row-reverse',
+        p: 80,
+        m: 16,
+
+        borderRadius: 10,
       }}
     >
       <Paper elevation={5}>
