@@ -52,16 +52,16 @@ export default function Sidemenu() {
         </p>
         <Divider />
         <br />
-        <Grid container justifyContent="flex-end">
-          <Grid item xs={6} justifyContent="flex-start">
-            <a href="/JSK1">
+        <Grid container>
+          <Grid item sm={8} md={8} lg={10}>
+            <a href="/uebersichtJS">
               <Button variant="text" startIcon={<ArrowBackIosIcon />}>
                 <LockOpenIcon></LockOpenIcon> JavaScript
               </Button>
             </a>
           </Grid>
-          <Grid item xs={6} justifyContent="flex-end">
-            <a href="/JSK1">
+          <Grid item sm={4} md={4} lg={2}>
+            <a href="/Grundbegriffe">
               <Button variant="text" endIcon={<ArrowForwardIosIcon />}>
                 <LockOpenIcon></LockOpenIcon> Grundbegriffe
               </Button>
