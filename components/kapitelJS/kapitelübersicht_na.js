@@ -114,7 +114,6 @@ export default function CustomizedAccordions() {
       `}</style>
 
       <h1> Wilkommen auf der JavaScript Lernseite! </h1>
-      {/* <Box sx={{ width: '100%' }} alignItems="center" justifyContent="center"> */}
       <Stack sx={{ width: '100%' }} alignItems="center" justifyContent="center">
         <Collapse in={open}>
           <Alert
@@ -149,44 +148,13 @@ export default function CustomizedAccordions() {
                 control={<Checkbox value="remember" color="primary" />}
                 label="Diese Info nicht mehr anzeigen"
               />
-              {/* <Checkbox
-                checked={checked}
-                onChange={handleChangeCheck}
-                inputProps={{ 'aria-label': 'controlled' }}
-              /> */}
+             
             </Typography>
           </Alert>
         </Collapse>
-        {/* <Button
-          disabled={open}
-          variant="outlined"
-          onClick={() => {
-            setOpen(true);
-          }}
-        >
-          Info
-        </Button> */}
-        {/* </Box> */}
+     
       </Stack>
-      {/* <Stack sx={{ width: '100%' }} spacing={2}>
-        <Alert severity="info">
-          <Typography>
-            <AlertTitle>Info</AlertTitle>
-            <h3>
-              {' '}
-              Melde Dich bitte an um alle Funktionen nutzen zu können! Dein
-              Fortschritt geht bei
-               schließen der Seite sonst <b>verloren</b> und
-              Du musst alle Kapitel erneut freischalten!
-              <br />
-              <a href="signUp" className="hover">
-                {' '}
-                Hier geht es zum Login!
-              </a>
-            </h3>
-          </Typography>
-        </Alert>
-      </Stack> */}
+     
       <div className="acc">
         <Accordion
           expanded={expanded === 'panel0'}

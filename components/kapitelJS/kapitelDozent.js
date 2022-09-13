@@ -16,7 +16,7 @@ import UpgradeIcon from '@mui/icons-material/Upgrade';
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
 import AlertTitle from '@mui/material/AlertTitle';
-
+import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
 import CloseIcon from '@mui/icons-material/Close';
@@ -111,7 +111,7 @@ export default function CustomizedAccordions() {
       `}</style>
 
       <h1> Wilkommen auf der JavaScript Lernseite! </h1>
-      <Box sx={{ width: '100%' }}>
+      <Stack sx={{ width: '100%' }} alignItems="center" justifyContent="center">
         <Collapse in={open}>
           <Alert
             severity="info"
@@ -134,7 +134,7 @@ export default function CustomizedAccordions() {
               <h3>
                 {' '}
                 Sie können die Lernkapitel{' '}
-                <b> bearbeiten, löschen und neue ersetllen </b>.<br /> Gehen Sie
+                <b> bearbeiten, löschen und neue erstellen </b>.<br /> Gehen Sie
                 dafür auf das Plus an dem rechten Bildrand. <br /> Für Sie gibt
                 es keine <i> Freischalte-Funktion</i>. Sie haben jeder Zeit
                 Zugriff auf alle Kapitel.
@@ -146,7 +146,7 @@ export default function CustomizedAccordions() {
             </Typography>
           </Alert>
         </Collapse>
-      </Box>
+      </Stack>
       <div className="acc">
         <Accordion
           expanded={expanded === 'panel1'}
@@ -163,6 +163,12 @@ export default function CustomizedAccordions() {
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
               eget.
             </Typography>
+            <br />
+            <Stack spacing={2} direction="row" justifyContent="center">
+              <Button variant="contained">Hinzufügen</Button>
+              <Button variant="contained">Bearbeiten</Button>
+              <Button variant="contained">Löschen</Button>
+            </Stack>
           </AccordionDetails>
         </Accordion>
         <Accordion
