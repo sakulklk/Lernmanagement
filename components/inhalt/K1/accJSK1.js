@@ -40,7 +40,7 @@ export default function Sidemenu() {
                 </Typography>
               </MenuItem>
 
-              <MenuItem component={Link} href="/grundbegriffe">
+              <MenuItem component={Link} href="/Grundbegriffe">
                 <Typography variant="inherit" noWrap>
                   Grundbegriffe
                 </Typography>
