@@ -5,6 +5,8 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Content from '../components/inhalt/K1/inhaltJSK1.js';
 import ScrollBar from '../components/inhalt/scrollbar.js';
+import SideMenuRight from '../components/inhalt/sideMenuRight.js';
+
 // import Uebersicht from '../components/inhalt/Uebersicht/acc.js';
 
 export default function Test() {
@@ -19,7 +21,10 @@ export default function Test() {
               <SideMenu></SideMenu>
             </Box>
           </Grid>
-          <Grid item xs={10}>
+          <Grid item xs={2}>
+            <SideMenuRight></SideMenuRight>
+          </Grid>
+          <Grid item xs={8}>
             <ScrollBar></ScrollBar>
             <Content></Content>
           </Grid>
