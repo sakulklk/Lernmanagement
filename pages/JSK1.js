@@ -21,12 +21,13 @@ export default function Test() {
               <SideMenu></SideMenu>
             </Box>
           </Grid>
-          {/* <Grid item xs={2}>
-            <SideMenuRight></SideMenuRight>
-          </Grid> */}
-          <Grid item xs={8}>
+
+          <Grid item xs={9}>
             <ScrollBar></ScrollBar>
             <Content></Content>
+          </Grid>
+          <Grid item xs={1}>
+            <SideMenuRight></SideMenuRight>
           </Grid>
         </Grid>
       </div>

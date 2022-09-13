@@ -1,23 +1,19 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 
-export default function SimplePaper() {
+export default function BoxSx() {
   return (
     <Box
       sx={{
-        display: 'flex',
-        flexDirection: 'row-reverse',
-        p: 80,
-        m: 16,
-
-        borderRadius: 10,
+        width: '100px',
+        backgroundColor: 'blue',
+        height: 300,
+        b: 6,
+        position: 'fixed',
       }}
     >
-      <Paper elevation={5}>
-        <Typography>hgf</Typography>
-      </Paper>
+      <Typography>jhbg</Typography>
     </Box>
   );
 }
