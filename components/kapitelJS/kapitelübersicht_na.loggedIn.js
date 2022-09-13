@@ -8,12 +8,12 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import LockIcon from '@mui/icons-material/Lock';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
-import HorizontalNonLinearStepper from '../Menu.js';
+import VerticalLinearStepper from '../Menu.js';
 
-import Box from '@mui/material/Box';
-import Stepper from '@mui/material/Stepper';
-import Step from '@mui/material/Step';
-import StepButton from '@mui/material/StepButton';
+// import Box from '@mui/material/Box';
+// import Stepper from '@mui/material/Stepper';
+// import Step from '@mui/material/Step';
+// import StepButton from '@mui/material/StepButton';
 
 const actions = [
   { icon: <LockIcon />, name: 'nicht freigeschalten!' },
@@ -129,9 +129,7 @@ export default function CustomizedAccordions1() {
             <Typography>Kapitel 2</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              <HorizontalNonLinearStepper></HorizontalNonLinearStepper>
-            </Typography>
+            <Typography></Typography>
             <br />
           </AccordionDetails>
         </Accordion>
@@ -145,7 +143,7 @@ export default function CustomizedAccordions1() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              <HorizontalNonLinearStepper></HorizontalNonLinearStepper>{' '}
+              {/* <HorizontalNonLinearStepper></HorizontalNonLinearStepper>{' '} */}
             </Typography>
             <br />
           </AccordionDetails>
@@ -159,10 +157,7 @@ export default function CustomizedAccordions1() {
             <Typography>Kapitel 4</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              {' '}
-              <HorizontalNonLinearStepper></HorizontalNonLinearStepper>{' '}
-            </Typography>
+            <Typography> </Typography>
             <br />
           </AccordionDetails>
         </Accordion>
@@ -175,10 +170,7 @@ export default function CustomizedAccordions1() {
             <Typography>Kapitel 5</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              {' '}
-              <HorizontalNonLinearStepper></HorizontalNonLinearStepper>{' '}
-            </Typography>
+            <Typography></Typography>
             <br />
           </AccordionDetails>
         </Accordion>
@@ -191,10 +183,7 @@ export default function CustomizedAccordions1() {
             <Typography>Kapitel 6</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              {' '}
-              <HorizontalNonLinearStepper></HorizontalNonLinearStepper>{' '}
-            </Typography>
+            <Typography></Typography>
             <br />
           </AccordionDetails>
         </Accordion>
