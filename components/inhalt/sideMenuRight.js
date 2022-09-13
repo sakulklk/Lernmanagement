@@ -6,20 +6,20 @@ export default function BoxSx() {
   return (
     <Box
       sx={{
-        width: '100px',
-        backgroundColor: 'blue',
+        width: '100%',
+
         height: 300,
-        m: 6,
+        m: 3,
         position: 'fixed',
       }}
     >
-      <Typography>
+      <Typography style={{ lineHeight: 2.5 }}>
         <b> Auf dieser Seite </b>
-        <br/>
+        <br />
         1. Inhalt mit verlinkung
-        <br/>
+        <br />
         2. Inhalt mit verlinkung
-        <br/>
+        <br />
         3. Inhalt mit verlinkung
       </Typography>
     </Box>
