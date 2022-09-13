@@ -85,10 +85,10 @@ export default function CustomizedAccordions() {
       <style jsx>{`
     .acc{
       margin-top: 50px;
-      margin-bpttom: 25px;
+      margin-bpttom: 80px;
       text-align: center;
-      padding-right: 75px;
-      padding-left: 75px;
+      padding-right: 100px;
+      padding-left: 100px;
     }
 
     h1{
@@ -132,12 +132,11 @@ export default function CustomizedAccordions() {
             <Typography>
               <AlertTitle>Info</AlertTitle>
               <h3>
-                {' '}
-                Sie können die Lernkapitel{' '}
+                Sie können die Lernkapitel
                 <b> bearbeiten, löschen und neue erstellen </b>.<br /> Gehen Sie
-                dafür auf das Plus an dem rechten Bildrand. <br /> Für Sie gibt
-                es keine <i> Freischalte-Funktion</i>. Sie haben jeder Zeit
-                Zugriff auf alle Kapitel.
+                bitte dafür unten auf das Plus. <br /> Für Sie gibt es keine{' '}
+                <i> Freischalte-Funktion</i>. Sie haben jeder Zeit Zugriff auf
+                alle beliebigen Kapitel.
               </h3>
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
@@ -147,6 +146,7 @@ export default function CustomizedAccordions() {
           </Alert>
         </Collapse>
       </Stack>
+
       <div className="acc">
         <Accordion
           expanded={expanded === 'panel1'}
