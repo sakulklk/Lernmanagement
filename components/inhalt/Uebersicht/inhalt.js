@@ -43,6 +43,29 @@ color: #863E15
       <div className="content">
         <Typography>
           <h1> JavaScript</h1>
+          <y>
+            <Box
+              sx={{
+                backgroundColor: '#FFFFEA',
+                padding: '14px',
+              }}
+            >
+              <TipsAndUpdatesIcon></TipsAndUpdatesIcon>
+              <Box
+                sx={{
+                  backgroundColor: '#FFFFEA',
+                  margin: '25px',
+                }}
+              >
+                <b>Dauer: </b>10 Minuten
+                <br />
+                <ul>
+                  <li> Allgemeine Infos über JavaScript </li>
+                </ul>
+                <b>Ziel: </b> Hintergründe und Eigenschaften von JavaScript
+              </Box>
+            </Box>
+          </y>
           <h2>Geschichte</h2>
           <Divider />
           <p>
