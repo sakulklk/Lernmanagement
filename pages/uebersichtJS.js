@@ -23,9 +23,9 @@ export default function Test() {
             <Content></Content>
           </Grid>
 
-          <Grid item xs={2}>
+          {/* <Grid item xs={2}>
             <SideMenuRight></SideMenuRight>
-          </Grid>
+          </Grid> */}
         </Grid>
       </div>
       <Footer></Footer>
