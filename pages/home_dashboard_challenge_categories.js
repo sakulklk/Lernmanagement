@@ -17,7 +17,7 @@ export default function Test() {
         <List>
           <ListItem
             component={Link}
-            href="/home_challenges_five"
+            href="/home_challenges_time"
             style={{
               display: 'flex',
               justifyContent: 'center',
@@ -31,7 +31,7 @@ export default function Test() {
           <Divider />
           <ListItem
             component={Link}
-            href="/"
+            href="/home_challenges_five"
             style={{
               display: 'flex',
               justifyContent: 'center',
@@ -45,7 +45,7 @@ export default function Test() {
           <Divider />
           <ListItem
             component={Link}
-            href="/"
+            href="/home_challenges_friends"
             style={{
               display: 'flex',
               justifyContent: 'center',
