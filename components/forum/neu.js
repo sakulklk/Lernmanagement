@@ -28,9 +28,8 @@ export default function Neu() {
           <h3>Typ</h3>
           <ToggleButtonGroup color="primary" exclusive aria-label="Platform">
             <ToggleButton value="FAQ">FAQ</ToggleButton>
-            <ToggleButton value="Bugs">Bugs</ToggleButton>
             <ToggleButton value="Fragen">Fragen</ToggleButton>
-            <ToggleButton value="Updates">Updates</ToggleButton>
+            <ToggleButton value="Kommentare zur Update">Updates</ToggleButton>
           </ToggleButtonGroup>
         </Grid>
         <Grid item xs={12} style={{ textAlign: 'center' }}>

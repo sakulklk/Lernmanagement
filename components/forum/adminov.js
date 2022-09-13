@@ -11,11 +11,22 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
+import Fab from '@material-ui/core/Fab';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import DeleteOutlined from '@mui/icons-material/DeleteOutlined';
+import AddToQueueIcon from '@mui/icons-material/AddToQueue';
+import IconButton from '@mui/material/IconButton';
+import SvgIcon from '@mui/material/SvgIcon';
 
 export default function Adminov() {
   return (
-    <Grid container spacing={3}>
-      <Grid item xs={3} style={{ textAlign: 'center' }}>
+    <Grid container spacing={2}>
+      <Grid item xs={2} style={{ textAlign: 'center' }}>
+        <h3> Filters: </h3>
+      </Grid>
+      <Grid item xs={10} style={{ textAlign: 'center' }}></Grid>
+
+      <Grid item xs={4} style={{ textAlign: 'center' }}>
         <Button
           variant="text"
           href="./faqposts"
@@ -24,12 +35,8 @@ export default function Adminov() {
           FAQ
         </Button>
       </Grid>
-      <Grid item xs={3}>
-        <Button variant="text" href="./forum" style={{ textAlign: 'center' }}>
-          Bugs
-        </Button>
-      </Grid>
-      <Grid item xs={3} style={{ textAlign: 'center' }}>
+
+      <Grid item xs={4} style={{ textAlign: 'center' }}>
         <Button
           variant="text"
           href="./fragenposts"
@@ -38,15 +45,16 @@ export default function Adminov() {
           Fragen
         </Button>
       </Grid>
-      <Grid item xs={3}>
+      <Grid item xs={4} style={{ textAlign: 'center' }}>
         <Button
           variant="text"
           href="./updateposts"
           style={{ textAlign: 'center' }}
         >
-          Updates
+          Kommentare zu Updates
         </Button>
       </Grid>
+      <Divider />
 
       <Grid item xs={12}>
         <List>
@@ -62,23 +70,22 @@ export default function Adminov() {
                 <ListItemText align="left" primary=""></ListItemText>
               </Grid>
               <Grid item xs={4} style={{ textAlign: 'center' }}>
-                <Button
-                  variant="contained"
-                  align="left"
-                  href="./neupost"
-                  style={{ textAlign: 'center' }}
-                  spacing={3}
-                >
-                  Neu
-                </Button>
-                <Button
-                  variant="contained"
-                  align="left"
-                  href="./forumadmin"
-                  style={{ textAlign: 'center' }}
-                >
-                  Löschen
-                </Button>
+                <Box sx={{ '& > :not(style)': { m: 1 } }}>
+                  <Fab
+                    size="small"
+                    aria-label="readmore"
+                  
+                    href="./neupost"
+                  >
+                    <AddToQueueIcon fontSize="small" />
+                  </Fab>
+                  <Fab
+                    size="small"
+                    aria-label="readmore"
+                  >
+                    <DeleteOutlined fontSize="small" />
+                  </Fab>
+                </Box>
               </Grid>
             </Grid>
           </ListItem>
@@ -87,7 +94,10 @@ export default function Adminov() {
           <ListItem key="2">
             <Grid container>
               <Grid item xs={2}>
-                <ListItemText align="left" secondary="Update"></ListItemText>
+                <ListItemText
+                  align="left"
+                  secondary="Kommentare zu Update"
+                ></ListItemText>
               </Grid>
               <Grid item xs={3}>
                 <ListItemText
@@ -102,13 +112,14 @@ export default function Adminov() {
                 ></ListItemText>
               </Grid>
               <Grid item xs={4} style={{ textAlign: 'center' }}>
-                <Button
-                  variant="contained"
+                <Fab
+                  size="small"
+                  color="primary"
+                  aria-label="readmore"
                   href="./post"
-                  style={{ textAlign: 'center' }}
                 >
-                  +
-                </Button>
+                  <ArrowForwardIosIcon fontSize="small" />
+                </Fab>
                 <Checkbox default />
               </Grid>
             </Grid>
@@ -116,7 +127,10 @@ export default function Adminov() {
           <ListItem key="3">
             <Grid container>
               <Grid item xs={2}>
-                <ListItemText align="left" secondary="Update"></ListItemText>
+                <ListItemText
+                  align="left"
+                  secondary="Kommentare zu Update"
+                ></ListItemText>
               </Grid>
               <Grid item xs={3}>
                 <ListItemText align="left" secondary="3.0"></ListItemText>
@@ -125,13 +139,14 @@ export default function Adminov() {
                 <ListItemText align="left" secondary="Neu..."></ListItemText>
               </Grid>
               <Grid item xs={4} style={{ textAlign: 'center' }}>
-                <Button
-                  variant="contained"
+                <Fab
+                  size="small"
+                  color="primary"
+                  aria-label="readmore"
                   href="./post"
-                  style={{ textAlign: 'center' }}
                 >
-                  +
-                </Button>
+                  <ArrowForwardIosIcon fontSize="small" />
+                </Fab>
                 <Checkbox default />
               </Grid>
             </Grid>

@@ -10,6 +10,8 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import Fab from '@material-ui/core/Fab';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 export default function Fragenpost() {
   return (
@@ -32,14 +34,15 @@ export default function Fragenpost() {
                 secondary="Seit der letzten update..."
               ></ListItemText>
             </Grid>
-            <Grid item xs={2} style={{ textAlign: 'center' }}>
-              <Button
-                variant="contained"
+            <Grid xs={2} style={{ textAlign: 'center' }}>
+              <Fab
+                size="small"
+                color="primary"
+                aria-label="readmore"
                 href="./post"
-                style={{ textAlign: 'center' }}
               >
-                +
-              </Button>
+                <ArrowForwardIosIcon fontSize="small" />
+              </Fab>
             </Grid>
           </Grid>
         </ListItem>

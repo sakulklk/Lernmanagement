@@ -15,6 +15,11 @@ export default function Overview() {
   return (
     <Grid container spacing={2}>
       <Grid item xs={2} style={{ textAlign: 'center' }}>
+        <h3> Filters: </h3>
+      </Grid>
+      <Grid item xs={10} style={{ textAlign: 'center' }}></Grid>
+
+      <Grid item xs={2} style={{ textAlign: 'center' }}>
         <Button
           variant="text"
           href="./faqposts"
@@ -24,7 +29,7 @@ export default function Overview() {
         </Button>
       </Grid>
 
-      <Grid item xs={2}>
+      <Grid item xs={2} style={{ textAlign: 'center' }}>
         <Button
           variant="text"
           href="./fragenposts"
@@ -33,7 +38,7 @@ export default function Overview() {
           Fragen
         </Button>
       </Grid>
-      <Grid item xs={2}>
+      <Grid item xs={2} style={{ textAlign: 'center' }}>
         <Button
           variant="text"
           href="./updateposts"
@@ -51,6 +56,7 @@ export default function Overview() {
           +
         </Button>
       </Grid>
+      <Divider />
       <Grid item xs={12}>
         <List>
           <ListItem key="1">
