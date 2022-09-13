@@ -5,8 +5,15 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import LinearProgress from '@mui/material/LinearProgress';
+import IconButton from '@mui/material/IconButton';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import Typography from '@mui/material/Typography';
 
 export default function Test() {
+  let [score, setScore] = React.useState(0);
+  function handleClick() {
+    setScore(score + 1);
+  }
   const [progress, setProgress] = React.useState(0);
 
   React.useEffect(() => {
@@ -30,17 +37,23 @@ export default function Test() {
       <Paper
         elevation={5}
         style={{
-          margin: 'auto ',
-          marginTop: '20px',
+          margin: '30px auto 20px auto ',
+
           width: '1000px',
           height: '50px',
+          textAlign: 'center',
         }}
       >
-        {' '}
+        <Typography
+          variant="h5"
+          style={{ fontWeight: 'bold', padding: 'auto', lineHeight: '2' }}
+        >
+          Score: {score}
+        </Typography>
       </Paper>
       <Paper
         elevation={5}
-        style={{ margin: '10px auto', width: '1000px', height: '400px' }}
+        style={{ margin: ' auto', width: '1000px', height: '400px' }}
       >
         <LinearProgress
           variant="determinate"
@@ -52,21 +65,22 @@ export default function Test() {
         elevation={5}
         style={{
           margin: 'auto ',
-          marginTop: '50px',
-          width: '1000px',
-          height: '50px',
-        }}
-      ></Paper>
-      <Paper
-        elevation={5}
-        style={{
-          margin: 'auto ',
           marginTop: '20px',
           width: '1000px',
           height: '50px',
+          display: 'flex',
+          justifyContent: 'center',
         }}
       >
         {' '}
+        <IconButton
+          aria-label="ArrowForwardIosIcon"
+          color="primary"
+          size="large"
+          onClick={handleClick}
+        >
+          <ArrowForwardIosIcon fontSize="large" />
+        </IconButton>
       </Paper>
 
       <Footer></Footer>
