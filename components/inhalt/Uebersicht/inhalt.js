@@ -3,6 +3,10 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import LockOpenIcon from '@mui/icons-material/LockOpen';
 
 export default function Sidemenu() {
   return (
@@ -149,6 +153,14 @@ color: #863E15
               </Box>
             </Box>
           </y>
+
+          <Grid container justifyContent="flex-end">
+            <a href="/JSK1">
+              <Button variant="text" endIcon={<ArrowForwardIosIcon />}>
+                <LockOpenIcon></LockOpenIcon> Hello, World!
+              </Button>
+            </a>
+          </Grid>
         </Typography>
       </div>
     </div>
