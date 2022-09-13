@@ -9,11 +9,19 @@ export default function BoxSx() {
         width: '100px',
         backgroundColor: 'blue',
         height: 300,
-        b: 6,
+        m: 6,
         position: 'fixed',
       }}
     >
-      <Typography>jhbg</Typography>
+      <Typography>
+        <b> Auf dieser Seite </b>
+        <br/>
+        1. Inhalt mit verlinkung
+        <br/>
+        2. Inhalt mit verlinkung
+        <br/>
+        3. Inhalt mit verlinkung
+      </Typography>
     </Box>
   );
 }
