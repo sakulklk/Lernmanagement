@@ -5,6 +5,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Content from '../components/inhalt/Uebersicht/inhalt.js';
 import ScrollBar from '../components/inhalt/scrollbar.js';
+import SideMenuRight from '../components/inhalt/sideMenuRight.js';
 
 export default function Test() {
   return (
@@ -20,6 +21,7 @@ export default function Test() {
           <Grid item xs={10}>
             <ScrollBar></ScrollBar>
             <Content></Content>
+            <SideMenuRight></SideMenuRight>
           </Grid>
         </Grid>
       </div>
