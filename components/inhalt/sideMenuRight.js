@@ -14,6 +14,7 @@ export default function SimplePaper() {
           height: 200,
           position: 'fixed',
         },
+        justifyContent: 'right',
       }}
     >
       <Paper elevation={5}>

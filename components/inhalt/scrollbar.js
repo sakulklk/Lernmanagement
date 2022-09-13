@@ -30,7 +30,7 @@ export default function StatusBar() {
       <style jsx>{`
             .bar{
               position: fixed;
-              width: auto;
+              width: 100%;
             }
             `}</style>
       <div className="bar">
