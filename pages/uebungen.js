@@ -8,7 +8,7 @@ import DragDrop from '../components/uebungen/DragDrop.js';
 import DragDrop2 from '../components/uebungen/DragDrop2.js';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
-//yarn add react-dnd react-dnd-html5-backend
+//npm install react-dnd react-dnd-html5-backend --save
 //import { DndProvider } from 'react-dnd';
 //import { HTML5Backend } from 'react-dnd-html5-backend';
 
