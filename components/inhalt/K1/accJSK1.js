@@ -34,17 +34,13 @@ export default function Sidemenu() {
           </AccordionSummary>
           <AccordionDetails>
             <MenuList>
-              <MenuItem
-                MenuItem
-                component={Link}
-                href="/nutzerdaten_kontoinformationen"
-              >
+              <MenuItem MenuItem component={Link} href="/JSK1">
                 <Typography variant="inherit" noWrap>
                   Hello, World!
                 </Typography>
               </MenuItem>
 
-              <MenuItem component={Link} href="/nutzerdaten_daten_aendern">
+              <MenuItem component={Link} href="/grundbegriffe">
                 <Typography variant="inherit" noWrap>
                   Grundbegriffe
                 </Typography>
