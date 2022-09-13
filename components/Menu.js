@@ -6,13 +6,7 @@ import StepButton from '@mui/material/StepButton';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-
-
-const steps = [
-  'Select campaign settings',
-  'Create an ad group',
-  'Create an ad',
-];
+const steps = ['Skript', 'Übungen', 'Mein Wissen überprüfen'];
 
 export default function HorizontalNonLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -79,7 +73,7 @@ export default function HorizontalNonLinearStepper() {
         {allStepsCompleted() ? (
           <React.Fragment>
             <Typography sx={{ mt: 2, mb: 1 }}>
-              All steps completed - you&apos;re finished
+              Alle Schritte beendet - du bist fertig
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
               <Box sx={{ flex: '1 1 auto' }} />
@@ -89,7 +83,7 @@ export default function HorizontalNonLinearStepper() {
         ) : (
           <React.Fragment>
             <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-              Step {activeStep + 1}
+              Schritt {activeStep + 1}
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
               <Button
@@ -98,11 +92,11 @@ export default function HorizontalNonLinearStepper() {
                 onClick={handleBack}
                 sx={{ mr: 1 }}
               >
-                Back
+                zurück
               </Button>
               <Box sx={{ flex: '1 1 auto' }} />
               <Button onClick={handleNext} sx={{ mr: 1 }}>
-                Next
+                weiter
               </Button>
               {activeStep !== steps.length &&
                 (completed[activeStep] ? (
@@ -115,8 +109,8 @@ export default function HorizontalNonLinearStepper() {
                 ) : (
                   <Button onClick={handleComplete}>
                     {completedSteps() === totalSteps() - 1
-                      ? 'Finish'
-                      : 'Complete Step'}
+                      ? 'Fertig'
+                      : 'abschliessen'}
                   </Button>
                 ))}
             </Box>

@@ -144,7 +144,9 @@ export default function CustomizedAccordions1() {
             <Typography>Kapitel 3</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography></Typography>
+            <Typography>
+              <HorizontalNonLinearStepper></HorizontalNonLinearStepper>{' '}
+            </Typography>
             <br />
           </AccordionDetails>
         </Accordion>
@@ -157,7 +159,10 @@ export default function CustomizedAccordions1() {
             <Typography>Kapitel 4</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography></Typography>
+            <Typography>
+              {' '}
+              <HorizontalNonLinearStepper></HorizontalNonLinearStepper>{' '}
+            </Typography>
             <br />
           </AccordionDetails>
         </Accordion>
@@ -170,7 +175,10 @@ export default function CustomizedAccordions1() {
             <Typography>Kapitel 5</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography></Typography>
+            <Typography>
+              {' '}
+              <HorizontalNonLinearStepper></HorizontalNonLinearStepper>{' '}
+            </Typography>
             <br />
           </AccordionDetails>
         </Accordion>
@@ -183,7 +191,10 @@ export default function CustomizedAccordions1() {
             <Typography>Kapitel 6</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography></Typography>
+            <Typography>
+              {' '}
+              <HorizontalNonLinearStepper></HorizontalNonLinearStepper>{' '}
+            </Typography>
             <br />
           </AccordionDetails>
         </Accordion>
