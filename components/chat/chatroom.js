@@ -48,10 +48,10 @@ export default function Chat() {
             </ListItem>
           </List>
           <Divider />
-          <Grid item xs={3} style={{ padding: '10px' }}>
-            <TextField label="Search" variant="outlined" fullWidth />
+          {/* <Grid item xs={3} style={{ padding: '10px' }}>
+            <TextField label="Search" variant="outlined" width="100px" />
           </Grid>
-          <Divider />
+          <Divider /> */}
           <List>
             <ListItem button key="Evan Adams">
               <ListItemIcon>
