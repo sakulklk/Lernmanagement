@@ -114,7 +114,7 @@ export default function CustomizedAccordions1() {
           <AccordionDetails>
             <Typography>
               {/* Folgendes soll Code für  stepper von Mui sein  */}
-              <HorizontalNonLinearStepper></HorizontalNonLinearStepper>
+              <VerticalLinearStepper> </VerticalLinearStepper>
             </Typography>
 
             <br />
