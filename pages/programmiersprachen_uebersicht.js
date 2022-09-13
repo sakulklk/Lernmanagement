@@ -7,6 +7,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 export default function Test() {
+  const Dozent = false;
   const learningLanguagesCategories = [
     'Webentwicklung',
     'DataScience',

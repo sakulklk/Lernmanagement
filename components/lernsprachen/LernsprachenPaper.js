@@ -6,8 +6,10 @@ import Button from '@mui/material/Button';
 import LinearProgress from '@mui/material/LinearProgress';
 import { Fragment } from 'react'; // import Fragment from React
 import BookmarkIcon from '@mui/icons-material/Bookmark';
+import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 
 export default function LernsprachenPaper({ name, progress, learningMark }) {
+  const Dozent = false;
   return (
     <>
       <Paper
@@ -47,10 +49,16 @@ export default function LernsprachenPaper({ name, progress, learningMark }) {
           </Grid>
 
           <Grid item xs={2} style={{ alignSelf: 'center' }}>
-            <Button variant="contained" color="secondary" size="small">
-              {' '}
-              lernen{' '}
-            </Button>
+            {Dozent ? (
+              <Button variant="contained" color="secondary" size="small">
+                <DoubleArrowIcon />
+              </Button>
+            ) : (
+              <Button variant="contained" color="secondary" size="small">
+                {' '}
+                lernen{' '}
+              </Button>
+            )}
           </Grid>
         </Grid>
       </Paper>
