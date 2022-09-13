@@ -106,7 +106,7 @@ color: #863E15
             <Box
               sx={{
                 backgroundColor: '#FFFFEA',
-                padding: '40px',
+                padding: '14px',
               }}
             >
               <TipsAndUpdatesIcon></TipsAndUpdatesIcon>
