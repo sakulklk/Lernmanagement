@@ -55,7 +55,7 @@ export default function Sidemenu() {
         <Grid container justifyContent="flex-end">
           <Grid item xs={6} justifyContent="flex-start">
             <a href="/JSK1">
-              <Button variant="text" endIcon={<ArrowBackIosIcon />}>
+              <Button variant="text" startIcon={<ArrowBackIosIcon />}>
                 <LockOpenIcon></LockOpenIcon> JavaScript
               </Button>
             </a>
