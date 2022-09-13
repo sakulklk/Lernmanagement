@@ -5,10 +5,12 @@ import Languages from '../components/home/Languages.js';
 import Footer from '../components/Footer.js';
 import ForumQuestion from '../components/home/ForumQuestion.js';
 import HomeHoverCard from '../components/home/HomeHoverCard.js';
+import DozentenOptionen from '../components/lernsprachen/DozentenOptionen.js';
 import Grid from '@mui/material/Grid';
 import ShuffleIcon from '@mui/icons-material/Shuffle';
 import StarPurple500Icon from '@mui/icons-material/StarPurple500';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+
 export default function Home() {
   const loggedIn = true;
   return (
