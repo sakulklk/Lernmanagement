@@ -18,14 +18,14 @@ export default function Test() {
               <SideMenu></SideMenu>
             </Box>
           </Grid>
-          <Grid item xs={10}>
+          <Grid item xs={8}>
             <ScrollBar></ScrollBar>
             <Content></Content>
           </Grid>
 
-          {/* <Grid item xs={2}>
+          <Grid item xs={2}>
             <SideMenuRight></SideMenuRight>
-          </Grid> */}
+          </Grid>
         </Grid>
       </div>
       <Footer></Footer>
