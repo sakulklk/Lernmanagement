@@ -13,6 +13,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import SaveIcon from '@mui/icons-material/Save';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import UpgradeIcon from '@mui/icons-material/Upgrade';
+import VerticalLinearStepper1 from '../MenuDozent.js';
 
 const actions = [
   { icon: <DeleteIcon />, name: 'Löschen' },
@@ -113,11 +114,7 @@ export default function CustomizedAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
+              <VerticalLinearStepper1></VerticalLinearStepper1>
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -130,11 +127,7 @@ export default function CustomizedAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
+              <VerticalLinearStepper1></VerticalLinearStepper1>
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -147,11 +140,7 @@ export default function CustomizedAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
+              <VerticalLinearStepper1></VerticalLinearStepper1>
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -164,11 +153,7 @@ export default function CustomizedAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
+              <VerticalLinearStepper1></VerticalLinearStepper1>
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -181,11 +166,7 @@ export default function CustomizedAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
+              <VerticalLinearStepper1></VerticalLinearStepper1>
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -198,11 +179,7 @@ export default function CustomizedAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
+              <VerticalLinearStepper1></VerticalLinearStepper1>
             </Typography>
           </AccordionDetails>
         </Accordion>
