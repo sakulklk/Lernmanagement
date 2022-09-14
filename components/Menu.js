@@ -8,20 +8,31 @@ import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 
+// Code für Stepper
 const steps = [
   {
-    label: 'Select campaign settings',
+    label: 'Unterkapitel 1',
     description: `For each ad campaign that you create, you can control how much
               you're willing to spend on clicks and conversions, which networks
               and geographical locations you want your ads to show on, and more.`,
   },
   {
-    label: 'Create an ad group',
+    label: 'Unterkapitel 2',
     description:
       'An ad group contains one or more ads which target a shared set of keywords.',
   },
   {
-    label: 'Create an ad',
+    label: 'Unterkapitel 3',
+    description:
+      'An ad group contains one or more ads which target a shared set of keywords.',
+  },
+  {
+    label: 'Unterkapitel 4',
+    description:
+      'An ad group contains one or more ads which target a shared set of keywords.',
+  },
+  {
+    label: 'Unterkapitel 5',
     description: `Try out different ad text to see what brings in the most customers,
               and learn how to enhance your ads using features like ad extensions.
               If you run into any problems with your ads, find out how to tell if
@@ -30,7 +41,7 @@ const steps = [
 ];
 
 export default function VerticalLinearStepper() {
-  const [activeStep, setActiveStep] = React.useState(0);
+  const [activeStep, setActiveStep] = React.useState(3);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);

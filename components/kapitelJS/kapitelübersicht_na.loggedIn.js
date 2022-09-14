@@ -129,7 +129,9 @@ export default function CustomizedAccordions1() {
             <Typography>Kapitel 2</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography></Typography>
+            <Typography>
+              <VerticalLinearStepper> </VerticalLinearStepper>{' '}
+            </Typography>
             <br />
           </AccordionDetails>
         </Accordion>
@@ -143,6 +145,7 @@ export default function CustomizedAccordions1() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
+              <VerticalLinearStepper> </VerticalLinearStepper>
               {/* <HorizontalNonLinearStepper></HorizontalNonLinearStepper>{' '} */}
             </Typography>
             <br />
@@ -157,7 +160,10 @@ export default function CustomizedAccordions1() {
             <Typography>Kapitel 4</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography> </Typography>
+            <Typography>
+              {' '}
+              <VerticalLinearStepper> </VerticalLinearStepper>{' '}
+            </Typography>
             <br />
           </AccordionDetails>
         </Accordion>
@@ -170,7 +176,10 @@ export default function CustomizedAccordions1() {
             <Typography>Kapitel 5</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography></Typography>
+            <Typography>
+              {' '}
+              <VerticalLinearStepper> </VerticalLinearStepper>{' '}
+            </Typography>
             <br />
           </AccordionDetails>
         </Accordion>
@@ -183,7 +192,10 @@ export default function CustomizedAccordions1() {
             <Typography>Kapitel 6</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography></Typography>
+            <Typography>
+              {' '}
+              <VerticalLinearStepper> </VerticalLinearStepper>{' '}
+            </Typography>
             <br />
           </AccordionDetails>
         </Accordion>
