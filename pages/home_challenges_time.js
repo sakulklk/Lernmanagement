@@ -63,6 +63,29 @@ export default function Test() {
         elevation={5}
         style={{ margin: ' auto', width: '1000px', height: '400px' }}
       >
+        <Box
+          sx={{
+            display: 'flex',
+            height: '100%',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <Timer initialTime={5500} direction="backward">
+            {() => (
+              <React.Fragment>
+                <Typography
+                  variant="h1"
+                  style={{
+                    fontWeight: 'bold',
+                  }}
+                >
+                  <Timer.Seconds />
+                </Typography>
+              </React.Fragment>
+            )}
+          </Timer>
+        </Box>
         <LinearProgress
           variant="determinate"
           value={progress}
