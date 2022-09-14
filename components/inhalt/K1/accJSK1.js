@@ -45,10 +45,7 @@ export default function Sidemenu() {
                   Grundbegriffe
                 </Typography>
               </MenuItem>
-              <MenuItem
-                component={Link}
-                href="/nutzerdaten_adminrechte_beantragen"
-              >
+              <MenuItem component={Link} href="/var_konst">
                 <Typography variant="inherit" noWrap>
                   Variablen und Konstanten
                 </Typography>
