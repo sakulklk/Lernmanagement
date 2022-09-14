@@ -44,7 +44,7 @@ export default function Sidemenu() {
           <Grid item sm={7} md={7} lg={9}>
             <a href="/JSK1">
               <Button variant="text" startIcon={<ArrowBackIosIcon />}>
-                <LockOpenIcon></LockOpenIcon> Grundbegriffe
+                <LockOpenIcon></LockOpenIcon> Hello, World!
               </Button>
             </a>
           </Grid>

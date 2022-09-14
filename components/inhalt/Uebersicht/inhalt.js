@@ -86,6 +86,20 @@ color: #863E15
             (und vielen anderen) bietet JavaScript eine moderne und robuste
             Programmierumgebung.
           </p>
+          <h2>Vergleich mit Java</h2>
+          <Divider />
+          <p>
+            JavaScript unterscheidet sich in vielerlei Hinsicht von Java. Siehe
+            dazu z.B. diese Tabelle.
+            <br />
+            <br />
+            Java is to JavaScript like Car is to Carpet.
+            <br />
+            <br />
+            Dennoch gibt es einige Konzepte, die in JavaScript und Java recht
+            ähnlich sind (u.a. Blöcke mit geschweifte Klammern, if/else/else if,
+            for/while).
+          </p>
           <h2>Linksammlung</h2>
           <Divider />
           <p>

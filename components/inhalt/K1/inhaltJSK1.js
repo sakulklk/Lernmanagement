@@ -61,7 +61,7 @@ export default function Sidemenu() {
             </a>
           </Grid>
           <Grid item sm={4} md={4} lg={2}>
-            <a href="/Grundbegriffe">
+            <a href="/grundbegriffe">
               <Button variant="text" endIcon={<ArrowForwardIosIcon />}>
                 <LockOpenIcon></LockOpenIcon> Grundbegriffe
               </Button>
