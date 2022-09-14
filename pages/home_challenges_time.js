@@ -8,12 +8,20 @@ import LinearProgress from '@mui/material/LinearProgress';
 import IconButton from '@mui/material/IconButton';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Typography from '@mui/material/Typography';
+import Timer from 'react-compound-timer';
 
 export default function Test() {
+  let [timerStarted, setTimer] = React.useState(false);
+
+  function handleClick_StartTimer() {
+    setTimer(true);
+  }
+
   let [score, setScore] = React.useState(0);
-  function handleClick() {
+  function handleClick_NextExercice() {
     setScore(score + 1);
   }
+
   const [progress, setProgress] = React.useState(0);
 
   React.useEffect(() => {
@@ -77,7 +85,7 @@ export default function Test() {
           aria-label="ArrowForwardIosIcon"
           color="primary"
           size="large"
-          onClick={handleClick}
+          onClick={handleClick_NextExercice}
         >
           <ArrowForwardIosIcon fontSize="large" />
         </IconButton>
