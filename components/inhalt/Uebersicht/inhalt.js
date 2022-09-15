@@ -42,6 +42,11 @@ color: #863E15
             ul {
               list-style-type: circle;
             }
+
+            .u_c{
+              color: #0288d1;
+              text-decoration: underline;
+            }
             
             `}</style>
       <div className="content">
@@ -105,40 +110,80 @@ color: #863E15
           <p>
             <ul>
               <li>
-                {' '}
-                javascript.info ist ein sehr gut strukturiertes und
-                übersichtliches Tutorial.
+                <a
+                  className="u_c"
+                  target="_blank"
+                  href="https://javascript.info/"
+                >
+                  javascript.info {''}
+                </a>
+                ist ein sehr gut strukturiertes und übersichtliches Tutorial.
               </li>
               <li>
-                developer.mozilla.org — Mozilla Developer Network (MND) ist die
-                beste Referenz zum Nachschlagen oder für ausführliche
+                <a
+                  className="u_c"
+                  target="_blank"
+                  href="https://developer.mozilla.org/en-US/"
+                >
+                  developer.mozilla.org — Mozilla Developer Network (MND){' '}
+                </a>{' '}
+                ist die beste Referenz zum Nachschlagen oder für ausführliche
                 Beschreibungen bestimmter Sprachkonzepte (nicht nur
                 JavaScript!). Allerdings ist die deutsche Übersetzung nicht
                 immer aktuell und vollständig — daher sollte MDN immer auf
                 Englisch gelesen werden.
               </li>
               <li>
-                {' '}
-                wiki.selfhtml.org — SelfHTML hat eine Einführung in JavaScript
-                auf deutsch.
+                <a
+                  className="u_c"
+                  target="_blank"
+                  href="https://wiki.selfhtml.org/"
+                >
+                  wiki.selfhtml.org{' '}
+                </a>{' '}
+                — SelfHTML hat eine Einführung in JavaScript auf deutsch.
               </li>
 
               <li>
-                {' '}
-                eloquentjavascript.net — Tutorial im Stil eines Lehrbuchs mit
-                interaktiven Beispielen direkt im Browser.
+                <a
+                  className="u_c"
+                  target="_blank"
+                  href="https://eloquentjavascript.net/"
+                >
+                  eloquentjavascript.net{' '}
+                </a>{' '}
+                — Tutorial im Stil eines Lehrbuchs mit interaktiven Beispielen
+                direkt im Browser.
               </li>
 
               <li>
-                {' '}
-                workshops.progcontent.com — Notizen zu dieser Veranstaltung,
-                d.h. diese Webseite 😀.
+                <a
+                  className="u_c"
+                  target="_blank"
+                  href="https://workshops.progcontent.com/"
+                >
+                  workshops.progcontent.com{' '}
+                </a>{' '}
+                — Notizen zu dieser Veranstaltung, d.h. diese Webseite 😀.
               </li>
 
               <li>
-                {' '}
-                progcontent.com — Lernumgebung von Erik Behrends (work in
-                progress), siehe z.B. JavaScript für Java-Devs.
+                <a
+                  className="u_c"
+                  target="_blank"
+                  href="https://www.progcontent.com/"
+                >
+                  progcontent.com
+                </a>{' '}
+                — Lernumgebung von Erik Behrends (work in progress), siehe z.B.{' '}
+                <a
+                  className="u_c"
+                  target="_blank"
+                  href="https://www.progcontent.com/js-from-java"
+                >
+                  {' '}
+                  JavaScript für Java-Devs.{' '}
+                </a>
               </li>
             </ul>
           </p>
