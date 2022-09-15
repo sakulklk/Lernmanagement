@@ -13,17 +13,17 @@ export default function Test() {
       <div style={{ paddingBottom: '65px' }}>
         <NavBar></NavBar>
         <Grid container spacing={1}>
-          <Grid item xs={2}>
+          <Grid item sm={0} md={3} lg={2}>
             <Box sx={{ p: 2 }}>
               <SideMenu></SideMenu>
             </Box>
           </Grid>
-          <Grid item xs={8}>
-            <ScrollBar></ScrollBar>
+          <Grid item sm={12} md={9} lg={8}>
+              <ScrollBar></ScrollBar>
             <Content></Content>
           </Grid>
 
-          <Grid item xs={2}>
+          <Grid item sm={0} md={0} lg={2}>
             <SideMenuRight></SideMenuRight>
           </Grid>
         </Grid>
