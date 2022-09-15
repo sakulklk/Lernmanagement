@@ -252,7 +252,7 @@ color: #863E15
             <br />
           </y>
           <Grid container justifyContent="flex-end">
-            <a href="/JSK1">
+            <a href="/hello_world">
               <Button variant="text" endIcon={<ArrowForwardIosIcon />}>
                 <LockOpenIcon></LockOpenIcon> Hello, World!
               </Button>

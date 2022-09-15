@@ -34,7 +34,7 @@ export default function Sidemenu() {
           </AccordionSummary>
           <AccordionDetails>
             <MenuList>
-              <MenuItem MenuItem component={Link} href="/JSK1">
+              <MenuItem MenuItem component={Link} href="/hello_world">
                 <Typography variant="inherit" noWrap>
                   Hello, World!
                 </Typography>
