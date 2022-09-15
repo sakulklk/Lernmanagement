@@ -20,7 +20,7 @@ export default function Sidemenu() {
         <style jsx>{`
             .text{
               position: fixed;
-              width: 15%;
+              width: 28%;
               margin-top: 50px;
             }
             `}</style>
