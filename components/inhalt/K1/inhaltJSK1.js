@@ -49,7 +49,7 @@ export default function Sidemenu() {
                 color: #0288d1;
                 text-decoration: underline;
               }
-              code{
+              codest{
                 background-color: #e5e5e5;
                 border-radius: 10px;
               }
@@ -92,7 +92,7 @@ export default function Sidemenu() {
               m: 1,
               width: '100%',
               height: 50,
-              background: '#e5e5e5',
+              background: 'rgba(59,130,246,.14)',
             },
           }}
         >
@@ -138,24 +138,56 @@ export default function Sidemenu() {
               oder nützliche Tipps dabei.
             </Box>
           </Box>
-          <br />
-          <br />
-          <br />
-          <Divider />
-          <br />
         </y>
         <h2>Strings für Text</h2>
+        <Divider />
         <p>
           In fast allen Programmiersprachen wird beliebiger Text wie z.B.{' '}
-          <code> Hello, World!</code> als <b>String</b> (Zeichenkette)
-          bezeichnet.
+          <codest>
+            <code> Hello, World!</code>
+          </codest>{' '}
+          als <b>String</b> (Zeichenkette) bezeichnet.
           <br />
           <br />
           Strings werden in fast allen Programmiersprachen mit doppelten
           Anführungszeichen umgeben:
         </p>
         <p>
-        Strings werden in fast allen Programmiersprachen mit doppelten Anführungszeichen umgeben:
+          Strings werden in fast allen Programmiersprachen mit doppelten
+          Anführungszeichen umgeben:
+        </p>
+        <Box
+          sx={{
+            display: 'flex',
+            '& > :not(style)': {
+              m: 1,
+              width: '100%',
+              height: 50,
+              background: 'rgba(59,130,246,.14)',
+            },
+          }}
+        >
+          <Paper
+            variant="outlined"
+            sx={{
+              alignItems: 'center',
+              justifyContent: 'flex-start',
+              display: 'flex',
+              padding: '5px',
+              color: '#3CB043',
+            }}
+          >
+            <code> "Hello, World!" </code>
+          </Paper>
+        </Box>
+        <p>
+          {' '}
+          Für das Hello-World-Programm benötigen wir also den String{' '}
+          <codest>
+            <code>"Hello, World!"</code>
+          </codest>{' '}
+          und einen „Befehl“, um einen String auf dem Bildschirm anzuzeigen bzw.
+          auszugeben.
         </p>
         <Divider />
         <br />
