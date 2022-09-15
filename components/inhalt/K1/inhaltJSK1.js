@@ -221,13 +221,14 @@ export default function Sidemenu() {
           </Paper>
         </Box>
         <p>
-          {' '}
-          Für das Hello-World-Programm benötigen wir also den String{' '}
-          <codest>
-            <code>"Hello, World!"</code>
-          </codest>{' '}
-          und einen „Befehl“, um einen String auf dem Bildschirm anzuzeigen bzw.
-          auszugeben.
+          Die runden Klammern deuten bei Funktionen (und Methoden) an, dass
+          diese verwendet bzw. <b>aufgerufen</b> werden.
+          <br />
+          <br />
+          Um mit dieser Funktion etwas bestimmtes auszugeben, müssen wir hier
+          beim <b>Funktionsaufruf</b> (oder <b>Methodenaufruf</b>) einen{' '}
+          <b>Parameter</b> (manchmal auch <b>Argument</b> genannt) in den runden
+          Klammern einsetzen. Wir verwenden also den String "Hello, World!":
         </p>
         <br />
         <Grid container>
