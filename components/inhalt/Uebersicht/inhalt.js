@@ -47,6 +47,10 @@ color: #863E15
               color: #0288d1;
               text-decoration: underline;
             }
+            code{
+              background-color: #e5e5e5;
+              border-radius: 10px;
+            }
             
             `}</style>
       <div className="content">
@@ -79,7 +83,15 @@ color: #863E15
           <Divider />
           <p>
             JavaScript wurde 1995 in nur zwei Wochen konzipiert — daher gibt es
-            leider einige seltsame Eigenschaften.
+            leider einige{' '}
+            <a
+              className="u_c"
+              target="_blank"
+              href="https://bonsaiden.github.io/JavaScript-Garden/"
+            >
+              seltsame Eigenschaften
+            </a>
+            .
             <br /> <br />
             Dennoch hat sich JavaScript als die Programmiersprache der Browser
             durchgesetzt und kommt (neben HTML und CSS) auf fast allen Webseiten
@@ -87,7 +99,19 @@ color: #863E15
             <br /> <br />
             Inzwischen kommen jedes Jahr neue Spracheigenschaften hinzu, sodass
             die oben erwähnten Nachteile heutzutage kaum noch von Bedeutung
-            sind. Durch die Ergänzung mit TypeScript und Werkzeugen wie ESLint
+            sind. Durch die Ergänzung mit{' '}
+            <a
+              className="u_c"
+              target="_blank"
+              href="https://www.typescriptlang.org/"
+            >
+              {' '}
+              TypeScript
+            </a>{' '}
+            und Werkzeugen wie{' '}
+            <a className="u_c" target="_blank" href="https://eslint.org/">
+              ESLint
+            </a>{' '}
             (und vielen anderen) bietet JavaScript eine moderne und robuste
             Programmierumgebung.
           </p>
@@ -95,15 +119,23 @@ color: #863E15
           <Divider />
           <p>
             JavaScript unterscheidet sich in vielerlei Hinsicht von Java. Siehe
-            dazu z.B. diese Tabelle.
+            dazu z.B. diese{' '}
+            <a
+              className="u_c"
+              target="_blank"
+              href="https://www.progcontent.com/js-from-java/intro/"
+            >
+              {' '}
+              Tabelle
+            </a>
+            .
             <br />
-            <br />
-            Java is to JavaScript like Car is to Carpet.
-            <br />
-            <br />
+            <blockquote>
+              <i>Java is to JavaScript like Car is to Carpet.</i>
+            </blockquote>
             Dennoch gibt es einige Konzepte, die in JavaScript und Java recht
-            ähnlich sind (u.a. Blöcke mit geschweifte Klammern, if/else/else if,
-            for/while).
+            ähnlich sind (u.a. Blöcke mit geschweifte Klammern,{' '}
+            <code>if/else/else if</code>,<code>for/while</code>).
           </p>
           <h2>Linksammlung</h2>
           <Divider />
@@ -115,9 +147,10 @@ color: #863E15
                   target="_blank"
                   href="https://javascript.info/"
                 >
-                  javascript.info {''}
+                  javascript.info
                 </a>
-                ist ein sehr gut strukturiertes und übersichtliches Tutorial.
+                {''} ist ein sehr gut strukturiertes und übersichtliches
+                Tutorial.
               </li>
               <li>
                 <a
@@ -125,7 +158,7 @@ color: #863E15
                   target="_blank"
                   href="https://developer.mozilla.org/en-US/"
                 >
-                  developer.mozilla.org — Mozilla Developer Network (MND){' '}
+                  developer.mozilla.org — Mozilla Developer Network (MND)
                 </a>{' '}
                 ist die beste Referenz zum Nachschlagen oder für ausführliche
                 Beschreibungen bestimmter Sprachkonzepte (nicht nur
@@ -139,7 +172,7 @@ color: #863E15
                   target="_blank"
                   href="https://wiki.selfhtml.org/"
                 >
-                  wiki.selfhtml.org{' '}
+                  wiki.selfhtml.org
                 </a>{' '}
                 — SelfHTML hat eine Einführung in JavaScript auf deutsch.
               </li>
@@ -150,7 +183,7 @@ color: #863E15
                   target="_blank"
                   href="https://eloquentjavascript.net/"
                 >
-                  eloquentjavascript.net{' '}
+                  eloquentjavascript.net
                 </a>{' '}
                 — Tutorial im Stil eines Lehrbuchs mit interaktiven Beispielen
                 direkt im Browser.
@@ -162,7 +195,7 @@ color: #863E15
                   target="_blank"
                   href="https://workshops.progcontent.com/"
                 >
-                  workshops.progcontent.com{' '}
+                  workshops.progcontent.com
                 </a>{' '}
                 — Notizen zu dieser Veranstaltung, d.h. diese Webseite 😀.
               </li>
@@ -182,8 +215,9 @@ color: #863E15
                   href="https://www.progcontent.com/js-from-java"
                 >
                   {' '}
-                  JavaScript für Java-Devs.{' '}
+                  JavaScript für Java-Devs
                 </a>
+                .
               </li>
             </ul>
           </p>
