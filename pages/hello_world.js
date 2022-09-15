@@ -15,7 +15,7 @@ export default function Test() {
       <div style={{ paddingBottom: '65px' }}>
         <NavBar></NavBar>
         <Grid container spacing={1}>
-          <Grid item sm={0} md={4} lg={2}>
+          <Grid item sm={0} md={3} lg={2}>
             <Box sx={{ p: 2 }}>
               <SideMenu></SideMenu>
             </Box>
