@@ -11,12 +11,12 @@ import LockOpenIcon from '@mui/icons-material/LockOpen';
 import Paper from '@mui/material/Paper';
 
 export default function Sidemenu() {
-  const umgebungen = [
-    'Deno',
-    'Rome',
-    'Kennst du weitere und hast damit schon mal gearbeitet?',
-  ];
-  const listOne = umgebungen.map((umgebungen) => <li>{umgebungen}</li>);
+  // const umgebungen = [
+  //   'Deno',
+  //   'Rome',
+  //   'Kennst du weitere und hast damit schon mal gearbeitet?',
+  // ];
+  // const listOne = umgebungen.map((umgebungen) => <li>{umgebungen}</li>);
   return (
     <div>
       <style jsx>{`
@@ -351,7 +351,6 @@ export default function Sidemenu() {
             </li>
           </ul>
         </p>
-
         <h2>Programmierumgebung</h2>
         <Divider />
         <p>
@@ -437,57 +436,93 @@ export default function Sidemenu() {
           Es gibt weitere Alternativen zu NodeJS für
           JavaScript-Laufzeitumgebungen, die aber noch nicht ausgereift oder
           etabliert sind:
-          <ul>{listOne}</ul>
+          {/* <ul>{listOne}</ul> */}
+          <ul>
+            <li>
+              {' '}
+              <a className="u_c" target="_blank" href="https://deno.land/">
+                Deno
+              </a>
+            </li>
+            <li>
+              {' '}
+              <a className="u_c" target="_blank" href="https://rome.tools/">
+                Rome
+              </a>
+            </li>
+            <li> Kennst du weitere und hast schon mal damit gearbeitet?</li>
+          </ul>
         </p>
-        <h2>Ausgabe auf Bildschirm</h2>
+        <h2>Inspiration</h2>
         <Divider />
         <p>
-          Um etwas auf dem Bildschirm auszugeben, hat JavaScript z.B. die
-          folgende <b>Funktion</b> (manchmal auch <b>Methode</b> genannt):
+          Es gibt einigende spannende Programmierungen für besondere
+          Einsatzbereiche wie Grafik oder Spiele, die direkt ohne etwas
+          installieren zu müssen online im Browser funktionieren. In folgenden
+          Beispiele wird mit
           <br />
+          <ul>
+            <li>
+              Grafische Programmierung mit{' '}
+              <a className="u_c" target="_blank" href="https://p5js.org/">
+                p5js
+              </a>{' '}
+              — basiert auf{' '}
+              <a className="u_c" target="_blank" href="https://processing.org/">
+                Processing{' '}
+              </a>
+            </li>
+            <li>
+              Spiele mit{' '}
+              <a
+                className="u_c"
+                target="_blank"
+                href="https://arcade.makecode.com/"
+              >
+                MakeCode Arcade
+              </a>{' '}
+              — unterstützt Scratch, JavaScript und Python
+            </li>
+            <li>
+              Spiele mit{' '}
+              <a className="u_c" target="_blank" href="https://kaboomjs.com/">
+                Kaboom
+              </a>{' '}
+              von{' '}
+              <a
+                className="u_c"
+                target="_blank"
+                href="https://blog.replit.com/kaboom"
+              >
+                replit.com
+              </a>
+            </li>
+          </ul>
         </p>
-        <Box
-          sx={{
-            display: 'flex',
-            '& > :not(style)': {
-              m: 1,
-              width: '100%',
-              height: 50,
-              background: 'rgba(59,130,246,.13)',
-            },
-          }}
-        >
-          <Paper
-            variant="outlined"
+        ////////////////////////////////////////////////////////////////
+        <y>
+          <Box
             sx={{
-              alignItems: 'center',
-              justifyContent: 'flex-start',
-              display: 'flex',
-              padding: '5px',
+              backgroundColor: '#FFFFEA',
+              padding: '14px',
             }}
           >
-            <code>
-              {' '}
-              <span className="blue">console</span>.
-              <span className="purple">log</span>(){' '}
-            </code>
-          </Paper>
-        </Box>
-        <p>
-          Die runden Klammern deuten bei Funktionen (und Methoden) an, dass
-          diese verwendet bzw. <b>aufgerufen</b> werden.
-          <br />
-          <br />
-          Um mit dieser Funktion etwas bestimmtes auszugeben, müssen wir hier
-          beim <b>Funktionsaufruf</b> (oder <b>Methodenaufruf</b>) einen{' '}
-          <b>Parameter</b> (manchmal auch <b>Argument</b> genannt) in den runden
-          Klammern einsetzen. Wir verwenden also den String{' '}
-          <codest>
-            <code>"Hello, World!"</code>
-          </codest>
-          :
-        </p>
-        <br />
+            <TipsAndUpdatesIcon></TipsAndUpdatesIcon>
+            <Box
+              sx={{
+                backgroundColor: '#FFFFEA',
+                margin: '25px',
+              }}
+            >
+              <b>Dauer: </b>10 Minuten
+              <br />
+              <ul>
+                <li> Allgemeine Infos über JavaScript </li>
+              </ul>
+              <b>Ziel: </b> Hintergründe und Eigenschaften von JavaScript
+            </Box>
+          </Box>
+        </y>
         <Grid container>
           <Grid item sm={8} md={8} lg={10}>
             <a href="/uebersichtJS">
