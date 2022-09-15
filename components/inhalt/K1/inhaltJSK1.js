@@ -11,6 +11,12 @@ import LockOpenIcon from '@mui/icons-material/LockOpen';
 import Paper from '@mui/material/Paper';
 
 export default function Sidemenu() {
+  const umgebungen = [
+    'Deno',
+    'Rome',
+    'Kennst du weitere und hast damit schon mal gearbeitet?',
+  ];
+  const listOne = umgebungen.map((umgebungen) => <li>{umgebungen}</li>);
   return (
     <div>
       <style jsx>{`
@@ -42,7 +48,7 @@ export default function Sidemenu() {
               }
   
               ul {
-                list-style-type: circle;
+                list-style-type: disc;
               }
   
               .u_c{
@@ -50,14 +56,26 @@ export default function Sidemenu() {
                 text-decoration: underline;
               }
               codest{
-                background-color: #e5e5e5;
-                border-radius: 10px;
+                background-color: #F0F0F8;
+                border-radius: 5px;
+                padding: 0.8px;
               }
 
             }
+            .purple {
+              color: #6f42c1;
+            }
+            .blue {
+              color: #1976d2;
+            }
+            .green {
+              color: #22863a;
+            }
+            
             `}</style>
       <div className="content">
         <h1>Hello, World!</h1>
+        <p> </p>
         <y>
           <Box
             sx={{
@@ -92,7 +110,7 @@ export default function Sidemenu() {
               m: 1,
               width: '100%',
               height: 50,
-              background: 'rgba(59,130,246,.14)',
+              background: 'rgba(59,130,246,.13)',
             },
           }}
         >
@@ -108,7 +126,6 @@ export default function Sidemenu() {
             <code> Hello, World! </code>
           </Paper>
         </Box>
-
         <p>
           auf dem Bildschirm anzeigt bzw. ausgibt. Wir betrachten dies kurz in
           JavaScript.
@@ -163,7 +180,7 @@ export default function Sidemenu() {
               m: 1,
               width: '100%',
               height: 50,
-              background: 'rgba(59,130,246,.14)',
+              background: 'rgba(59,130,246,.13)',
             },
           }}
         >
@@ -174,7 +191,7 @@ export default function Sidemenu() {
               justifyContent: 'flex-start',
               display: 'flex',
               padding: '5px',
-              color: '#3CB043',
+              color: '#22863a',
             }}
           >
             <code> "Hello, World!" </code>
@@ -203,7 +220,7 @@ export default function Sidemenu() {
               m: 1,
               width: '100%',
               height: 50,
-              background: 'rgba(59,130,246,.14)',
+              background: 'rgba(59,130,246,.13)',
             },
           }}
         >
@@ -214,10 +231,13 @@ export default function Sidemenu() {
               justifyContent: 'flex-start',
               display: 'flex',
               padding: '5px',
-              color: 'purple',
             }}
           >
-            <code> console.log() </code>
+            <code>
+              {' '}
+              <span className="blue">console</span>.
+              <span className="purple">log</span>(){' '}
+            </code>
           </Paper>
         </Box>
         <p>
@@ -228,7 +248,244 @@ export default function Sidemenu() {
           Um mit dieser Funktion etwas bestimmtes auszugeben, müssen wir hier
           beim <b>Funktionsaufruf</b> (oder <b>Methodenaufruf</b>) einen{' '}
           <b>Parameter</b> (manchmal auch <b>Argument</b> genannt) in den runden
-          Klammern einsetzen. Wir verwenden also den String "Hello, World!":
+          Klammern einsetzen. Wir verwenden also den String{' '}
+          <codest>
+            <code>"Hello, World!"</code>
+          </codest>
+          :
+        </p>
+        <Box
+          sx={{
+            display: 'flex',
+            '& > :not(style)': {
+              m: 1,
+              width: '100%',
+              height: 50,
+              background: 'rgba(59,130,246,.13)',
+            },
+          }}
+        >
+          <Paper
+            variant="outlined"
+            sx={{
+              alignItems: 'center',
+              justifyContent: 'flex-start',
+              display: 'flex',
+              padding: '5px',
+            }}
+          >
+            <code>
+              {' '}
+              <span className="blue">console</span>.
+              <span className="purple">log</span>(
+              <span className="green">"Hello,World!"</span>){' '}
+            </code>
+          </Paper>
+        </Box>
+        <p>
+          Oft sagen wir hierzu auch „der Funktion bzw. Methode beim Aufruf ein
+          Parameter oder ein Argument übergeben“.
+          <br />
+          <br />
+          Es gibt auch Funktionen/Methoden ohne Parameter und solche mit
+          mehreren Parametern. Ebenso können sie ein Ergebnis als{' '}
+          <b>Rückgabewert</b> liefern (hier bei{' '}
+          <codest>
+            <code>console.log()</code>
+          </codest>{' '}
+          nicht relevant).
+          <br />
+          <br />
+          Nun haben wir eine korrekte <b>Anweisung</b> in JavaScript
+          programmiert.
+          <br />
+          <br />
+          Grundlegend und stark vereinfacht gesagt besteht die Programmierung in
+          vielen Sprachen daraus, aufeinanderfolgende Anweisungen zu schreiben,
+          die dann ausgeführt werden.
+          <br />
+          <br />
+          Ein paar Bemerkungen dazu:
+          <br />
+          <br />
+          <ul>
+            <li>
+              In JavaScript können mehrere Anweisungen durch Zeilenumbruch oder
+              Semikolon voneinander getrennt werden.
+            </li>
+
+            <li>
+              {' '}
+              Oft ist daher JavaScript-Code mit Semikolon am Ende einer
+              Anweisung zu sehen:
+              <codest>
+                <code> {''}console.log("Hello, World!");</code>
+              </codest>
+            </li>
+            <li>
+              {' '}
+              Im Unterrichtsmaterial wird meistens das Semikolon am Ende einer
+              Anweisung angegeben.{' '}
+            </li>
+            <li>
+              Jeder Browser hat eine JavaScript-Konsole, in der JavaScript-Code
+              ausprobiert werden kann. Dort funktioniert auch die Methode
+              <codest>
+                <code>{''} console.log()</code>
+              </codest>
+              .
+            </li>
+            <li>
+              {' '}
+              Im Browser kann auch etwas in einem UI-Dialog mit{' '}
+              <codest>
+                <code>alert()</code>
+              </codest>
+              angezeigt werden.
+            </li>
+            <li>
+              {' '}
+              In dieser Vorlesung betrachten wir JavaScript weitestgehend ohne
+              HTML und CSS (⟶ dies findet evtl. in der Vorlesung
+              „Web-Engineering“ statt).
+            </li>
+          </ul>
+        </p>
+
+        <h2>Programmierumgebung</h2>
+        <Divider />
+        <p>
+          Für die Verwendung einer Programmiersprache werden zusätzliche
+          Werkzeuge wie Editoren, Interpreter/Compiler oder komplette
+          Entwicklungsumgebungen benötigt.
+          <br />
+          <br />
+          JavaScript hat den Vorteil, dass jeder Browser eine sogenannte Konsole
+          hat, in der mit JavaScript experimentiert werden kann (außer auf dem
+          Smartphone oder Tablet). Die Konsole (console) ist Teil der
+          Entwicklerwerkzeuge (developer tools) eines Browsers und kann meistens
+          mit der Funktionstaste{' '}
+          <codest>
+            <code>F12</code>
+          </codest>{' '}
+          geöffnet werden.
+        </p>
+        <p>
+          Später lernen wir weitere Programmierumgebungen wie z.B. den Editor{' '}
+          <a
+            className="u_c"
+            target="_blank"
+            href="https://code.visualstudio.com/"
+          >
+            VS Code
+          </a>
+          , die JavaScript-Laufzeitumgebung {''}
+          <a className="u_c" target="_blank" href="https://nodejs.org/en/">
+            NodeJS
+          </a>{' '}
+          und die Online-Programmierumgebung{' '}
+          <a className="u_c" target="_blank" href="https://replit.com/">
+            replit.com
+          </a>{' '}
+          kennen. Letztere unterstützt neben JavaScript auch viele weitere
+          Programmiersprachen.
+        </p>
+        <y>
+          <Box
+            sx={{
+              backgroundColor: '#FFFFEA',
+              padding: '14px',
+            }}
+          >
+            <TipsAndUpdatesIcon></TipsAndUpdatesIcon>
+            <Box
+              sx={{
+                backgroundColor: '#FFFFEA',
+                margin: '25px',
+              }}
+            >
+              Wir werden den JavaScript-Code in den ersten Vorlesungsterminen
+              und für die Übungen in kleinen Beispielen im Browser schreiben. Es
+              muss also nichts installiert werden.
+              <br />
+              <br />
+              Für das Programmierprojekt kann später auch{' '}
+              <a className="u_c" target="_blank" href="https://nodejs.org/en/">
+                NodeJS
+              </a>{' '}
+              zur Programmierung direkt auf dem Laptop installiert werden —
+              eventuell ist dies jedoch nicht unbedingt nötig (siehe spätere
+              Infos zum Projekt).
+              <br />
+              <br />
+              Für die Programmierung von JavaScript kann im Prinzip jeder
+              Texteditor eingesetzt werden (VS Code, Web-/PhpStorm, Notepad++,
+              usw.).
+              <br />
+              <br />
+              Beim Programmierprojekt sollten alle Mitglieder einer Gruppe die
+              gleiche Entwicklungsumgebung einsetzen, damit die Teamarbeit
+              einheitlich abläuft. Hierzu ist dann auch die Verwendung von{' '}
+              <a className="u_c" target="_blank" href="https://git-scm.com/">
+                git
+              </a>{' '}
+              sinnvoll.
+            </Box>
+          </Box>
+        </y>
+        <p>
+          Es gibt weitere Alternativen zu NodeJS für
+          JavaScript-Laufzeitumgebungen, die aber noch nicht ausgereift oder
+          etabliert sind:
+          <ul>{listOne}</ul>
+        </p>
+        <h2>Ausgabe auf Bildschirm</h2>
+        <Divider />
+        <p>
+          Um etwas auf dem Bildschirm auszugeben, hat JavaScript z.B. die
+          folgende <b>Funktion</b> (manchmal auch <b>Methode</b> genannt):
+          <br />
+        </p>
+        <Box
+          sx={{
+            display: 'flex',
+            '& > :not(style)': {
+              m: 1,
+              width: '100%',
+              height: 50,
+              background: 'rgba(59,130,246,.13)',
+            },
+          }}
+        >
+          <Paper
+            variant="outlined"
+            sx={{
+              alignItems: 'center',
+              justifyContent: 'flex-start',
+              display: 'flex',
+              padding: '5px',
+            }}
+          >
+            <code>
+              {' '}
+              <span className="blue">console</span>.
+              <span className="purple">log</span>(){' '}
+            </code>
+          </Paper>
+        </Box>
+        <p>
+          Die runden Klammern deuten bei Funktionen (und Methoden) an, dass
+          diese verwendet bzw. <b>aufgerufen</b> werden.
+          <br />
+          <br />
+          Um mit dieser Funktion etwas bestimmtes auszugeben, müssen wir hier
+          beim <b>Funktionsaufruf</b> (oder <b>Methodenaufruf</b>) einen{' '}
+          <b>Parameter</b> (manchmal auch <b>Argument</b> genannt) in den runden
+          Klammern einsetzen. Wir verwenden also den String{' '}
+          <codest>
+            <code>"Hello, World!"</code>
+          </codest>
+          :
         </p>
         <br />
         <Grid container>

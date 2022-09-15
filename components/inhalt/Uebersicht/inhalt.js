@@ -40,7 +40,7 @@ color: #863E15
             }
 
             ul {
-              list-style-type: circle;
+              list-style-type: disc;
             }
 
             .u_c{
