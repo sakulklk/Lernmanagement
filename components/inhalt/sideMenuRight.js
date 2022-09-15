@@ -34,6 +34,12 @@ export default function BoxSx() {
           Dann ins Forum damit!
           <ArrowForwardIcon></ArrowForwardIcon>
         </a>
+        <br />
+        <b>Bitte gebe dein Feedback zu der Übung!</b>
+        <br />
+        <a href="/forum">
+Hier geht es zum Feedback Bogen          <ArrowForwardIcon></ArrowForwardIcon>
+        </a>
       </Typography>
     </Box>
   );

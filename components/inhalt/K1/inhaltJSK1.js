@@ -189,7 +189,46 @@ export default function Sidemenu() {
           und einen „Befehl“, um einen String auf dem Bildschirm anzuzeigen bzw.
           auszugeben.
         </p>
+        <h2>Ausgabe auf Bildschirm</h2>
         <Divider />
+        <p>
+          Um etwas auf dem Bildschirm auszugeben, hat JavaScript z.B. die
+          folgende <b>Funktion</b> (manchmal auch <b>Methode</b> genannt):
+          <br />
+        </p>
+        <Box
+          sx={{
+            display: 'flex',
+            '& > :not(style)': {
+              m: 1,
+              width: '100%',
+              height: 50,
+              background: 'rgba(59,130,246,.14)',
+            },
+          }}
+        >
+          <Paper
+            variant="outlined"
+            sx={{
+              alignItems: 'center',
+              justifyContent: 'flex-start',
+              display: 'flex',
+              padding: '5px',
+              color: 'purple',
+            }}
+          >
+            <code> console.log() </code>
+          </Paper>
+        </Box>
+        <p>
+          {' '}
+          Für das Hello-World-Programm benötigen wir also den String{' '}
+          <codest>
+            <code>"Hello, World!"</code>
+          </codest>{' '}
+          und einen „Befehl“, um einen String auf dem Bildschirm anzuzeigen bzw.
+          auszugeben.
+        </p>
         <br />
         <Grid container>
           <Grid item sm={8} md={8} lg={10}>
