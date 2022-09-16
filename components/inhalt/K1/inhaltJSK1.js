@@ -1,13 +1,20 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
+
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
+
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
+import Divider from '@mui/material/Divider';
+
+
+ 
+
 import Paper from '@mui/material/Paper';
 
 export default function Sidemenu() {
@@ -523,6 +530,7 @@ export default function Sidemenu() {
             </Box>
           </Box>
         </y>
+
         <Grid container>
           <Grid item sm={8} md={8} lg={10}>
             <a href="/uebersichtJS">
@@ -532,7 +540,9 @@ export default function Sidemenu() {
             </a>
           </Grid>
           <Grid item sm={4} md={4} lg={2}>
+
             <a href="/grundbegriffe">
+
               <Button variant="text" endIcon={<ArrowForwardIosIcon />}>
                 <LockOpenIcon></LockOpenIcon> Grundbegriffe
               </Button>

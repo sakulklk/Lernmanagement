@@ -38,24 +38,32 @@ export default function Sidemenu() {
           dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
           lacus ex, sit amet blandit leo lobortis eget.
         </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
+          lacus ex, sit amet blandit leo lobortis eget.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
+          lacus ex, sit amet blandit leo lobortis eget.
+        </p>
         <Divider />
         <br />
         <Grid container>
-          <Grid item sm={7} md={7} lg={9}>
-
-            <a href="/hello_world">
+          <Grid item sm={8} md={8} lg={10}>
+            <a href="/uebersichtJS">
               <Button variant="text" startIcon={<ArrowBackIosIcon />}>
-                <LockOpenIcon></LockOpenIcon> Hello, World!
-
+                <LockOpenIcon></LockOpenIcon> JavaScript
               </Button>
             </a>
           </Grid>
-          <Grid item sm={5} md={5} lg={3}>
-
-            <a href="/var_konst">
-
+          <Grid item sm={4} md={4} lg={2}>
+            <a href="/Grundbegriffe">
               <Button variant="text" endIcon={<ArrowForwardIosIcon />}>
-                <LockOpenIcon></LockOpenIcon> Variablen und Konstanten
+                <LockOpenIcon></LockOpenIcon> Grundbegriffe
               </Button>
             </a>
           </Grid>

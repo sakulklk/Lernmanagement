@@ -20,9 +20,7 @@ export default function Sidemenu() {
         <style jsx>{`
             .text{
               position: fixed;
-
-              width: 25%;
-
+              width: 15%;
               margin-top: 50px;
             }
             `}</style>
@@ -36,22 +34,21 @@ export default function Sidemenu() {
           </AccordionSummary>
           <AccordionDetails>
             <MenuList>
-
-              <MenuItem MenuItem component={Link} href="/hello_world">
-
+              <MenuItem MenuItem component={Link} href="/JSK1">
                 <Typography variant="inherit" noWrap>
                   Hello, World!
                 </Typography>
               </MenuItem>
 
-              <MenuItem component={Link} href="/grundbegriffe">
+              <MenuItem component={Link} href="/Grundbegriffe">
                 <Typography variant="inherit" noWrap>
                   Grundbegriffe
                 </Typography>
               </MenuItem>
-
-              <MenuItem component={Link} href="/var_konst">
-
+              <MenuItem
+                component={Link}
+                href="/nutzerdaten_adminrechte_beantragen"
+              >
                 <Typography variant="inherit" noWrap>
                   Variablen und Konstanten
                 </Typography>

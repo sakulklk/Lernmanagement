@@ -13,6 +13,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import SaveIcon from '@mui/icons-material/Save';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import UpgradeIcon from '@mui/icons-material/Upgrade';
+
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
 import AlertTitle from '@mui/material/AlertTitle';
@@ -22,6 +23,7 @@ import Collapse from '@mui/material/Collapse';
 import CloseIcon from '@mui/icons-material/Close';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
+
 
 const actions = [
   { icon: <DeleteIcon />, name: 'Löschen' },
@@ -69,12 +71,14 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 export default function CustomizedAccordions() {
   const [expanded, setExpanded] = React.useState('panel1');
 
+
   const [open, setOpen] = React.useState(true);
 
   const [checked, setChecked] = React.useState(false);
   const handleChangeCheck = (event) => {
     setChecked(event.target.checked);
   };
+
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -84,11 +88,13 @@ export default function CustomizedAccordions() {
     <div>
       <style jsx>{`
     .acc{
+
       margin-top: 50px;
       margin-bpttom: 80px;
       text-align: center;
       padding-right: 100px;
       padding-left: 100px;
+
     }
 
     h1{
@@ -109,6 +115,7 @@ export default function CustomizedAccordions() {
 
         
       `}</style>
+
 
       <h1> Wilkommen auf der JavaScript Lernseite! </h1>
       <Stack sx={{ width: '100%' }} alignItems="center" justifyContent="center">
@@ -147,6 +154,7 @@ export default function CustomizedAccordions() {
         </Collapse>
       </Stack>
 
+
       <div className="acc">
         <Accordion
           expanded={expanded === 'panel1'}
@@ -157,6 +165,7 @@ export default function CustomizedAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
+
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
               eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -169,6 +178,7 @@ export default function CustomizedAccordions() {
               <Button variant="contained">Bearbeiten</Button>
               <Button variant="contained">Löschen</Button>
             </Stack>
+
           </AccordionDetails>
         </Accordion>
         <Accordion
@@ -180,11 +190,13 @@ export default function CustomizedAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
+
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
               eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
               eget.
+
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -197,6 +209,7 @@ export default function CustomizedAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
+
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
               eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -214,7 +227,7 @@ export default function CustomizedAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
               eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
@@ -231,6 +244,7 @@ export default function CustomizedAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
+
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
               eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -248,6 +262,7 @@ export default function CustomizedAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
+
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
               eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -259,6 +274,7 @@ export default function CustomizedAccordions() {
       </div>
       <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1 }}>
         <SpeedDial
+
           ariaLabel="SpeedDial CRUD"
           sx={{ position: 'sticky' }}
           icon={<SpeedDialIcon />}

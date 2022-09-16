@@ -42,18 +42,14 @@ export default function Sidemenu() {
         <br />
         <Grid container>
           <Grid item sm={7} md={7} lg={9}>
-
-            <a href="/hello_world">
+            <a href="/JSK1">
               <Button variant="text" startIcon={<ArrowBackIosIcon />}>
-                <LockOpenIcon></LockOpenIcon> Hello, World!
-
+                <LockOpenIcon></LockOpenIcon> Grundbegriffe
               </Button>
             </a>
           </Grid>
           <Grid item sm={5} md={5} lg={3}>
-
-            <a href="/var_konst">
-
+            <a href="/JSK1">
               <Button variant="text" endIcon={<ArrowForwardIosIcon />}>
                 <LockOpenIcon></LockOpenIcon> Variablen und Konstanten
               </Button>

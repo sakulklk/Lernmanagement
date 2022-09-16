@@ -8,6 +8,7 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import LockIcon from '@mui/icons-material/Lock';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
+
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import IconButton from '@mui/material/IconButton';
@@ -65,6 +66,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export default function CustomizedAccordions() {
+
   const [expanded, setExpanded] = React.useState(0);
 
   const [open, setOpen] = React.useState(true);
@@ -88,6 +90,7 @@ export default function CustomizedAccordions() {
     <div>
       <style jsx>{`
     .acc{
+
       margin-top: 50px;
       margin-bpttom: 80px;
       text-align: center;
@@ -103,6 +106,7 @@ export default function CustomizedAccordions() {
 
     h3{
       font-weight: lighter;
+
       margin-left: auto;
       text-align: center;
       margin-rigth: auto;
@@ -234,6 +238,7 @@ export default function CustomizedAccordions() {
               id="button"
               variant="contained"
               startIcon={<LockOpenIcon />}
+
               href={'/JSK1'}
             >
               Fange an zu lernen!
@@ -242,6 +247,7 @@ export default function CustomizedAccordions() {
         </Accordion>
         <Accordion
           expanded={expanded === 'panel2'}
+
           onChange={handleChangePanel('panel2')}
         >
           <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
@@ -284,6 +290,7 @@ export default function CustomizedAccordions() {
         </Accordion>
         <Accordion
           expanded={expanded === 'panel3'}
+
           onChange={handleChangePanel('panel3')}
         >
           <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
@@ -323,6 +330,7 @@ export default function CustomizedAccordions() {
         </Accordion>
         <Accordion
           expanded={expanded === 'panel4'}
+
           onChange={handleChangePanel('panel4')}
         >
           <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
@@ -362,6 +370,7 @@ export default function CustomizedAccordions() {
         </Accordion>
         <Accordion
           expanded={expanded === 'panel5'}
+
           onChange={handleChangePanel('panel5')}
         >
           <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
@@ -407,6 +416,7 @@ export default function CustomizedAccordions() {
         </Accordion>
         <Accordion
           expanded={expanded === 'panel6'}
+
           onChange={handleChangePanel('panel6')}
         >
           <AccordionSummary aria-controls="panel6d-content" id="panel6d-header">

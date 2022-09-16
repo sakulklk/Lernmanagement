@@ -5,21 +5,35 @@ import NestedList from '../components/admin/Liste.js';
   rel="stylesheet"
   href="https://fonts.googleapis.com/icon?family=Material+Icons"
 />;
-import BasicTextFields from '../components/admin/Button.js';
+import Mail from '../components/admin/Button.js';
 import SimpleAccordion from '../components/admin/Akkordion.js';
-import Textfield from '../components/admin/Textfeld.js';
+import Header from '../components/admin/Textfeld.js';
 import Field from '../components/admin/Bestätigungscode.js';
 import BasicButtons from '../components/admin/BestätigenButton.js';
 import BasicBreadcrumbs from '../components/admin/Breadcrumb.js';
+import Grid from '@mui/material/Grid';
+import BasicBreadcrumbs1 from '../components/admin/Breadcrumb.js';
 
+// deine Namen sind nicht sehr gut würde ziemlich vieles umbenennen ( breadcrumbs ist zB ein guter Name, da man gleich weißt was es ist bei den anderen Sachen keine Ahnung)
+// habe Textfield in Header umbenannt und basictextfield in mail
+// habe dir jetzt ein Grid gemacht damit die Mail neben dem SendIcon ist
 
 export default function adminrechte() {
   return (
     <>
       <NavBar></NavBar>
-      <BasicBreadcrumbs></BasicBreadcrumbs>
-        <div className="column">
-          <style jsx>{`
+      <BasicBreadcrumbs1></BasicBreadcrumbs1>
+
+      <div className="bread">
+        <style jsx>{`
+      .bread{
+        margin-left: 30px;
+        margin-top: 18px;
+      }
+     `}</style>
+      </div>
+      <div className="column">
+        <style jsx>{`
       .column{
         margin-top: 100px;;
         margin-bottom: 25px;
@@ -34,26 +48,34 @@ export default function adminrechte() {
       .accordion{
         text-align: left;
       }
+
+      .sendIcon{
+        font-size: 100;
+      }
      `}</style>
-
-          <Textfield></Textfield>
-
-          <BasicTextFields></BasicTextFields>
-
-          <NestedList></NestedList>
-          <div className="confirm">
-            <Field></Field>
-          </div>
-          <BasicButtons></BasicButtons>
-
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          />
-          <div className="accordion">
-            <SimpleAccordion></SimpleAccordion>
-          </div>
+        <Header></Header>
+        <Grid container spacing={1}>
+          <Grid item xs={9}>
+            <Mail></Mail>
+          </Grid>
+          <Grid item xs={3}>
+            <NestedList></NestedList>
+          </Grid>
+        </Grid>
+        <div className="confirm">
+          <Field></Field>
         </div>
+        <BasicButtons></BasicButtons>
+
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+        <div className="accordion">
+          <SimpleAccordion></SimpleAccordion>
+        </div>
+      </div>
+
       <Footer></Footer>
     </>
   );

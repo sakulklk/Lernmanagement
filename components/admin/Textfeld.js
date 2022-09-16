@@ -9,7 +9,7 @@ export default function Textfield() {
     <div>
       <h3>
         Um Adminrechte zu beantragen, geben Sie uns bitte im folgenden Feld Ihre
-        E-Mail an. <br></br> Wir schicken Ihnen anschliessend einen Bestätigungscode.
+        E-Mail an. <br></br> Wir schicken Ihnen anschließend einen Bestätigungscode.
       </h3>
     </div>
    
