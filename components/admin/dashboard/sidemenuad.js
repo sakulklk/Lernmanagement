@@ -21,7 +21,7 @@ export default function Sidemenuad() {
           </Typography>
         </MenuItem>
         <Divider />
-        <MenuItem component={Link} href="/nutzerdaten_daten_aendern">
+        <MenuItem component={Link} href="/nutzerdaten_daten_admin">
           <Typography variant="inherit" noWrap>
             Daten ändern
           </Typography>

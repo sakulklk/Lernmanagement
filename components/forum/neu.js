@@ -12,6 +12,11 @@ import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
 import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
 import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
 import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
+import FormatBoldIcon from '@mui/icons-material/FormatBold';
+import FormatItalicIcon from '@mui/icons-material/FormatItalic';
+import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
+import FormatColorFillIcon from '@mui/icons-material/FormatColorFill';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 export default function Neu() {
   const [alignment, setAlignment] = React.useState('');
@@ -22,7 +27,11 @@ export default function Neu() {
   const handleAlignment = (event, newAlignment) => {
     setAlignment(newAlignment);
   };
-
+  const handleFormat = (event, newFormats) => {
+    setFormats(newFormats);
+  };
+  const [formats, setFormats] = React.useState(() => ['']);
+  
   return (
     <>
       <Grid item xs={12}>
@@ -51,6 +60,8 @@ export default function Neu() {
           </Grid>
           <Grid item xs={12} style={{ textAlign: 'center' }}>
             <h3>Text</h3>
+          </Grid>
+          <Grid item xs={6} style={{ textAlign: 'center' }}>
             <ToggleButtonGroup
               value={alignment}
               exclusive
@@ -70,6 +81,29 @@ export default function Neu() {
                 <FormatAlignJustifyIcon />
               </ToggleButton>
             </ToggleButtonGroup>
+          </Grid>
+          <Grid item xs={6} style={{ textAlign: 'center' }}>
+            <ToggleButtonGroup
+              value={formats}
+              onChange={handleFormat}
+              aria-label="text formatting"
+            >
+              <ToggleButton value="bold" aria-label="bold">
+                <FormatBoldIcon />
+              </ToggleButton>
+              <ToggleButton value="italic" aria-label="italic">
+                <FormatItalicIcon />
+              </ToggleButton>
+              <ToggleButton value="underlined" aria-label="underlined">
+                <FormatUnderlinedIcon />
+              </ToggleButton>
+              <ToggleButton value="color" aria-label="color" disabled>
+                <FormatColorFillIcon />
+                <ArrowDropDownIcon />
+              </ToggleButton>
+            </ToggleButtonGroup>
+          </Grid>
+          <Grid item xs={12} style={{ textAlign: 'center' }}>
             <TextField
               id="outlined-multiline-flexible"
               multiline
