@@ -5,8 +5,11 @@ import Übersicht from '../components/kapitelJS/kapitelübersicht_na.js';
 export default function KapitelJS() {
   return (
     <>
-      <NavBar></NavBar>
-      <Übersicht></Übersicht>
+
+      <div style={{ paddingBottom: '75px' }}>
+        <NavBar></NavBar>
+        <Übersicht></Übersicht>
+      </div>
       <Footer></Footer>
     </>
   );

@@ -7,8 +7,9 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
-export default function CurrentLanguages() {
-  const languages = [
+export default function LanguageWidget() {
+  const loggedIn = false;
+  const currentLanguages = [
     { name: 'JavaScript', progress: 78, learningMark: 'JSON' },
     { name: 'Python', progress: 65, learningMark: 'Tkinter' },
     { name: 'HTML', progress: 90, learningMark: 'Profiwissen' },
@@ -17,9 +18,8 @@ export default function CurrentLanguages() {
     { name: 'C++', progress: 13, learningMark: 'Variablen' },
     { name: 'Prolog', progress: 55, learningMark: 'Arithmetik' },
   ];
-
   return (
-    <div>
+    <>
       <Paper
         elevation={5}
         style={{ margin: '10px', padding: '10px', textAlign: 'center' }}
@@ -28,15 +28,15 @@ export default function CurrentLanguages() {
       </Paper>
       <Paper elevation={5} style={{ margin: '10px' }}>
         <List style={{ maxHeight: '250px', overflowY: 'scroll' }}>
-          {languages.map((language) => (
+          {currentLanguages.map((currentLanguage) => (
             <ListItem>
               <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={2}>
+                <Grid container spacing={2} style={{ alignItems: 'center' }}>
                   <Grid item xs={2} style={{ textAlign: 'center' }}>
-                    {language.name}
+                    {currentLanguage.name}
                   </Grid>
                   <Grid item xs={4} style={{ textAlign: 'center' }}>
-                    {language.learningMark}
+                    {currentLanguage.learningMark}
                   </Grid>
                   <Grid
                     item
@@ -46,13 +46,13 @@ export default function CurrentLanguages() {
                       alignSelf: 'center',
                     }}
                   >
-                    {language.progress}%
+                    {currentLanguage.progress}%
                   </Grid>
                   <Grid item xs={3} alignSelf="center">
                     <Box sx={{ width: '100%', padding: 'auto' }}>
                       <LinearProgress
                         variant="determinate"
-                        value={language.progress}
+                        value={currentLanguage.progress}
                         color="secondary"
                         // ?  height=""
                       />
@@ -70,6 +70,6 @@ export default function CurrentLanguages() {
           ))}
         </List>
       </Paper>
-    </div>
+    </>
   );
 }

@@ -17,13 +17,17 @@
     "@material-ui/icons": "^4.11.3",
     "@mui/icons-material": "^5.8.4",
     "@mui/joy": "*",
+    "@mui/lab": "*",
     "@mui/material": "^5.9.3",
     "@mui/x-date-pickers": "*",
     "@mui/x-date-pickers-pro": "*",
     "material-ui": "^0.20.2",
     "next": "^12.1.0",
     "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "react-window": "^1.8.7"
+
+    "react-beautiful-dnd": "^13.1.1",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "17.0.1"
   }
 }

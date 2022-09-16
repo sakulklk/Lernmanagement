@@ -13,7 +13,17 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import SaveIcon from '@mui/icons-material/Save';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import UpgradeIcon from '@mui/icons-material/Upgrade';
-import VerticalLinearStepper1 from '../MenuDozent.js';
+
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
+import AlertTitle from '@mui/material/AlertTitle';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import Collapse from '@mui/material/Collapse';
+import CloseIcon from '@mui/icons-material/Close';
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
+
 
 const actions = [
   { icon: <DeleteIcon />, name: 'Löschen' },
@@ -61,6 +71,15 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 export default function CustomizedAccordions() {
   const [expanded, setExpanded] = React.useState('panel1');
 
+
+  const [open, setOpen] = React.useState(true);
+
+  const [checked, setChecked] = React.useState(false);
+  const handleChangeCheck = (event) => {
+    setChecked(event.target.checked);
+  };
+
+
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
@@ -69,11 +88,13 @@ export default function CustomizedAccordions() {
     <div>
       <style jsx>{`
     .acc{
-      margin-top: 100px;
-      margin-bpttom: 25px;
+
+      margin-top: 50px;
+      margin-bpttom: 80px;
       text-align: center;
-      padding-right: 75px;
-      padding-left: 75px;
+      padding-right: 100px;
+      padding-left: 100px;
+
     }
 
     h1{
@@ -94,16 +115,46 @@ export default function CustomizedAccordions() {
 
         
       `}</style>
-      <Typography>
-        <h1> Wilkommen auf der JavaScript Lernseite! </h1>
-        <h3>
-          {' '}
-          Sie können die Lernkapitel{' '}
-          <b> bearbeiten, löschen und neue ersetllen </b>. <br /> Für Sie gibt
-          es keine <i> Freischalte-Funktion</i>. Sie haben jeder Zeit Zugriff
-          auf alle Kapitel.
-        </h3>
-      </Typography>
+
+
+      <h1> Wilkommen auf der JavaScript Lernseite! </h1>
+      <Stack sx={{ width: '100%' }} alignItems="center" justifyContent="center">
+        <Collapse in={open}>
+          <Alert
+            severity="info"
+            action={
+              <IconButton
+                aria-label="close"
+                color="inherit"
+                size="small"
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
+                <CloseIcon fontSize="inherit" />
+              </IconButton>
+            }
+            sx={{ mb: 2 }}
+          >
+            <Typography>
+              <AlertTitle>Info</AlertTitle>
+              <h3>
+                Sie können die Lernkapitel
+                <b> bearbeiten, löschen und neue erstellen </b>.<br /> Gehen Sie
+                bitte dafür unten auf das Plus. <br /> Für Sie gibt es keine{' '}
+                <i> Freischalte-Funktion</i>. Sie haben jeder Zeit Zugriff auf
+                alle beliebigen Kapitel.
+              </h3>
+              <FormControlLabel
+                control={<Checkbox value="remember" color="primary" />}
+                label="Diese Info nicht mehr anzeigen"
+              />
+            </Typography>
+          </Alert>
+        </Collapse>
+      </Stack>
+
+
       <div className="acc">
         <Accordion
           expanded={expanded === 'panel1'}
@@ -114,8 +165,20 @@ export default function CustomizedAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              <VerticalLinearStepper1></VerticalLinearStepper1>
+
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
             </Typography>
+            <br />
+            <Stack spacing={2} direction="row" justifyContent="center">
+              <Button variant="contained">Hinzufügen</Button>
+              <Button variant="contained">Bearbeiten</Button>
+              <Button variant="contained">Löschen</Button>
+            </Stack>
+
           </AccordionDetails>
         </Accordion>
         <Accordion
@@ -127,7 +190,13 @@ export default function CustomizedAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              <VerticalLinearStepper1></VerticalLinearStepper1>
+
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
+
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -140,7 +209,12 @@ export default function CustomizedAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              <VerticalLinearStepper1></VerticalLinearStepper1>
+
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -153,7 +227,11 @@ export default function CustomizedAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              <VerticalLinearStepper1></VerticalLinearStepper1>
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -166,7 +244,12 @@ export default function CustomizedAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              <VerticalLinearStepper1></VerticalLinearStepper1>
+
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -179,15 +262,21 @@ export default function CustomizedAccordions() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              <VerticalLinearStepper1></VerticalLinearStepper1>
+
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
             </Typography>
           </AccordionDetails>
         </Accordion>
       </div>
       <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1 }}>
         <SpeedDial
-          ariaLabel="SpeedDial basic example"
-          sx={{ position: 'absolute', bottom: 60, right: 20 }}
+
+          ariaLabel="SpeedDial CRUD"
+          sx={{ position: 'sticky' }}
           icon={<SpeedDialIcon />}
         >
           {actions.map((action) => (
