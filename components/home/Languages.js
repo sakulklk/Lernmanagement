@@ -30,18 +30,20 @@ export default function Languages() {
           margin: '10px',
           padding: '10px',
           textAlign: 'center',
-          fontFamily: " 'Chakra Petch', sans-serif",
         }}
       >
-        <Typography fontFamily=" 'Chakra Petch', sans-serif">
+        <Typography variant="subtitle1">
           Willkommen ! Tipp: Melde Dich an um hier immer deine aktuellen
-          Lernsprachen zu sehen.
+          Lernsprachen zu sehen. Unten kannst Du aus einer der populärsten
+          Programmiersprachen wählen oder du navigierst über das Menü zu allen
+          Sprachen.
         </Typography>
       </Paper>
       <Paper
         elevation={5}
         style={{
-          margin: '10px',
+          margin: ' auto',
+          width: '70%',
         }}
       >
         <List>
@@ -49,7 +51,7 @@ export default function Languages() {
             <ListItem>
               <Grid container spacing={1}>
                 <Grid item xs style={{ textAlign: 'center' }}>
-                  {language}
+                  <Typography variant="subtitle1">{language}</Typography>
                 </Grid>
                 <Grid item xs style={{ textAlign: 'center' }}>
                   <Button variant="contained" color="secondary" size="small">
