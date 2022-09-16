@@ -1,20 +1,59 @@
 import NavBar from '../components/NavBar.js';
 import Footer from '../components/Footer.js';
-import NestedList from '../components/admin/adminrechte.js';
+import NestedList from '../components/admin/Liste.js';
 <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/icon?family=Material+Icons"
 />;
+import BasicTextFields from '../components/admin/Button.js';
+import SimpleAccordion from '../components/admin/Akkordion.js';
+import Textfield from '../components/admin/Textfeld.js';
+import Field from '../components/admin/Bestätigungscode.js';
+import BasicButtons from '../components/admin/BestätigenButton.js';
+import BasicBreadcrumbs from '../components/admin/Breadcrumb.js';
 
-export default function Home() {
+
+export default function adminrechte() {
   return (
     <>
       <NavBar></NavBar>
-      <NestedList></NestedList>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      />
+      <BasicBreadcrumbs></BasicBreadcrumbs>
+        <div className="column">
+          <style jsx>{`
+      .column{
+        margin-top: 100px;;
+        margin-bottom: 25px;
+        text-align: center;
+        padding-right: 350px;
+        padding-left: 350px;
+      }
+      .confirm{
+        text-align:left;
+      }
+      
+      .accordion{
+        text-align: left;
+      }
+     `}</style>
+
+          <Textfield></Textfield>
+
+          <BasicTextFields></BasicTextFields>
+
+          <NestedList></NestedList>
+          <div className="confirm">
+            <Field></Field>
+          </div>
+          <BasicButtons></BasicButtons>
+
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          />
+          <div className="accordion">
+            <SimpleAccordion></SimpleAccordion>
+          </div>
+        </div>
       <Footer></Footer>
     </>
   );

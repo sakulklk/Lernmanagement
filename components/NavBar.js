@@ -15,6 +15,7 @@ import MenuItem from '@mui/material/MenuItem';
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 
 export default function NavBar() {
+  const loggedIn = true;
   const pages = [
     { name: 'Home', route: '/' },
     { name: 'Programmiersprachen', route: '/programmiersprachen' },
@@ -155,47 +156,56 @@ export default function NavBar() {
               </Button>
             ))}
           </Box>
-          <span style={{ margin: '10px' }}>Alex Anderson</span>
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Alex Anderson" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem
-                  key={setting}
-                  onClick={handleCloseUserMenu}
-                  component={Link}
-                  style={{
-                    my: 2,
-                    color: 'black',
-                    display: 'block',
-                    textDecoration: 'none',
+
+          {loggedIn ? (
+            <>
+              <span style={{ margin: '10px' }}>Alex Anderson</span>
+              <Box sx={{ flexGrow: 0 }}>
+                <Tooltip title="Open settings">
+                  <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                    <Avatar alt="Alex Anderson" />
+                  </IconButton>
+                </Tooltip>
+                <Menu
+                  sx={{ mt: '45px' }}
+                  id="menu-appbar"
+                  anchorEl={anchorElUser}
+                  anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
                   }}
-                  href={setting.route}
+                  keepMounted
+                  transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+                  open={Boolean(anchorElUser)}
+                  onClose={handleCloseUserMenu}
                 >
-                  {setting.name}
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+                  {settings.map((setting) => (
+                    <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                      <Link
+                        style={{
+                          my: 2,
+                          color: 'black',
+                          display: 'block',
+                          textDecoration: 'none',
+                        }}
+                        href={setting.route}
+                      >
+                        {setting.name}
+                      </Link>
+                    </MenuItem>
+                  ))}
+                </Menu>
+              </Box>
+            </>
+          ) : (
+            <Button variant="outlined" style={{ backgroundColor: 'white' }}>
+              Anmelden
+            </Button>
+          )}
+
         </Toolbar>
       </Container>
     </AppBar>
