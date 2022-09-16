@@ -1,15 +1,12 @@
 import NavBar from '../components/NavBar.js';
 import Footer from '../components/Footer.js';
-
-import Reply from '../components/forum/reply.js';
-import Question from '../components/forum/question.js';
+import Adminov from '../components/forum/adminov.js';
 
 export default function Test() {
   return (
     <>
       <NavBar></NavBar>
-      <Question> </Question>
-      <Reply> </Reply>
+      <Adminov> </Adminov>
       <Footer></Footer>
     </>
   );
