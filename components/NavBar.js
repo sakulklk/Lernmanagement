@@ -25,7 +25,8 @@ export default function NavBar() {
   ];
   const settings = [
     { name: 'Logout', route: '/' },
-    { name: 'Shibboleth', route: '/shibboleth' },
+
+    { name: 'Login', route: '/signUp' },
   ];
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -47,7 +48,7 @@ export default function NavBar() {
   };
 
   return (
-    <AppBar position="static" color="info">
+    <AppBar position="sticky" color="info">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <BookOutlinedIcon
@@ -98,18 +99,19 @@ export default function NavBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Link
-                    style={{
-                      my: 2,
-                      color: 'black',
-                      display: 'block',
-                      textDecoration: 'none',
-                    }}
-                    href={page.route}
-                  >
-                    {page.name}
-                  </Link>
+                <MenuItem
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  component={Link}
+                  style={{
+                    my: 2,
+                    color: 'black',
+                    display: 'block',
+                    textDecoration: 'none',
+                  }}
+                  href={page.route}
+                >
+                  {page.name}
                 </MenuItem>
               ))}
             </Menu>
@@ -154,6 +156,7 @@ export default function NavBar() {
               </Button>
             ))}
           </Box>
+
           {loggedIn ? (
             <>
               <span style={{ margin: '10px' }}>Alex Anderson</span>
@@ -202,6 +205,7 @@ export default function NavBar() {
               Anmelden
             </Button>
           )}
+
         </Toolbar>
       </Container>
     </AppBar>
