@@ -40,6 +40,7 @@ export default function Test() {
         ? (exercisesCompleted = true)
         : activeStep + 1;
     setActiveStep(newActiveStep);
+    window.alert(exercisesCompleted);
   };
 
   const handleBack = () => {
