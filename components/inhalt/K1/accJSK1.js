@@ -21,7 +21,7 @@ export default function Sidemenu() {
             .text{
               position: fixed;
 
-              width: 25%;
+              width: 16%;
 
               margin-top: 50px;
             }
@@ -36,9 +36,7 @@ export default function Sidemenu() {
           </AccordionSummary>
           <AccordionDetails>
             <MenuList>
-
               <MenuItem MenuItem component={Link} href="/hello_world">
-
                 <Typography variant="inherit" noWrap>
                   Hello, World!
                 </Typography>
@@ -51,7 +49,6 @@ export default function Sidemenu() {
               </MenuItem>
 
               <MenuItem component={Link} href="/var_konst">
-
                 <Typography variant="inherit" noWrap>
                   Variablen und Konstanten
                 </Typography>
