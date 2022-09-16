@@ -3,10 +3,11 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import RedoOutlinedIcon from '@mui/icons-material/RedoOutlined';
+import Crosswords from '../../uebungen/Crosswords.js';
 
 export default function RandomQuestionPicker() {
   const randomQuestions = [
-    'Random Übung 1 (Lukas)',
+    <Crosswords />,
     'Random Übung 2 (Lukas)',
     'Random Übung 3 (Lukas)',
     'Random Übung 4 (Lukas)',
@@ -26,7 +27,12 @@ export default function RandomQuestionPicker() {
     <Paper elevation={5} style={{ margin: '40px', height: '500px' }}>
       <Grid container style={{ height: '100%' }}>
         <Grid item xs={12} style={{ height: '80%', textAlign: 'center' }}>
-          <Paper style={{ height: '100%', textAlign: 'center' }}>
+          <Paper
+            style={{
+              height: '100%',
+              textAlign: 'center',
+            }}
+          >
             {randomQuestions[randomNumber]}
           </Paper>
         </Grid>
