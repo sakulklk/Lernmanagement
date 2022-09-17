@@ -46,7 +46,6 @@ export default function NavBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-
   return (
     <AppBar position="sticky" color="info">
       <Container maxWidth="xl">
@@ -147,11 +146,13 @@ export default function NavBar() {
                     color: 'white',
                     display: 'block',
                     textDecoration: 'none',
+                    fontWeight: 'bold',
                   }}
                   href={page.route}
                 >
-                  {' '}
-                  {page.name}
+                  <Typography variant="subtitle1" fontWeight="bold">
+                    {page.name}
+                  </Typography>
                 </Link>
               </Button>
             ))}
@@ -159,7 +160,9 @@ export default function NavBar() {
 
           {loggedIn ? (
             <>
-              <span style={{ margin: '10px' }}>Alex Anderson</span>
+              <span style={{ margin: '10px', fontWeight: 'bold' }}>
+                Alex Anderson
+              </span>
               <Box sx={{ flexGrow: 0 }}>
                 <Tooltip title="Open settings">
                   <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -205,7 +208,6 @@ export default function NavBar() {
               Anmelden
             </Button>
           )}
-
         </Toolbar>
       </Container>
     </AppBar>

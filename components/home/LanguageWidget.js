@@ -25,23 +25,50 @@ export default function LanguageWidget() {
         elevation={5}
         style={{ margin: '10px', padding: '10px', textAlign: 'center' }}
       >
-        <Typography variant="subtitle1">
+        <Typography variant="h6" fontWeight="bold">
           Willkommen zurück Alex ! Lerne dort weiter wo du aufgehört hast.
         </Typography>
       </Paper>
       <Paper elevation={5} style={{ margin: '10px' }}>
+        <Paper elevation={3}>
+          <Grid
+            container
+            style={{ textAlign: 'center', background: '#0288d1' }}
+          >
+            <Grid item xs={2}>
+              <Typography variant="h6" fontWeight="bold" color="white">
+                Lernkategorie
+              </Typography>
+            </Grid>
+            <Grid item xs={4}>
+              <Typography variant="h6" fontWeight="bold" color="white">
+                Aktuelles Kapitel (?)
+              </Typography>
+            </Grid>
+            <Grid item xs={6} color="white">
+              <Typography
+                variant="h6"
+                fontWeight="bold"
+                textAlign="left"
+                paddingLeft="220px"
+              >
+                Fortschritt
+              </Typography>
+            </Grid>
+          </Grid>
+        </Paper>
         <List style={{ maxHeight: '250px', overflowY: 'scroll' }}>
           {currentLanguages.map((currentLanguage) => (
             <ListItem>
               <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={2} style={{ alignItems: 'center' }}>
+                <Grid container spacing={2}>
                   <Grid item xs={2} style={{ textAlign: 'center' }}>
-                    <Typography variant="subtitle1">
+                    <Typography variant="h6" fontWeight="bold">
                       {currentLanguage.name}{' '}
                     </Typography>
                   </Grid>
                   <Grid item xs={4} style={{ textAlign: 'center' }}>
-                    <Typography variant="subtitle1">
+                    <Typography variant="h6" color="gray">
                       {' '}
                       {currentLanguage.learningMark}{' '}
                     </Typography>
@@ -54,7 +81,7 @@ export default function LanguageWidget() {
                       alignSelf: 'center',
                     }}
                   >
-                    <Typography variant="subtitle1">
+                    <Typography variant="subtitle1" fontWeight="bold">
                       {' '}
                       {currentLanguage.progress}%{' '}
                     </Typography>
@@ -69,8 +96,12 @@ export default function LanguageWidget() {
                       />
                     </Box>
                   </Grid>
-                  <Grid item xs={2} style={{ textAlign: 'center' }}>
-                    <Button variant="contained" color="secondary" size="small">
+                  <Grid
+                    item
+                    xs={2}
+                    style={{ textAlign: 'center', paddingLeft: '25px' }}
+                  >
+                    <Button variant="contained" color="secondary" size="medium">
                       {' '}
                       lernen{' '}
                     </Button>

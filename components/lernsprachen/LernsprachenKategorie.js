@@ -9,12 +9,12 @@ export default function LernsprachenKategorie({ name }) {
       <Paper
         elevation={5}
         style={{
-          padding: '20px',
+          padding: '7px',
           textAlign: 'center',
-          backgroundColor: '#bbdefb',
+          backgroundColor: '#0288d1',
         }}
       >
-        <Typography variant="button" noWrap fontWeight="bold">
+        <Typography variant="h6" noWrap color="white" fontWeight="bold">
           {name}
         </Typography>
       </Paper>
