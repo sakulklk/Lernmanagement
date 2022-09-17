@@ -31,91 +31,89 @@ export default function Crosswords() {
   function createGridFromArray() {
     return (
       <div>
-        <div>
-          {questions[0].grid.map((row, idRow) => {
-            return (
-              <div
-                key={idRow}
-                style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  justifyContent: 'center',
-                }}
-              >
-                {row.map((element, idElement) => {
-                  return (
-                    <div key={idElement}>
-                      {!isNaN(element) && element !== ' ' ? (
-                        <div
+        {questions[0].grid.map((row, idRow) => {
+          return (
+            <div
+              key={idRow}
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+              }}
+            >
+              {row.map((element, idElement) => {
+                return (
+                  <div key={idElement}>
+                    {!isNaN(element) && element !== ' ' ? (
+                      <div
+                        style={{
+                          float: 'left',
+                          border: '0',
+                          height: '40px',
+                          width: '40px',
+                          textAlign: 'center',
+                          backgroundColor: 'transparent',
+                          fontSize: '30px',
+                          fontWeight: '400',
+                          marginTop: '-1px',
+                          marginLeft: '-1px',
+                        }}
+                      >
+                        {element}
+                      </div>
+                    ) : (
+                      <></>
+                    )}
+                    {element === ' ' ? (
+                      <div
+                        style={{
+                          float: 'left',
+                          border: '0',
+                          height: '40px',
+                          width: '40px',
+                          marginTop: '-1px',
+                          marginLeft: '-1px',
+                        }}
+                      ></div>
+                    ) : (
+                      <></>
+                    )}
+                    {isNaN(element) && element !== ' ' ? (
+                      <div
+                        style={{
+                          border: '1px solid',
+                          float: 'left',
+                          height: '40px',
+                          width: '40px',
+                          marginTop: '-1px',
+                          marginLeft: '-1px',
+                        }}
+                      >
+                        <input
+                          type="text"
+                          maxLength="1"
                           style={{
-                            float: 'left',
-                            border: '0',
-                            height: '50px',
-                            width: '50px',
+                            border: 'none',
+                            padding: '0',
+                            width: '100%',
+                            height: '100%',
                             textAlign: 'center',
                             backgroundColor: 'transparent',
                             fontSize: '30px',
                             fontWeight: '400',
-                            marginTop: '-1px',
-                            marginLeft: '-1px',
+                            textAnchor: 'middle',
                           }}
-                        >
-                          {element}
-                        </div>
-                      ) : (
-                        <></>
-                      )}
-                      {element === ' ' ? (
-                        <div
-                          style={{
-                            float: 'left',
-                            border: '0',
-                            height: '50px',
-                            width: '50px',
-                            marginTop: '-1px',
-                            marginLeft: '-1px',
-                          }}
-                        ></div>
-                      ) : (
-                        <></>
-                      )}
-                      {isNaN(element) && element !== ' ' ? (
-                        <div
-                          style={{
-                            border: '1px solid',
-                            float: 'left',
-                            height: '50px',
-                            width: '50px',
-                            marginTop: '-1px',
-                            marginLeft: '-1px',
-                          }}
-                        >
-                          <input
-                            type="text"
-                            maxLength="1"
-                            style={{
-                              border: 'none',
-                              padding: '0',
-                              width: '100%',
-                              height: '100%',
-                              textAlign: 'center',
-                              backgroundColor: 'transparent',
-                              fontSize: '30px',
-                              fontWeight: '400',
-                              textAnchor: 'middle',
-                            }}
-                          ></input>
-                        </div>
-                      ) : (
-                        <></>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            );
-          })}
-        </div>
+                        ></input>
+                      </div>
+                    ) : (
+                      <></>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })}
       </div>
     );
   }
