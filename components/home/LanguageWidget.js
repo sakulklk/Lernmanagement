@@ -42,7 +42,7 @@ export default function LanguageWidget() {
             </Grid>
             <Grid item xs={4}>
               <Typography variant="h6" fontWeight="bold" color="white">
-                Aktuelles Kapitel (?)
+                Aktuelles Kapitel
               </Typography>
             </Grid>
             <Grid item xs={6} color="white">
