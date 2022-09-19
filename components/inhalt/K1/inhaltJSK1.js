@@ -503,30 +503,6 @@ export default function Sidemenu() {
           </ul>
         </p>
 
-        <y>
-          <Box
-            sx={{
-              backgroundColor: '#FFFFEA',
-              padding: '14px',
-            }}
-          >
-            <TipsAndUpdatesIcon></TipsAndUpdatesIcon>
-            <Box
-              sx={{
-                backgroundColor: '#FFFFEA',
-                margin: '25px',
-              }}
-            >
-              <b>Dauer: </b>10 Minuten
-              <br />
-              <ul>
-                <li> Allgemeine Infos über JavaScript </li>
-              </ul>
-              <b>Ziel: </b> Hintergründe und Eigenschaften von JavaScript
-            </Box>
-          </Box>
-        </y>
-
         <Grid container>
           <Grid item sm={8} md={8} lg={10}>
             <a href="/uebersichtJS">
