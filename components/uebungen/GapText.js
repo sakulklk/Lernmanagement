@@ -34,9 +34,24 @@ const texts = [
   },
 ];
 
+function handleAnswer(chosenAnswers, correctAnswers) {
+  chosenAnswers = chosenAnswers.filter((index) => !isNaN(index));
+  if (chosenAnswers.length != correctAnswers.length) {
+    return false; //not all gaps filled yet
+  }
+  for (var i = 0; i < correctAnswers.length; i++) {
+    if (chosenAnswers[i] != correctAnswers[i]) {
+      return false; //answers incorrect
+    }
+  }
+  console.log('correct');
+  return true;
+}
+
 var started = false;
 var currentQuestion = texts[0];
 var currentAnswers = texts[0].answers;
+var currentCorrectAnswers = currentAnswers;
 
 export default function GapText() {
   const [selectedAnswer, setSelectedAnswer] = useState('none');
@@ -45,9 +60,12 @@ export default function GapText() {
 
   if (!started) {
     currentQuestion = Math.floor(Math.random() * texts.length);
-    currentAnswers = texts[currentQuestion].answers.sort(
+    currentAnswers = [...texts[currentQuestion].answers].sort(
       () => Math.random() - 0.5
     );
+    currentCorrectAnswers = texts[currentQuestion].answers.map((answer) => {
+      return currentAnswers.indexOf(answer);
+    });
     started = true;
   }
 
@@ -104,6 +122,7 @@ export default function GapText() {
                     if (selectedAnswer != 'none') {
                       var newChosenAnswers = chosenAnswers;
                       newChosenAnswers[id] = selectedAnswer;
+                      handleAnswer(newChosenAnswers, currentCorrectAnswers);
                       setChosenAnswers(newChosenAnswers);
                       setSelectedAnswer('none');
                     }
@@ -123,6 +142,7 @@ export default function GapText() {
                     onClick={() => {
                       var newChosenAnswers = chosenAnswers;
                       delete newChosenAnswers[id];
+                      handleAnswer(newChosenAnswers, currentCorrectAnswers);
                       setChosenAnswers(newChosenAnswers);
                       toggleRefresh(!toggle);
                     }}
