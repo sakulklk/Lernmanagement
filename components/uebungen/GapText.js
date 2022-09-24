@@ -34,7 +34,7 @@ const texts = [
   },
 ];
 
-function handleAnswer(chosenAnswers, correctAnswers) {
+function handleAnswer(chosenAnswers, correctAnswers, props) {
   chosenAnswers = chosenAnswers.filter((index) => !isNaN(index));
   if (chosenAnswers.length != correctAnswers.length) {
     return false; //not all gaps filled yet
@@ -44,7 +44,7 @@ function handleAnswer(chosenAnswers, correctAnswers) {
       return false; //answers incorrect
     }
   }
-  console.log('correct');
+  props.isCorrect(true);
   return true;
 }
 
@@ -53,7 +53,7 @@ var currentQuestion = texts[0];
 var currentAnswers = texts[0].answers;
 var currentCorrectAnswers = currentAnswers;
 
-export default function GapText() {
+export default function GapText(props) {
   const [selectedAnswer, setSelectedAnswer] = useState('none');
   const [chosenAnswers, setChosenAnswers] = useState([]);
   const [toggle, toggleRefresh] = useState(false);
@@ -122,7 +122,11 @@ export default function GapText() {
                     if (selectedAnswer != 'none') {
                       var newChosenAnswers = chosenAnswers;
                       newChosenAnswers[id] = selectedAnswer;
-                      handleAnswer(newChosenAnswers, currentCorrectAnswers);
+                      handleAnswer(
+                        newChosenAnswers,
+                        currentCorrectAnswers,
+                        props
+                      );
                       setChosenAnswers(newChosenAnswers);
                       setSelectedAnswer('none');
                     }
@@ -142,7 +146,11 @@ export default function GapText() {
                     onClick={() => {
                       var newChosenAnswers = chosenAnswers;
                       delete newChosenAnswers[id];
-                      handleAnswer(newChosenAnswers, currentCorrectAnswers);
+                      handleAnswer(
+                        newChosenAnswers,
+                        currentCorrectAnswers,
+                        props
+                      );
                       setChosenAnswers(newChosenAnswers);
                       toggleRefresh(!toggle);
                     }}

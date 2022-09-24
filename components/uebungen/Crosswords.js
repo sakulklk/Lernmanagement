@@ -27,7 +27,7 @@ const questions = [
   },
 ];
 
-function createGridFromArray(grid) {
+function createGridFromArray(grid, props) {
   return (
     <div>
       <div>
@@ -92,7 +92,9 @@ function createGridFromArray(grid) {
                         <input
                           type="text"
                           maxLength="1"
-                          onKeyDown={(e) => handleInput(e, idRow, idElement)}
+                          onKeyDown={(e) =>
+                            handleInput(e, idRow, idElement, props)
+                          }
                           style={{
                             border: 'none',
                             padding: '0',
@@ -142,7 +144,7 @@ function createQuestionsFromArray(questions) {
   );
 }
 
-function handleAnswer(correctGrid, answerGrid) {
+function handleAnswer(correctGrid, answerGrid, props) {
   for (var y = 0; y < correctGrid.length; y++) {
     for (var x = 0; x < correctGrid[y].length; x++) {
       if (correctGrid[y][x].toUpperCase() != answerGrid[y][x].toUpperCase()) {
@@ -155,7 +157,7 @@ function handleAnswer(correctGrid, answerGrid) {
   return true;
 }
 
-function handleInput(input, idRow, idColumn) {
+function handleInput(input, idRow, idColumn, props) {
   if (input.key == 'Backspace') {
     currentFilledGrid[idRow][idColumn] = ' ';
   }
@@ -165,7 +167,7 @@ function handleInput(input, idRow, idColumn) {
   if (currentFilledGrid[idRow][idColumn] == ' ') {
     if (input.key.toUpperCase() != input.key.toLowerCase()) {
       currentFilledGrid[idRow][idColumn] = input.key;
-      handleAnswer(currentCorrectGrid, currentFilledGrid);
+      handleAnswer(currentCorrectGrid, currentFilledGrid, props);
     } else {
       currentFilledGrid[idRow][idColumn] = '!';
     }
@@ -188,7 +190,7 @@ var currentCorrectGrid = currentQuestion.grid;
 var currentFilledGrid = createEmptyGridFromSoulutionGrid(currentCorrectGrid);
 var started = false;
 
-export default function Crosswords() {
+export default function Crosswords(props) {
   if (!started) {
     currentQuestion = questions[Math.floor(Math.random() * questions.length)];
     currentCorrectGrid = currentQuestion.grid;
@@ -199,7 +201,7 @@ export default function Crosswords() {
   return (
     <div style={{ marginBottom: '65px' }}>
       {createQuestionsFromArray(currentQuestion.questions)}
-      {createGridFromArray(currentCorrectGrid)}
+      {createGridFromArray(currentCorrectGrid, props)}
     </div>
   );
 }
