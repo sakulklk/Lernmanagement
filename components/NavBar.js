@@ -23,11 +23,7 @@ export default function NavBar() {
     { name: 'Nutzerdaten', route: '/nutzerdaten_kontoinformationen' },
     { name: 'Chat', route: '/chat' },
   ];
-  const settings = [
-    { name: 'Logout', route: '/' },
-
-    { name: 'Login', route: '/signUp' },
-  ];
+  const settings = [{ name: 'Logout', route: '/' }];
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);

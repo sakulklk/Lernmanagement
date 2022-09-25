@@ -11,7 +11,7 @@ export default function Footer({}) {
         height: 40,
         bottom: 0,
         padding: 0.8,
-
+        position: 'fixed',
         backgroundColor: '#0288d1',
       }}
     >
@@ -26,7 +26,11 @@ export default function Footer({}) {
             justifyContent: 'center',
           }}
         >
-          <Link href="#" underline="none" color="white">
+          <Link
+            href="https://www.dhbw.de/startseite"
+            underline="none"
+            color="white"
+          >
             DHBW
           </Link>
         </Grid>
