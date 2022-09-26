@@ -153,7 +153,7 @@ export default function NavBar() {
               </Button>
             ))}
           </Box>
-
+          
           {loggedIn ? (
             <>
               <span style={{ margin: '10px', fontWeight: 'bold' }}>
