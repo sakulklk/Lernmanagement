@@ -25,7 +25,12 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 export default function NavBar() {
-  let [userState, setUserState] = React.useState('ok');
+  let [userState, setUserState] = React.useState('yo');
+
+  function handleClose() {
+    setAnchorEl(null);
+    setUserState((userState = 'test'));
+  }
 
   const loggedIn = true;
   const pages = [
@@ -102,9 +107,6 @@ export default function NavBar() {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  function handleClose(state) {
-    setUserState((userState = state));
-  }
 
   return (
     <AppBar position="sticky" color="info">
@@ -239,9 +241,9 @@ export default function NavBar() {
               }}
               anchorEl={anchorEl}
               open={open}
-              onClose={handleClose()}
+              onClose={(handleClose, handleUserStateChange)}
             >
-              <MenuItem onClick={handleClose} disableRipple>
+              <MenuItem onClick={handleUserStateChange} disableRipple>
                 <Typography variant="button">Kein Login</Typography>
               </MenuItem>
               <MenuItem onClick={handleClose} disableRipple>
