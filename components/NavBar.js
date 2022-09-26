@@ -52,7 +52,7 @@ export default function NavBar() {
   };
 
   const handleCloseUserMenu = () => {
-    setUserState((userState = 'geschafft'));
+    setAnchorElUser(null);
   };
   const StyledMenu = styled((props) => (
     <Menu
@@ -102,9 +102,9 @@ export default function NavBar() {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = () => {
-    userState = 'klappt';
-  };
+  function handleClose(state) {
+    setUserState((userState = state));
+  }
 
   return (
     <AppBar position="sticky" color="info">
@@ -239,7 +239,7 @@ export default function NavBar() {
               }}
               anchorEl={anchorEl}
               open={open}
-              onClose={handleClose}
+              onClose={handleClose()}
             >
               <MenuItem onClick={handleClose} disableRipple>
                 <Typography variant="button">Kein Login</Typography>
