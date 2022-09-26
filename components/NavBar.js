@@ -1,5 +1,6 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
@@ -15,6 +16,7 @@ import MenuItem from '@mui/material/MenuItem';
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 
 export default function NavBar() {
+  
   const loggedIn = true;
   const pages = [
     { name: 'Home', route: '/' },
@@ -153,7 +155,30 @@ export default function NavBar() {
               </Button>
             ))}
           </Box>
-          
+          <Grid
+            container
+            textAlign="center"
+            width="500px"
+            spacing={3}
+            display="flex"
+            alignItems="center"
+          >
+            <Grid item xs={3}>
+              <Button size="small" variant="contained" color="secondary">
+                <Typography variant="button">Kein {'\n'}Login</Typography>
+              </Button>
+            </Grid>
+            <Grid item xs={3}>
+              <Button size="small" variant="contained" color="secondary">
+                <Typography variant="button">Login Student</Typography>
+              </Button>
+            </Grid>
+            <Grid item xs={3}>
+              <Button size="small" variant="contained" color="secondary">
+                <Typography variant="button">Login Dozent</Typography>
+              </Button>
+            </Grid>
+          </Grid>
           {loggedIn ? (
             <>
               <span style={{ margin: '10px', fontWeight: 'bold' }}>
