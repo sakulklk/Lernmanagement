@@ -11,6 +11,7 @@ import ShuffleIcon from '@mui/icons-material/Shuffle';
 import StarPurple500Icon from '@mui/icons-material/StarPurple500';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 
+
 export default function Home() {
   const loggedIn = true;
   return (
