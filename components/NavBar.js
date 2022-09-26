@@ -27,9 +27,9 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 export default function NavBar() {
   let [userState, setUserState] = React.useState('yo');
 
-  function handleClose() {
+  function handleClose(state) {
     setAnchorEl(null);
-    setUserState((userState = 'test'));
+    setUserState((userState = { state }));
   }
 
   const loggedIn = true;
@@ -241,9 +241,9 @@ export default function NavBar() {
               }}
               anchorEl={anchorEl}
               open={open}
-              onClose={(handleClose, handleUserStateChange)}
+              onClose={handleClose}
             >
-              <MenuItem onClick={handleUserStateChange} disableRipple>
+              <MenuItem onClick={handleClose} disableRipple>
                 <Typography variant="button">Kein Login</Typography>
               </MenuItem>
               <MenuItem onClick={handleClose} disableRipple>
