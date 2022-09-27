@@ -9,10 +9,15 @@ import MultipleChoice from '../../uebungen/MultipleChoice.js';
 import DragDrop from '../../uebungen/DragDrop.js';
 
 export default function RandomQuestionPicker() {
+  function isCorrect(correct) {
+    if (correct) {
+      alert('correct');
+    }
+  }
   const randomQuestions = [
     <Crosswords />,
     <GapText />,
-    <MultipleChoice />,
+    <MultipleChoice isCorrect={isCorrect} />,
     <DragDrop />,
   ];
 
