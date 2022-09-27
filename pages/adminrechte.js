@@ -9,6 +9,8 @@ import BasicTextFields from '../components/admin/Button.js';
 export default function Test1() {  // E-mail verschicken button soll rechts von Bitte   geben sie ihre E-mail hier ein stehen 
   return (
     <body>
+            <div style={{ paddingBottom: '65px' }}>
+
       <NavBar></NavBar>
       <Box sx={{ p: 2 }}>
         <Grid container spacing={1}>
@@ -20,11 +22,13 @@ export default function Test1() {  // E-mail verschicken button soll rechts von 
               <Grid item xs={12}>
               <NestedList></NestedList>
               </Grid>
-              
+              </Grid>
+              </Grid>
             </Grid>
           
         
       </Box>
+      </div>
       <Footer></Footer>
     </body>
   );

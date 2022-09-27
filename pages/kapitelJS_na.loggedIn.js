@@ -10,6 +10,8 @@ import Link from '@mui/material/Link';
 export default function KapitelJSloggedIn() {
   return (
     <>
+          <div style={{ paddingBottom: '65px' }}>
+
       <NavBar></NavBar>
       <Breadcrumbs aria-label="breadcrumb">
         <Link underline="hover" color="inherit" href="/">
@@ -21,6 +23,7 @@ export default function KapitelJSloggedIn() {
       </Breadcrumbs>
 
       <ÜbersichtLoggedIn></ÜbersichtLoggedIn>
+      </div>
       <Footer></Footer>
     </>
   );

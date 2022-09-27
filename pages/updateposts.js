@@ -8,9 +8,12 @@ import Updatepost from '../components/forum/updatepost.js';
 export default function Test() {
   return (
     <>
+          <div style={{ paddingBottom: '65px' }}>
+
       <NavBar></NavBar>
       <Overview> </Overview>
       <Updatepost></Updatepost>
+      </div>
       <Footer></Footer>
     </>
   );

@@ -10,6 +10,8 @@ import LearningHistory from '../components/nutzerdaten/LearningHistory.js';
 export default function Test() {
   return (
     <body>
+            <div style={{ paddingBottom: '65px' }}>
+
       <NavBar></NavBar>
       <Box sx={{ p: 2 }}>
         <Grid container spacing={1}>
@@ -31,6 +33,7 @@ export default function Test() {
           </Grid>
         </Grid>
       </Box>
+      </div>
       <Footer></Footer>
     </body>
   );

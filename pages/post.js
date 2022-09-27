@@ -7,9 +7,12 @@ import Question from '../components/forum/question.js';
 export default function Test() {
   return (
     <>
+          <div style={{ paddingBottom: '65px' }}>
+
       <NavBar></NavBar>
       <Question> </Question>
       <Reply> </Reply>
+      </div>
       <Footer></Footer>
     </>
   );

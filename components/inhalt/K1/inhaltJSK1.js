@@ -1,6 +1,8 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 
+import GapText from '../../uebungen/GapText.js';
+
 import Box from '@mui/material/Box';
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 
@@ -10,9 +12,6 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import Divider from '@mui/material/Divider';
-
-
- 
 
 import Paper from '@mui/material/Paper';
 
@@ -505,31 +504,9 @@ export default function Sidemenu() {
             </li>
           </ul>
         </p>
-        ////////////////////////////////////////////////////////////////
-        <y>
-          <Box
-            sx={{
-              backgroundColor: '#FFFFEA',
-              padding: '14px',
-            }}
-          >
-            <TipsAndUpdatesIcon></TipsAndUpdatesIcon>
-            <Box
-              sx={{
-                backgroundColor: '#FFFFEA',
-                margin: '25px',
-              }}
-            >
-              <b>Dauer: </b>10 Minuten
-              <br />
-              <ul>
-                <li> Allgemeine Infos über JavaScript </li>
-              </ul>
-              <b>Ziel: </b> Hintergründe und Eigenschaften von JavaScript
-            </Box>
-          </Box>
-        </y>
-
+        <br />
+        <p>Bearbeite bitte folgende Übungen!</p>
+        <GapText></GapText>
         <Grid container>
           <Grid item sm={8} md={8} lg={10}>
             <a href="/uebersichtJS">
@@ -539,9 +516,7 @@ export default function Sidemenu() {
             </a>
           </Grid>
           <Grid item sm={4} md={4} lg={2}>
-
             <a href="/grundbegriffe">
-
               <Button variant="text" endIcon={<ArrowForwardIosIcon />}>
                 <LockOpenIcon></LockOpenIcon> Grundbegriffe
               </Button>

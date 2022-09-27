@@ -41,6 +41,8 @@ export default function Test() {
   }, []);
   return (
     <>
+          <div style={{ paddingBottom: '65px' }}>
+
       <NavBar></NavBar>
       <Paper
         elevation={5}
@@ -113,7 +115,7 @@ export default function Test() {
           <ArrowForwardIosIcon fontSize="large" />
         </IconButton>
       </Paper>
-
+</div>
       <Footer></Footer>
     </>
   );
