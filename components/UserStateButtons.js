@@ -6,7 +6,7 @@ import InfoIcon from '@mui/icons-material/Info';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Popper from '@mui/material/Popper';
-
+import InfoPopper from './InfoPopper.js';
 import IconButton from '@mui/material/IconButton';
 
 export default function UserStateButtons() {
@@ -25,14 +25,6 @@ export default function UserStateButtons() {
     alert(userState);
   }
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleClick = (event) => {
-    setAnchorEl(anchorEl ? null : event.currentTarget);
-  };
-
-  const open = Boolean(anchorEl);
-  const id = open ? 'simple-popper' : undefined;
   return (
     <>
       <Grid container style={{ display: 'flex', justifyContent: 'end' }}>
@@ -40,29 +32,11 @@ export default function UserStateButtons() {
           <Grid container style={{ marginRight: '50px' }}>
             <Grid item={3}>
               <Grid container>
-                <Button
-                  type="button"
-                  aria-label="InfoIcon"
-                  color="primary"
-                  size="small"
-                  aria-describedby={id}
-                  onClick={handleClick}
-                >
-                  {' '}
-                  <InfoIcon />
-                </Button>
-                <Popper id={id} open={open} anchorEl={anchorEl}>
-                  <Box sx={{ border: 1, p: 1, bgcolor: 'background.paper' }}>
-                    <Typography display="block">
-                      Untersuchen Sie hier die verschiedenen Ansichten der
-                      Prototyp-Webseite je nach Anmeldestatus.
-                    </Typography>
-                    <Typography display="block">
-                      In Zukunft muss hierbei ein Backend implementiert werden,
-                      welches die Ansichten automatisches anpasst.
-                    </Typography>
-                  </Box>
-                </Popper>
+                <InfoPopper
+                  text1="Untersuchen Sie hier die verschiedenen Ansichten der Prototyp-Webseite je nach Anmeldestatus."
+                  text2="In Zukunft muss hierbei ein Backend implementiert werden,
+                welches die Ansichten automatisches anpasst."
+                />
 
                 <Typography
                   variant="subtitle2"

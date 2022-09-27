@@ -5,8 +5,6 @@ import Grid from '@mui/material/Grid';
 import { userState, userStateOptions } from '../userState.js';
 
 export default function Test() {
-  userState = userStateOptions[1];
-
   return (
     <>
       <NavBar></NavBar>
