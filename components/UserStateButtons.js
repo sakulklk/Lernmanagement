@@ -9,12 +9,12 @@ import Popper from '@mui/material/Popper';
 import InfoPopper from './InfoPopper.js';
 import IconButton from '@mui/material/IconButton';
 
-export default function UserStateButtons() {
+export default function UserStateButtons(props) {
   let [userState, setUserState] = React.useState('loggedStudent');
 
   function setNotLogged() {
     setUserState((userState = 'notLogged'));
-    alert(userState);
+    props.userState();
   }
   function setLoggedStudent() {
     setUserState((userState = 'loggedStudent'));

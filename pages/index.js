@@ -15,7 +15,7 @@ import { userState } from '../components/UserStateButtons.js';
 
 export default function Home() {
   function userState() {
-    console.log('klappt');
+    alert('klappt');
   }
 
   return (
