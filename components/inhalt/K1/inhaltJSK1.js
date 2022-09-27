@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
-import GapText from '../uebungen/GapText.js';
+
+import GapText from '../../uebungen/GapText.js';
 
 import Box from '@mui/material/Box';
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
@@ -504,8 +505,8 @@ export default function Sidemenu() {
           </ul>
         </p>
         <br />
-        <p>poiuzg</p>
-
+        <p>Bearbeite bitte folgende Übungen!</p>
+        <GapText></GapText>
         <Grid container>
           <Grid item sm={8} md={8} lg={10}>
             <a href="/uebersichtJS">
