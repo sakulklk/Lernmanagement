@@ -3,13 +3,22 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import RedoOutlinedIcon from '@mui/icons-material/RedoOutlined';
+import Crosswords from '../../uebungen/Crosswords.js';
+import GapText from '../../uebungen/GapText.js';
+import MultipleChoice from '../../uebungen/MultipleChoice.js';
+import DragDrop from '../../uebungen/DragDrop.js';
 
 export default function RandomQuestionPicker() {
+  function isCorrect(correct) {
+    if (correct) {
+      alert('correct');
+    }
+  }
   const randomQuestions = [
-    'Random Übung 1 (Lukas)',
-    'Random Übung 2 (Lukas)',
-    'Random Übung 3 (Lukas)',
-    'Random Übung 4 (Lukas)',
+    <Crosswords />,
+    <GapText />,
+    <MultipleChoice isCorrect={isCorrect} />,
+    <DragDrop />,
   ];
 
   let [randomNumber, setRandomNumber] = React.useState(
@@ -23,28 +32,38 @@ export default function RandomQuestionPicker() {
 
   const random = Math.floor(Math.random() * randomQuestions.length);
   return (
-    <Paper elevation={5} style={{ margin: '40px', height: '500px' }}>
-      <Grid container style={{ height: '100%' }}>
-        <Grid item xs={12} style={{ height: '80%', textAlign: 'center' }}>
-          <Paper style={{ height: '100%', textAlign: 'center' }}>
-            {randomQuestions[randomNumber]}
-          </Paper>
-        </Grid>
-        <Grid item xs={4}></Grid>
-        <Grid item xs={4} style={{ textAlign: 'center' }}>
-          <IconButton
-            aria-label="RedoOutlinedIcon"
-            color="primary"
-            size="large"
-            onClick={handleClickOnNext}
-          >
-            <RedoOutlinedIcon fontSize="large" />
-          </IconButton>
-        </Grid>
-        <Grid item xs={4}>
-          {' '}
-        </Grid>
-      </Grid>
-    </Paper>
+    <>
+      <Paper
+        elevation={5}
+        style={{
+          margin: '30px',
+          marginBottom: '5px',
+          height: '600px',
+          display: 'flex',
+          padding: '20px',
+        }}
+      >
+        {randomQuestions[randomNumber]}
+      </Paper>
+      <Paper
+        elevation={5}
+        style={{
+          margin: '0px 30px',
+          marginBottom: '30px',
+          height: '60px',
+          display: 'flex',
+          justifyContent: 'center',
+        }}
+      >
+        <IconButton
+          aria-label="RedoOutlinedIcon"
+          color="primary"
+          size="large"
+          onClick={handleClickOnNext}
+        >
+          <RedoOutlinedIcon fontSize="large" />
+        </IconButton>
+      </Paper>
+    </>
   );
 }

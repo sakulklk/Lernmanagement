@@ -31,7 +31,9 @@ function createGridFromArray(grid, props) {
   return (
     <div>
       <div>
+
         {grid.map((row, idRow) => {
+
           return (
             <div
               key={idRow}
@@ -49,8 +51,12 @@ function createGridFromArray(grid, props) {
                         style={{
                           float: 'left',
                           border: '0',
-                          height: '50px',
-                          width: '50px',
+
+                   
+
+                          height: '40px',
+                          width: '40px',
+
                           textAlign: 'center',
                           backgroundColor: 'transparent',
                           fontSize: '30px',
@@ -69,8 +75,10 @@ function createGridFromArray(grid, props) {
                         style={{
                           float: 'left',
                           border: '0',
-                          height: '50px',
-                          width: '50px',
+
+                          height: '40px',
+                          width: '40px',
+
                           marginTop: '-1px',
                           marginLeft: '-1px',
                         }}
@@ -83,8 +91,10 @@ function createGridFromArray(grid, props) {
                         style={{
                           border: '1px solid',
                           float: 'left',
-                          height: '50px',
-                          width: '50px',
+
+                          height: '40px',
+                          width: '40px',
+
                           marginTop: '-1px',
                           marginLeft: '-1px',
                         }}
@@ -92,9 +102,11 @@ function createGridFromArray(grid, props) {
                         <input
                           type="text"
                           maxLength="1"
+
                           onKeyDown={(e) =>
                             handleInput(e, idRow, idElement, props)
                           }
+
                           style={{
                             border: 'none',
                             padding: '0',

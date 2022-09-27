@@ -6,11 +6,11 @@ import Typography from '@mui/material/Typography';
 export default function LernsprachenMenuItem({ name, progress }) {
   return (
     <>
-       <Paper elevation={5}>
-        <Typography variant="inherit" noWrap>
+      <Paper elevation={5}>
+        <Typography variant="h6" noWrap>
           {name}
         </Typography>
-        </Paper>
+      </Paper>
     </>
   );
 }
