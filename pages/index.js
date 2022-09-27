@@ -15,7 +15,7 @@ import { userState } from '../components/UserStateButtons.js';
 
 export default function Home() {
   function userState() {
-    alert('userAnsicht wird gewechselt auf' + userState);
+    console.log('klappt');
   }
 
   return (
