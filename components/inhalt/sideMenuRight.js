@@ -20,10 +20,13 @@ export default function BoxSx() {
       >
         <b> Auf dieser Seite </b>
         <br />
-        Strings für Text <br />
-        Ausgabe auf Bildschirm <br />
-        Programmierumgebung <br />
-        Inspiration <br />
+        <a href="#stringsFürText"> Strings für Text </a> <br />
+        <a href="#ausgabe">Ausgabe auf Bildschirm </a>
+        <br />
+        <a href="#umgebung">Programmierumgebung </a>
+        <br />
+        <a href="#inspo">Inspiration </a>
+        <br />
         <Divider />
         <br />
         <b>Noch Fragen?</b>

@@ -157,10 +157,13 @@ export default function Sidemenu() {
               <br />
               Die ersten Schritte sollen zunächst diejenigen an die
               Programmierung heranführen, die noch nie oder nur wenig
-              programmiert haben. Am Anfang könnte das meiste demnach schon
-              bekannt sein, aber das Tempo wird sich schrittweise erhöhen und
-              hoffentlich sind bald auch für Erfahrene einige unbekannte Aspekte
-              oder nützliche Tipps dabei.
+              programmiert haben.{' '}
+              <p id="stringsFürText">
+                Am Anfang könnte das meiste demnach schon bekannt sein, aber das
+                Tempo wird sich schrittweise erhöhen und hoffentlich sind bald
+                auch für Erfahrene einige unbekannte Aspekte oder nützliche
+                Tipps dabei.
+              </p>
             </Box>
           </Box>
         </y>
@@ -205,7 +208,7 @@ export default function Sidemenu() {
             <code> "Hello, World!" </code>
           </Paper>
         </Box>
-        <p>
+        <p id="ausgabe">
           {' '}
           Für das Hello-World-Programm benötigen wir also den String{' '}
           <codest>
@@ -355,7 +358,7 @@ export default function Sidemenu() {
               {' '}
               In dieser Vorlesung betrachten wir JavaScript weitestgehend ohne
               HTML und CSS (⟶ dies findet evtl. in der Vorlesung
-              „Web-Engineering“ statt).
+              „Web-Engineering“ <a id="umgebung"></a>statt).
             </li>
           </ul>
         </p>
@@ -458,7 +461,7 @@ export default function Sidemenu() {
                 Rome
               </a>
             </li>
-            <li> Kennst du weitere und hast schon mal damit gearbeitet?</li>
+            <li>  <a id="inspo"></a>Kennst du weitere und hast schon mal damit gearbeitet?</li>
           </ul>
         </p>
         <h2>Inspiration</h2>
