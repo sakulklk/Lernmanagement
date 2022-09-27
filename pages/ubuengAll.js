@@ -3,7 +3,7 @@ import Footer from '../components/Footer.js';
 import SideMenu from '../components/inhalt/K1/accJSK1.js';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Content from '../components/inhalt/K1/var_a_konst.js';
+import Content from '../components/inhalt/K1/uebungenAll.js';
 import ScrollBar from '../components/inhalt/scrollbar.js';
 import SideMenuRight from '../components/inhalt/sideMenuRight.js';
 
