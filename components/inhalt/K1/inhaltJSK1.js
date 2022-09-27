@@ -10,6 +10,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import LockIcon from '@mui/icons-material/Lock';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import Divider from '@mui/material/Divider';
 
@@ -518,7 +519,7 @@ export default function Sidemenu() {
           <Grid item sm={4} md={4} lg={2}>
             <a href="/grundbegriffe">
               <Button variant="text" endIcon={<ArrowForwardIosIcon />}>
-                <LockOpenIcon></LockOpenIcon> Grundbegriffe
+                <LockIcon></LockIcon> Grundbegriffe
               </Button>
             </a>
           </Grid>
