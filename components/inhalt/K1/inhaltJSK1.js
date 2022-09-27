@@ -2,6 +2,8 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 
 import GapText from '../../uebungen/GapText.js';
+import Crosswords from '../../uebungen/Crosswords.js';
+import MultipleChoice from '../../uebungen/MultipleChoice.js';
 
 import Box from '@mui/material/Box';
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
@@ -507,7 +509,23 @@ export default function Sidemenu() {
         </p>
         <br />
         <p>Bearbeite bitte folgende Übungen!</p>
+        <h3> 1. Aufgabe: Lückentext</h3>
+        <h5> Klicke die Karten an und wähle den richtigen Platz </h5>
         <GapText></GapText>
+        <br />
+        <h3> 2. Aufgabe: Kreuzworträtsel</h3>
+        <h5>
+          {' '}
+          Finde die entsprechenden Wörter und schreibe sie in ihre Spalte/ Zeile
+          ein{' '}
+        </h5>
+        <Crosswords />
+        <br />
+        <h3> 3. Aufgabe: MultipleChoice</h3>
+        <h5> Beantworte 3 Fragen richtig </h5>
+        <br />
+        <MultipleChoice />
+        <br />
         <Grid container>
           <Grid item sm={8} md={8} lg={10}>
             <a href="/uebersichtJS">
