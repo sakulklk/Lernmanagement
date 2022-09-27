@@ -14,12 +14,15 @@ import UserStateButtons from '../components/UserStateButtons.js';
 import { userState } from '../components/UserStateButtons.js';
 
 export default function Home() {
-  console.log(userState)
+  function userState() {
+    alert('userAnsicht wird gewechselt auf' + userState);
+  }
+
   return (
     <>
       <div style={{ marginBottom: '65px' }}>
         <NavBar></NavBar>
-        <UserStateButtons></UserStateButtons>
+        <UserStateButtons userState={userState}></UserStateButtons>
         <Bild></Bild>
         <>
           <LanguageWidget></LanguageWidget>
