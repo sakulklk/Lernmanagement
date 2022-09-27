@@ -21,6 +21,8 @@ import BasicBreadcrumbs1 from '../components/admin/Breadcrumb.js';
 export default function adminrechte() {
   return (
     <>
+          <div style={{ paddingBottom: '65px' }}>
+
       <NavBar></NavBar>
       <BasicBreadcrumbs1></BasicBreadcrumbs1>
 
@@ -75,7 +77,7 @@ export default function adminrechte() {
           <SimpleAccordion></SimpleAccordion>
         </div>
       </div>
-
+</div>
       <Footer></Footer>
     </>
   );

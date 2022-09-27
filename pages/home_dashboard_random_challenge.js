@@ -4,8 +4,11 @@ import RandomQuestionPicker from '../components/home/dashboard/RandomQuestionPic
 export default function Test() {
   return (
     <>
+          <div style={{ paddingBottom: '65px' }}>
+
       <NavBar></NavBar>
       <RandomQuestionPicker></RandomQuestionPicker>
+      </div>
       <Footer></Footer>
     </>
   );

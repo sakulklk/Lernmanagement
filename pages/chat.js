@@ -6,10 +6,12 @@ import Grid from '@mui/material/Grid';
 export default function Test() {
   return (
     <>
+          <div style={{ paddingBottom: '65px' }}>
+
     <NavBar></NavBar>
       <Chat></Chat>
       
-      
+      </div>
       <Footer></Footer>
     </>
   );

@@ -4,6 +4,8 @@ import Paper from '@mui/material/Paper';
 export default function Test() {
   return (
     <>
+          <div style={{ paddingBottom: '65px' }}>
+
       <NavBar></NavBar>
       <Paper
         elevation={5}
@@ -11,6 +13,7 @@ export default function Test() {
       >
         Dein Daily (Lukas)
       </Paper>
+      </div>
       <Footer></Footer>
     </>
   );

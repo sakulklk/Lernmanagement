@@ -18,6 +18,8 @@ export default function Uebungen() {
 
   return (
     <body>
+            <div style={{ paddingBottom: '65px' }}>
+
       <NavBar></NavBar>
 
       <Button
@@ -82,7 +84,7 @@ export default function Uebungen() {
         //</DndProvider>
         <></>
       )}
-
+</div>
       <Footer></Footer>
     </body>
   );

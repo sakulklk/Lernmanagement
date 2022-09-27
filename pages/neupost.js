@@ -9,8 +9,11 @@ import Neu from '../components/forum/neu.js';
 export default function Test() {
   return (
     <>
+          <div style={{ paddingBottom: '65px' }}>
+
       <NavBar></NavBar>
       <Neu></Neu>
+      </div>
       <Footer></Footer>
     </>
   );

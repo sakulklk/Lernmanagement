@@ -10,6 +10,8 @@ export default function Test() {
 
   return (
     <>
+          <div style={{ paddingBottom: '65px' }}>
+
       <NavBar></NavBar>
       <Grid container spacing={1}>
         <Grid item xs={6}>
@@ -19,7 +21,7 @@ export default function Test() {
           <Login id="login"></Login>
         </Grid>
       </Grid>
-
+</div>
       <Footer></Footer>
     </>
   );
