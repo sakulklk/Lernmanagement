@@ -24,7 +24,7 @@ export default function LernsprachenPaper({ name, progress, learningMark }) {
         <Grid container>
           <Grid item xs={4} style={{ alignSelf: 'center' }}>
             <Typography
-              variant="button"
+              variant="h6"
               noWrap
               style={{ textAlign: 'center', fontWeight: 'bold' }}
             >

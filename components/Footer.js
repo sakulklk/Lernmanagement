@@ -8,40 +8,74 @@ export default function Footer({}) {
     <Box
       sx={{
         width: '100%',
-        height: 55,
+        height: 40,
         bottom: 0,
         padding: 0.8,
         position: 'fixed',
-        backgroundColor: 'primary.main',
+        backgroundColor: '#0288d1',
       }}
     >
       <Grid container>
-        <Grid item xs={3} style={{ textAlign: 'center' }}>
-          <Link href="#" underline="none" color="white">
+        <Grid
+          item
+          xs={3}
+          style={{
+            textAlign: 'center',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <Link
+            href="https://www.dhbw.de/startseite"
+            underline="none"
+            color="white"
+          >
             DHBW
           </Link>
         </Grid>
-        <Grid item xs={3} style={{ textAlign: 'center', color: 'white' }}>
+        <Grid
+          item
+          xs={3}
+          style={{
+            textAlign: 'center',
+            color: 'white',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
           <Link href="/kontaktformular_footer" underline="none" color="white">
             Anliegen / Feedback ?
           </Link>
         </Grid>
-        <Grid item xs={3} style={{ textAlign: 'center', color: 'white' }}>
-          <Grid container>
-            <Grid item xs={12} style={{ textAlign: 'center', color: 'white' }}>
-              <Link href="#" underline="none" color="white">
-                Datenschutzrichtlinien
-              </Link>
-            </Grid>
-            <Grid item xs={12} style={{ textAlign: 'center', color: 'white' }}>
-              <Link href="#" underline="none" color="white">
-                AGB
-              </Link>
-            </Grid>
-          </Grid>
+        <Grid
+          item
+          xs={3}
+          style={{
+            textAlign: 'center',
+            color: 'white',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <Link href="#" underline="none" color="white">
+            Datenschutz und AGB
+          </Link>
         </Grid>
 
-        <Grid item xs={3} style={{ textAlign: 'center', color: 'white' }}>
+        <Grid
+          item
+          xs={3}
+          style={{
+            textAlign: 'center',
+            color: 'white',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
           <Link href="#" underline="none" color="white">
             Impressum
           </Link>
