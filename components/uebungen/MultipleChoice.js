@@ -29,7 +29,7 @@ let nextQuestion = true;
 let currentQuestion = 0;
 let currentAnswers = ['a', 'b', 'c', 'd'];
 
-export default function MultipleChoice() {
+export default function MultipleChoice(props) {
   const [isCorrect, setCorrect] = useState(false);
   const [isWrong, setWrong] = useState(false);
   const [answerChosen, setAnswerChosen] = useState(true);
@@ -51,6 +51,7 @@ export default function MultipleChoice() {
       setCorrect(true);
       setWrong(false);
       setAnswerChosen(false);
+      props.isCorrect(true);
     } else {
       setCorrect(false);
       setWrong(true);

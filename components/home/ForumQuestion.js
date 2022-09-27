@@ -28,7 +28,7 @@ export default function ForumQuestion() {
         style={{ width: '100%', padding: '20px', border: '2px solid gray' }}
       />
       <Button size="small">
-        <SendIcon />
+        <SendIcon color="#2196f3" />
       </Button>
     </Paper>
   );
