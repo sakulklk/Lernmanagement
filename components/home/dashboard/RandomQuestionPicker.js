@@ -7,6 +7,7 @@ import Crosswords from '../../uebungen/Crosswords.js';
 import GapText from '../../uebungen/GapText.js';
 import MultipleChoice from '../../uebungen/MultipleChoice.js';
 import DragDrop from '../../uebungen/DragDrop.js';
+
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import Alert from '@mui/material/Alert';
@@ -32,7 +33,7 @@ export default function RandomQuestionPicker() {
     <Crosswords isCorrect={isCorrect} />,
     <GapText isCorrect={isCorrect} />,
     <MultipleChoice isCorrect={isCorrect} />,
-    <DragDrop isCorrect={isCorrect} />,
+    <MultipleChoiceSeperate isCorerct={isCorrect} />,
   ];
 
   let [randomNumber, setRandomNumber] = React.useState(
