@@ -12,6 +12,8 @@ import GroupIcon from '@mui/icons-material/Group';
 export default function Test() {
   return (
     <>
+          <div style={{ paddingBottom: '65px' }}>
+
       <NavBar></NavBar>
       <Paper elevation={5} style={{ margin: '35px auto', width: '1000px' }}>
         <List>
@@ -58,6 +60,7 @@ export default function Test() {
           </ListItem>
         </List>
       </Paper>
+      </div>
       <Footer></Footer>
     </>
   );

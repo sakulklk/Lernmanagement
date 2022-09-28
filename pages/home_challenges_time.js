@@ -43,6 +43,8 @@ export default function Test() {
 
   return (
     <>
+          <div style={{ paddingBottom: '65px' }}>
+
       <NavBar></NavBar>
 
       <Paper
@@ -130,7 +132,7 @@ export default function Test() {
           </IconButton>
         )}
       </Paper>
-
+</div>
       <Footer></Footer>
     </>
   );

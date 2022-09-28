@@ -9,6 +9,7 @@ import SideMenuAd from '../components/admin/dashboard/sidemenuad.js';
 export default function Test() {
   return (
     <body>
+      
       <NavBar></NavBar>
       <Box sx={{ p: 2 }}>
         <Grid container spacing={1}>

@@ -23,6 +23,9 @@ import Sidemenu from '../components/nutzerdaten/Sidemenu.js';
 export default function adminrechte() {
   return (
     <>
+          <div style={{ paddingBottom: '65px' }}>
+
+
       <NavBar></NavBar>{' '}
       <Box sx={{ p: 2 }}>
         <Grid container spacing={1}>
@@ -83,6 +86,8 @@ export default function adminrechte() {
           <SimpleAccordion></SimpleAccordion>
         </div>
       </div>
+</div>
+
       <Footer></Footer>
     </>
   );

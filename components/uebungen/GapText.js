@@ -138,11 +138,17 @@ export default function GapText(props) {
                 textPart
               )}
               {textPart === ' ' && !isNaN(chosenAnswers[id]) ? (
-                <div style={{ display: 'inline' }}>
-                  {currentAnswers[chosenAnswers[id]]}
+                <div
+                  style={{
+                    display: 'inline',
+                    border: '1px solid black',
+                    borderRadius: '15px',
+                  }}
+                >
+                  &nbsp;{currentAnswers[chosenAnswers[id]]}
                   <Button
-                    sx={{ borderRadius: '15px' }}
-                    variant="outlined"
+                    sx={{ margin: 'auto' }}
+                    variant="text"
                     onClick={() => {
                       var newChosenAnswers = chosenAnswers;
                       delete newChosenAnswers[id];

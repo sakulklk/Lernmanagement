@@ -7,8 +7,12 @@ import { userState, userStateOptions } from '../userState.js';
 export default function Test() {
   return (
     <>
-      <NavBar></NavBar>
+          <div style={{ paddingBottom: '65px' }}>
+
+    <NavBar></NavBar>
       <Chat></Chat>
+      
+      </div>
 
       <Footer></Footer>
     </>
