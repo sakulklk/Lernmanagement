@@ -7,7 +7,7 @@ const questions = [
       '1: Wofür steht JS?',
       '2: startet eine Schleife',
       '3: Name eines Frameworks für JS',
-      '4: Wie nennt einzelne Elemente, die per <Elemente> in React aufrufbar sind?',
+      '4: Wie nennt man einzelne Elemente, die per <Elemente> in React aufrufbar sind?',
       '5: Eine Datenstruktur, die mehrere Elemente beinhaltet',
       '6: Funktion, die true zurückgibt, wenn es sich beim Eingabewert nicht um eine Zahl handelt',
     ],
@@ -31,9 +31,7 @@ function createGridFromArray(grid, props) {
   return (
     <div>
       <div>
-
         {grid.map((row, idRow) => {
-
           return (
             <div
               key={idRow}
@@ -51,8 +49,6 @@ function createGridFromArray(grid, props) {
                         style={{
                           float: 'left',
                           border: '0',
-
-                   
 
                           height: '40px',
                           width: '40px',
@@ -102,11 +98,9 @@ function createGridFromArray(grid, props) {
                         <input
                           type="text"
                           maxLength="1"
-
                           onKeyDown={(e) =>
                             handleInput(e, idRow, idElement, props)
                           }
-
                           style={{
                             border: 'none',
                             padding: '0',
