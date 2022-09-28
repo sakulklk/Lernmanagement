@@ -78,73 +78,71 @@ export default function Test() {
 
   return (
     <>
-          <div style={{ paddingBottom: '65px' }}>
+      <div style={{ paddingBottom: '65px' }}>
+        <NavBar></NavBar>
 
-      <NavBar></NavBar>
-
-
-      {activeStep != null ? (
-        <>
-          <Paper
-            elevation={5}
-            style={{
-              margin: '30px auto 20px auto ',
-              width: '1000px',
-              height: '500px',
-            }}
-          >
-            <Box
-              sx={{
-                width: '100%',
+        {activeStep != null ? (
+          <>
+            <Paper
+              elevation={5}
+              style={{
+                margin: '30px auto 20px auto ',
+                width: '1000px',
+                height: '500px',
               }}
             >
-              <Stepper nonLinear activeStep={activeStep}>
-                {steps.map((label, index) => (
-                  <Step key={label} completed={completed[index]}>
-                    <StepButton
-                      color="inherit"
-                      onClick={handleStep(index)}
-                    ></StepButton>
-                  </Step>
-                ))}
-              </Stepper>
-            </Box>
-          </Paper>
-          <Paper
-            elevation={5}
-            style={{
-              margin: 'auto ',
-              marginTop: '20px',
-              width: '1000px',
-              height: '50px',
-              display: 'flex',
-              justifyContent: 'center',
-            }}
-          >
-            {' '}
-            <IconButton
-              aria-label="ArrowForwardIosIcon"
-              color="primary"
-              size="large"
-              onClick={handleNext}
+              <Box
+                sx={{
+                  width: '100%',
+                }}
+              >
+                <Stepper nonLinear activeStep={activeStep}>
+                  {steps.map((label, index) => (
+                    <Step key={label} completed={completed[index]}>
+                      <StepButton
+                        color="inherit"
+                        onClick={handleStep(index)}
+                      ></StepButton>
+                    </Step>
+                  ))}
+                </Stepper>
+              </Box>
+            </Paper>
+            <Paper
+              elevation={5}
+              style={{
+                margin: 'auto ',
+                marginTop: '20px',
+                width: '1000px',
+                height: '50px',
+                display: 'flex',
+                justifyContent: 'center',
+              }}
             >
-              <ArrowForwardIosIcon fontSize="large" />
-            </IconButton>{' '}
-          </Paper>{' '}
-        </>
-      ) : (
-        <>
-          <Paper
-            elevation={5}
-            style={{
-              margin: '50px auto 20px auto ',
-              width: '1000px',
-              height: '500px',
-            }}
-          ></Paper>
-        </>
-      )}
-
+              {' '}
+              <IconButton
+                aria-label="ArrowForwardIosIcon"
+                color="primary"
+                size="large"
+                onClick={handleNext}
+              >
+                <ArrowForwardIosIcon fontSize="large" />
+              </IconButton>{' '}
+            </Paper>{' '}
+          </>
+        ) : (
+          <>
+            <Paper
+              elevation={5}
+              style={{
+                margin: '50px auto 20px auto ',
+                width: '1000px',
+                height: '500px',
+              }}
+            ></Paper>
+          </>
+        )}
+      </div>
       <Footer></Footer>
     </>
   );
