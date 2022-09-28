@@ -13,7 +13,7 @@ export default function Test() {
   return (
     <>
       <NavBar></NavBar>
-      <div style={{ paddingBottom: '65px' paddingTop: "400px" }}>
+      <div style={{ paddingBottom: '65px', paddingTop: '400px' }}>
         <Grid container spacing={1}>
           <Grid item xs={2}>
             <Box sx={{ p: 2 }}>
