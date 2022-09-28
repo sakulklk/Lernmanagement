@@ -14,15 +14,15 @@ export default function UserStateButtons(props) {
 
   function setNotLogged() {
     setUserState((userState = 'notLogged'));
-    props.userState();
+    props.notLogged();
   }
   function setLoggedStudent() {
     setUserState((userState = 'loggedStudent'));
-    alert(userState);
+    props.loggedStudent();
   }
   function setLoggedTeacher() {
     setUserState((userState = 'loggedTeacher'));
-    alert(userState);
+    props.loggedTeacher();
   }
 
   return (

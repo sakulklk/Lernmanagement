@@ -70,7 +70,7 @@ export default function GapText(props) {
   }
 
   return (
-    <div style={{ fontSize: '20px' }}>
+    <div style={{ fontSize: '20px', marginTop: '50px' }}>
       <Box
         display="flex"
         flexDirection="row"

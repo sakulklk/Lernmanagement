@@ -14,8 +14,10 @@ export default function LanguageWidget() {
     {
       name: 'JavaScript',
       progress: 78,
-      learningMark: 'Hello, World!',
-      link: '/hello_world',
+
+      learningMark: 'JSON',
+      route: '/hello_world',
+
     },
     { name: 'Python', progress: 65, learningMark: 'Tkinter' },
     { name: 'HTML', progress: 90, learningMark: 'Profiwissen' },
@@ -107,7 +109,12 @@ export default function LanguageWidget() {
                     xs={2}
                     style={{ textAlign: 'center', paddingLeft: '25px' }}
                   >
-                    <Button variant="contained" color="secondary" size="medium">
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      size="medium"
+                      href={currentLanguage.route}
+                    >
                       {' '}
                       <a link={currentLanguages.link}>lernen </a>
                     </Button>
