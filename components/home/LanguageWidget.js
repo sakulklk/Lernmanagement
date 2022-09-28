@@ -14,8 +14,7 @@ export default function LanguageWidget() {
     {
       name: 'JavaScript',
       progress: 78,
-
-      learningMark: 'JSON',
+      learningMark: 'Hello, World!',
       route: '/hello_world',
 
     },
@@ -116,7 +115,7 @@ export default function LanguageWidget() {
                       href={currentLanguage.route}
                     >
                       {' '}
-                      <a link={currentLanguages.link}>lernen </a>
+                      lernen
                     </Button>
                   </Grid>
                 </Grid>

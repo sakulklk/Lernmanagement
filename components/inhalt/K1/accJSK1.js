@@ -8,6 +8,8 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Uebersicht from '../Uebersicht/acc.js';
+import LockIcon from '@mui/icons-material/Lock';
+import LockOpenIcon from '@mui/icons-material/LockOpen';
 
 export default function Sidemenu() {
   return (
@@ -38,45 +40,44 @@ export default function Sidemenu() {
             <MenuList>
               <MenuItem MenuItem component={Link} href="/hello_world">
                 <Typography variant="inherit" noWrap>
+                  <LockOpenIcon />
                   Hello, World!
                 </Typography>
               </MenuItem>
 
-              <MenuItem component={Link} href="/grundbegriffe">
+              <MenuItem /*component={Link} href="/grundbegriffe"*/>
                 <Typography variant="inherit" noWrap>
-                  Grundbegriffe
+                  <LockIcon /> Grundbegriffe
                 </Typography>
               </MenuItem>
 
-              <MenuItem component={Link} href="/var_konst">
+              <MenuItem /*component={Link} href="/var_konst"*/>
                 <Typography variant="inherit" noWrap>
+                  <LockIcon />
                   Variablen und Konstanten
                 </Typography>
               </MenuItem>
               <MenuItem
-                MenuItem
+              /*MenuItem
                 component={Link}
-                href="/nutzerdaten_kontoinformationen"
+                href="/nutzerdaten_kontoinformationen"*/
               >
                 <Typography variant="inherit" noWrap>
-                  Ein- und Ausgabe
+                  <LockIcon /> Ein- und Ausgabe
                 </Typography>
               </MenuItem>
               <MenuItem
-                MenuItem
+              /* MenuItem
                 component={Link}
-                href="/nutzerdaten_kontoinformationen"
+                href="/nutzerdaten_kontoinformationen"*/
               >
                 <Typography variant="inherit" noWrap>
-                  Datentypen
+                  <LockIcon /> Datentypen
                 </Typography>
               </MenuItem>
-              <MenuItem
-                MenuItem
-                component={Link}
-                href="/nutzerdaten_kontoinformationen"
-              >
+              <MenuItem MenuItem component={Link} href="/ubuengAll">
                 <Typography variant="inherit" noWrap>
+                  <LockOpenIcon />
                   Übungen
                 </Typography>
               </MenuItem>

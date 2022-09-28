@@ -5,6 +5,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
+import LockIcon from '@mui/icons-material/Lock';
 import Divider from '@mui/material/Divider';
 
 export default function Sidemenu() {
@@ -24,36 +25,29 @@ export default function Sidemenu() {
             }
             `}</style>
       <div className="content">
-        <h3>Scroll Down to See The Effect</h3>
+        <h1>Übe das Gelernte</h1>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-          lacus ex, sit amet blandit leo lobortis eget.
+          Hier ist nochmal ein Mix aus verschiedenen Aufgaben zu dem Kapitel.
+          Bitte bearbeite alle bevor du zum nächsten Kapitel übegehst
         </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-          lacus ex, sit amet blandit leo lobortis eget.
-        </p>
+
         <Divider />
         <br />
         <Grid container>
           <Grid item sm={7} md={7} lg={9}>
-            <a href="/grundbegriffe">
+            <a href="/hello_world">
               <Button variant="text" startIcon={<ArrowBackIosIcon />}>
-                <LockOpenIcon></LockOpenIcon> Grundbegriffe
+                <LockOpenIcon></LockOpenIcon> Anfang des Kapitels
               </Button>
             </a>
           </Grid>
           <Grid item sm={5} md={5} lg={3}>
-            <a href="/JSK1">
-              <Button variant="text" endIcon={<ArrowForwardIosIcon />}>
-                <LockOpenIcon></LockOpenIcon> Ein- und Ausgabe
-              </Button>
-            </a>
+            {/* <a href="/JSK1"> */}
+            <Button variant="text" endIcon={<ArrowForwardIosIcon />}>
+              <LockIcon /> Nächstes Kapitel
+            </Button>
+            {/* </a> */}
           </Grid>
         </Grid>
       </div>

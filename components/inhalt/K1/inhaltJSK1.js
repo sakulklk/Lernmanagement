@@ -2,6 +2,8 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 
 import GapText from '../../uebungen/GapText.js';
+import Crosswords from '../../uebungen/Crosswords.js';
+import MultipleChoice from '../../uebungen/MultipleChoice.js';
 
 import Box from '@mui/material/Box';
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
@@ -10,6 +12,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import LockIcon from '@mui/icons-material/Lock';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import Divider from '@mui/material/Divider';
 
@@ -154,10 +157,13 @@ export default function Sidemenu() {
               <br />
               Die ersten Schritte sollen zunächst diejenigen an die
               Programmierung heranführen, die noch nie oder nur wenig
-              programmiert haben. Am Anfang könnte das meiste demnach schon
-              bekannt sein, aber das Tempo wird sich schrittweise erhöhen und
-              hoffentlich sind bald auch für Erfahrene einige unbekannte Aspekte
-              oder nützliche Tipps dabei.
+              programmiert haben.{' '}
+              <p id="stringsFürText">
+                Am Anfang könnte das meiste demnach schon bekannt sein, aber das
+                Tempo wird sich schrittweise erhöhen und hoffentlich sind bald
+                auch für Erfahrene einige unbekannte Aspekte oder nützliche
+                Tipps dabei.
+              </p>
             </Box>
           </Box>
         </y>
@@ -202,7 +208,7 @@ export default function Sidemenu() {
             <code> "Hello, World!" </code>
           </Paper>
         </Box>
-        <p>
+        <p id="ausgabe">
           {' '}
           Für das Hello-World-Programm benötigen wir also den String{' '}
           <codest>
@@ -352,7 +358,7 @@ export default function Sidemenu() {
               {' '}
               In dieser Vorlesung betrachten wir JavaScript weitestgehend ohne
               HTML und CSS (⟶ dies findet evtl. in der Vorlesung
-              „Web-Engineering“ statt).
+              „Web-Engineering“ <a id="umgebung"></a>statt).
             </li>
           </ul>
         </p>
@@ -455,7 +461,7 @@ export default function Sidemenu() {
                 Rome
               </a>
             </li>
-            <li> Kennst du weitere und hast schon mal damit gearbeitet?</li>
+            <li>  <a id="inspo"></a>Kennst du weitere und hast schon mal damit gearbeitet?</li>
           </ul>
         </p>
         <h2>Inspiration</h2>
@@ -506,7 +512,23 @@ export default function Sidemenu() {
         </p>
         <br />
         <p>Bearbeite bitte folgende Übungen!</p>
+        <h3> 1. Aufgabe: Lückentext</h3>
+        <h5> Klicke die Karten an und wähle den richtigen Platz </h5>
         <GapText></GapText>
+        <br />
+        <h3> 2. Aufgabe: Kreuzworträtsel</h3>
+        <h5>
+          {' '}
+          Finde die entsprechenden Wörter und schreibe sie in ihre Spalte/ Zeile
+          ein{' '}
+        </h5>
+        <Crosswords />
+        <br />
+        <h3> 3. Aufgabe: MultipleChoice</h3>
+        <h5> Beantworte 3 Fragen richtig </h5>
+        <br />
+        <MultipleChoice />
+        <br />
         <Grid container>
           <Grid item sm={8} md={8} lg={10}>
             <a href="/uebersichtJS">
@@ -518,7 +540,7 @@ export default function Sidemenu() {
           <Grid item sm={4} md={4} lg={2}>
             <a href="/grundbegriffe">
               <Button variant="text" endIcon={<ArrowForwardIosIcon />}>
-                <LockOpenIcon></LockOpenIcon> Grundbegriffe
+                <LockIcon></LockIcon> Grundbegriffe
               </Button>
             </a>
           </Grid>
