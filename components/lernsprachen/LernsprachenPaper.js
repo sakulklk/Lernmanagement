@@ -8,7 +8,12 @@ import { Fragment } from 'react'; // import Fragment from React
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 
-export default function LernsprachenPaper({ name, progress, learningMark }) {
+export default function LernsprachenPaper({
+  name,
+  progress,
+  learningMark,
+  link,
+}) {
   const Dozent = false;
   return (
     <>
@@ -24,7 +29,7 @@ export default function LernsprachenPaper({ name, progress, learningMark }) {
         <Grid container>
           <Grid item xs={4} style={{ alignSelf: 'center' }}>
             <Typography
-              variant="button"
+              variant="h6"
               noWrap
               style={{ textAlign: 'center', fontWeight: 'bold' }}
             >
@@ -54,7 +59,12 @@ export default function LernsprachenPaper({ name, progress, learningMark }) {
                 <DoubleArrowIcon />
               </Button>
             ) : (
-              <Button variant="contained" color="secondary" size="small">
+              <Button
+                variant="contained"
+                color="secondary"
+                size="small"
+                href={link}
+              >
                 {' '}
                 lernen{' '}
               </Button>

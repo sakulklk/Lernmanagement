@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
+  let globalVariable = 'test43';
   return (
     <>
       <head>

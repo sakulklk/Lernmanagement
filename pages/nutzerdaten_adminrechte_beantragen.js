@@ -12,7 +12,9 @@ import Field from '../components/admin/Bestätigungscode.js';
 import BasicButtons from '../components/admin/BestätigenButton.js';
 import BasicBreadcrumbs from '../components/admin/Breadcrumb.js';
 import Grid from '@mui/material/Grid';
-import BasicBreadcrumbs1 from '../components/admin/Breadcrumb.js';
+import Box from '@mui/material/Box';
+
+import Sidemenu from '../components/nutzerdaten/Sidemenu.js';
 
 // deine Namen sind nicht sehr gut würde ziemlich vieles umbenennen ( breadcrumbs ist zB ein guter Name, da man gleich weißt was es ist bei den anderen Sachen keine Ahnung)
 // habe Textfield in Header umbenannt und basictextfield in mail
@@ -21,9 +23,18 @@ import BasicBreadcrumbs1 from '../components/admin/Breadcrumb.js';
 export default function adminrechte() {
   return (
     <>
-      <NavBar></NavBar>
-      <BasicBreadcrumbs1></BasicBreadcrumbs1>
+          <div style={{ paddingBottom: '65px' }}>
 
+
+      <NavBar></NavBar>{' '}
+      <Box sx={{ p: 2 }}>
+        <Grid container spacing={1}>
+          <Grid item xs={3}>
+            <Sidemenu></Sidemenu>
+          </Grid>
+          <Grid item xs={9}></Grid>
+        </Grid>
+      </Box>
       <div className="bread">
         <style jsx>{`
       .bread{
@@ -75,29 +86,9 @@ export default function adminrechte() {
           <SimpleAccordion></SimpleAccordion>
         </div>
       </div>
+</div>
 
       <Footer></Footer>
     </>
   );
 }
-
-/* 
-import Sidemenu from '../components/nutzerdaten/Sidemenu.js';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-
-export default function Test() {
-  return (
-    <body>
-      <NavBar></NavBar>
-      <Box sx={{ p: 2 }}>
-        <Grid container spacing={1}>
-          <Grid item xs={3}>
-            <Sidemenu></Sidemenu>
-          </Grid>
-          <Grid item xs={9}></Grid>
-        </Grid>
-      </Box>
-    </body>
-  );
-}*/

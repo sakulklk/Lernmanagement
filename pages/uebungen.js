@@ -15,9 +15,15 @@ import { useState } from 'react';
 
 export default function Uebungen() {
   const [chosenType, setType] = useState('MultipleChoice');
-
+  function isCorrect(correct) {
+    if (correct) {
+      alert('correct');
+    }
+  }
   return (
     <body>
+            <div style={{ paddingBottom: '65px' }}>
+
       <NavBar></NavBar>
 
       <Button
@@ -68,13 +74,21 @@ export default function Uebungen() {
       </Button>
 
       {chosenType == 'MultipleChoice' ? (
-        <MultipleChoice></MultipleChoice>
+        <MultipleChoice isCorrect={isCorrect}></MultipleChoice>
       ) : (
         <></>
       )}
-      {chosenType == 'Crosswords' ? <Crosswords></Crosswords> : <></>}
+      {chosenType == 'Crosswords' ? (
+        <Crosswords isCorrect={isCorrect}></Crosswords>
+      ) : (
+        <></>
+      )}
       {chosenType == 'DragDrop' ? <DragDrop></DragDrop> : <></>}
-      {chosenType == 'GapText' ? <GapText></GapText> : <></>}
+      {chosenType == 'GapText' ? (
+        <GapText isCorrect={isCorrect}></GapText>
+      ) : (
+        <></>
+      )}
       {chosenType == 'DragDrop2' ? (
         //<DndProvider>
         <DragDrop2></DragDrop2>
@@ -82,7 +96,7 @@ export default function Uebungen() {
         //</DndProvider>
         <></>
       )}
-
+</div>
       <Footer></Footer>
     </body>
   );

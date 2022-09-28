@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 export default function Test() {
-  const Dozent = true;
+  const Dozent = false;
   const learningLanguagesCategories = [
     'Webentwicklung',
     'DataScience',
@@ -18,8 +18,9 @@ export default function Test() {
     {
       name: 'JavaScript',
       progress: 80,
-      learningMark: 'JSON',
+      learningMark: 'Hello, World!',
       category: 'Webentwicklung',
+      link: '/hello_world',
     },
     {
       name: 'Python',
@@ -89,6 +90,7 @@ export default function Test() {
                       name={learningLanguage.name}
                       progress={learningLanguage.progress}
                       learningMark={learningLanguage.learningMark}
+                      link={learningLanguage.link}
                     />
                   </Grid>
                 ) : null

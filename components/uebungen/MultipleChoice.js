@@ -29,14 +29,21 @@ let nextQuestion = true;
 let currentQuestion = 0;
 let currentAnswers = ['a', 'b', 'c', 'd'];
 
-export default function MultipleChoice() {
+export default function MultipleChoice(props) {
   const [isCorrect, setCorrect] = useState(false);
   const [isWrong, setWrong] = useState(false);
   const [answerChosen, setAnswerChosen] = useState(true);
   const [toggleQuestion, toggle] = useState(false);
 
-  if (nextQuestion == true) {
+  if (nextQuestion == true && typeof props.questionNumber == 'undefined') {
     currentQuestion = Math.floor(Math.random() * questions.length);
+    currentAnswers = questions[currentQuestion].answers.sort(
+      () => Math.random() - 0.5
+    );
+    nextQuestion = false;
+  } else if (typeof props.questionNumber !== 'undefined') {
+    console.log(props.questionNumber);
+    currentQuestion = props.questionNumber;
     currentAnswers = questions[currentQuestion].answers.sort(
       () => Math.random() - 0.5
     );
@@ -51,6 +58,7 @@ export default function MultipleChoice() {
       setCorrect(true);
       setWrong(false);
       setAnswerChosen(false);
+      props.isCorrect(true);
     } else {
       setCorrect(false);
       setWrong(true);
@@ -59,7 +67,14 @@ export default function MultipleChoice() {
   }
 
   return (
-    <div style={{ marginBottom: '65px' }}>
+    <div
+      style={{
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: 'auto',
+        marginBottom: 'auto',
+      }}
+    >
       <Container maxWidth="sm">
         <Paper elevation={2}>
           <Grid container spacing={4}>
@@ -126,6 +141,7 @@ export default function MultipleChoice() {
             {answerChosen ? <>Bitte wählen Sie eine Antwort aus!</> : <></>}
           </Grid>
           <Grid item xs={4} style={{ textAlign: 'center' }}>
+            {/*}{' '}
             <Button
               variant="outlined"
               onClick={() => {
@@ -138,6 +154,7 @@ export default function MultipleChoice() {
             >
               Nächste Frage
             </Button>
+            {*/}
           </Grid>
         </Paper>
       </Container>

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
@@ -13,6 +14,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
+import Grid from '@mui/material/Grid';
 
 export default function NavBar() {
   const loggedIn = true;
@@ -50,7 +52,7 @@ export default function NavBar() {
   return (
     <AppBar position="sticky" color="info">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters style={{ display: 'flex' }}>
           <BookOutlinedIcon
             sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}
           />
@@ -159,6 +161,31 @@ export default function NavBar() {
 
           {loggedIn ? (
             <>
+              <Paper
+                color="white"
+                style={{
+                  width: '200px',
+                  marginRight: '5px',
+                  marginTop: '5px',
+                  alignSelf: 'center',
+                }}
+              >
+                <Grid container>
+                  <Grid item xs={4}>
+                    <Typography fontWeight="bold">Level</Typography>
+                  </Grid>
+                  <Grid item xs={2}>
+                    <Typography>5</Typography>
+                  </Grid>
+
+                  <Grid item xs={4}>
+                    <Typography fontWeight="bold">Punkte </Typography>
+                  </Grid>
+                  <Grid item xs={2}>
+                    <Typography>345</Typography>
+                  </Grid>
+                </Grid>
+              </Paper>
               <span style={{ margin: '10px' }}>Alex Anderson</span>
               <Box sx={{ flexGrow: 0 }}>
                 <Tooltip title="Open settings">
@@ -205,7 +232,6 @@ export default function NavBar() {
               Anmelden
             </Button>
           )}
-
         </Toolbar>
       </Container>
     </AppBar>

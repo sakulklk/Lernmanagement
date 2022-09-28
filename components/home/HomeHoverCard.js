@@ -19,7 +19,7 @@ export default function HomeHoverCard(text) {
         height: '100px',
         display: 'block',
 
-        background: '#1565c0',
+        background: '#0288d1',
         margin: '10px',
         textAlign: 'center',
         color: 'white',
@@ -32,7 +32,11 @@ export default function HomeHoverCard(text) {
         },
       }}
     >
-      <Typography className="title" variant="h6" style={{ paddingTop: '13px' }}>
+      <Typography
+        className="title"
+        variant="h6"
+        style={{ paddingTop: '12.5px', fontWeight: 'bold' }}
+      >
         {text.title}
       </Typography>
       <Typography

@@ -12,8 +12,6 @@ import Button from '@mui/material/Button';
 import StepButton from '@mui/material/StepButton';
 
 export default function Test() {
-  let exercisesCompleted = false;
-
   const steps = [1, 2, 3, 4, 5];
   const [activeStep, setActiveStep] = React.useState(0);
   const [completed, setCompleted] = React.useState({});
@@ -36,11 +34,8 @@ export default function Test() {
 
   const handleNext = () => {
     const newActiveStep =
-      isLastStep() && !allStepsCompleted()
-        ? (exercisesCompleted = true)
-        : activeStep + 1;
+      isLastStep() && !allStepsCompleted() ? null : activeStep + 1;
     setActiveStep(newActiveStep);
-    window.alert(exercisesCompleted);
   };
 
   const handleBack = () => {
@@ -65,55 +60,75 @@ export default function Test() {
 
   return (
     <>
+          <div style={{ paddingBottom: '65px' }}>
+
       <NavBar></NavBar>
-      <Paper
-        elevation={5}
-        style={{
-          margin: '50px auto 20px auto ',
-          width: '1000px',
-          height: '400px',
-        }}
-      >
-        {' '}
-        {exercisesCompleted ? 'test1' : 'test2'}
-        <Box
-          sx={{
-            width: '100%',
-          }}
-        >
-          <Stepper nonLinear activeStep={activeStep}>
-            {steps.map((label, index) => (
-              <Step key={label} completed={completed[index]}>
-                <StepButton
-                  color="inherit"
-                  onClick={handleStep(index)}
-                ></StepButton>
-              </Step>
-            ))}
-          </Stepper>
-        </Box>
-      </Paper>
-      <Paper
-        elevation={5}
-        style={{
-          margin: 'auto ',
-          marginTop: '20px',
-          width: '1000px',
-          height: '50px',
-          display: 'flex',
-          justifyContent: 'center',
-        }}
-      >
-        {' '}
-        <IconButton
-          aria-label="ArrowForwardIosIcon"
-          color="primary"
-          size="large"
-          onClick={handleNext}
-        >
-          <ArrowForwardIosIcon fontSize="large" />
-        </IconButton>
-      </Paper>
+
+
+      {activeStep != null ? (
+        <>
+          <Paper
+            elevation={5}
+            style={{
+              margin: '50px auto 20px auto ',
+              width: '1000px',
+              height: '400px',
+            }}
+          >
+            <Box
+              sx={{
+                width: '100%',
+              }}
+            >
+              <Stepper nonLinear activeStep={activeStep}>
+                {steps.map((label, index) => (
+                  <Step key={label} completed={completed[index]}>
+                    <StepButton
+                      color="inherit"
+                      onClick={handleStep(index)}
+                    ></StepButton>
+                  </Step>
+                ))}
+              </Stepper>
+            </Box>
+          </Paper>
+          <Paper
+            elevation={5}
+            style={{
+              margin: 'auto ',
+              marginTop: '20px',
+              width: '1000px',
+              height: '50px',
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
+            {' '}
+            <IconButton
+              aria-label="ArrowForwardIosIcon"
+              color="primary"
+              size="large"
+              onClick={handleNext}
+            >
+              <ArrowForwardIosIcon fontSize="large" />
+            </IconButton>{' '}
+          </Paper>{' '}
+        </>
+      ) : (
+        <>
+          <Paper
+            elevation={5}
+            style={{
+              margin: '50px auto 20px auto ',
+              width: '1000px',
+              height: '400px',
+            }}
+          >
+            vorbi
+          </Paper>
+        </>
+      )}
+
       <Footer></Footer>
     </>
   );
