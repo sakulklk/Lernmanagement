@@ -9,28 +9,45 @@ import MultipleChoice from '../../uebungen/MultipleChoice.js';
 import DragDrop from '../../uebungen/DragDrop.js';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
+import Alert from '@mui/material/Alert';
 
 export default function RandomQuestionPicker() {
   let [correctStatus, setCorrectStatus] = React.useState(false);
+  let [message, setMessage] = React.useState('no');
 
-  function isCorrect() {
-    setCorrectStatus((correctStatus = true));
-    alert('true');
+  function isCorrect(correct) {
+    if (correct) {
+      setCorrectStatus((correctStatus = true));
+    }
+  }
+  function handleCheckIfCorrect() {
+    if (correctStatus == true) {
+      setMessage((message = 'correctMessage'));
+    } else {
+      setMessage((message = 'wrongMessage'));
+    }
+    setCorrectStatus((correctStatus = false));
   }
   const randomQuestions = [
-    <Crosswords />,
-    <GapText />,
+    <Crosswords isCorrect={isCorrect} />,
+    <GapText isCorrect={isCorrect} />,
     <MultipleChoice isCorrect={isCorrect} />,
-    <DragDrop />,
+    <DragDrop isCorrect={isCorrect} />,
   ];
 
   let [randomNumber, setRandomNumber] = React.useState(
     Math.floor(Math.random() * randomQuestions.length)
   );
   function handleClickOnNext() {
+    //oldRandomNumber = randomNumber
     setRandomNumber(
+      //while(oldRandomNumber == randomNumber){
       (randomNumber = Math.floor(Math.random() * randomQuestions.length))
+      //oldRandomNumber = randomNumber
+      // }
     );
+    setCorrectStatus((correctStatus = false));
+    setMessage((message = 'no'));
   }
 
   const random = Math.floor(Math.random() * randomQuestions.length);
@@ -52,7 +69,19 @@ export default function RandomQuestionPicker() {
             {randomQuestions[randomNumber]}
           </Grid>
           <Grid item xs={12} style={{ display: 'flex', justifyContent: 'end' }}>
-            <IconButton aria-label="CheckBoxIcon" color="primary" size="large">
+            {message == 'correctMessage' ? (
+              <Alert severity="success">Richtig !</Alert>
+            ) : null}
+            {message == 'wrongMessage' ? (
+              <Alert severity="error">Versuche es nochmal ! </Alert>
+            ) : null}
+
+            <IconButton
+              aria-label="CheckBoxIcon"
+              color="primary"
+              size="large"
+              onClick={handleCheckIfCorrect}
+            >
               <CheckBoxIcon
                 fontSize="large"
                 style={{ marginBotom: '0px', marginRight: '0px' }}
