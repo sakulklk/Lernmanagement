@@ -10,8 +10,26 @@ import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import Button from '@mui/material/Button';
 import StepButton from '@mui/material/StepButton';
+import Crosswords from '../components/uebungen/Crosswords.js';
+import GapText from '../components/uebungen/GapText.js';
+import MultipleChoice from '../components/uebungen/MultipleChoice.js';
 
 export default function Test() {
+  let [correctAnswers, setCorrectAnswers] = React.useState(0);
+
+  function isCorrect(correct) {
+    if (correct) {
+      setCorrectAnswers((correctAnswers += 1));
+    }
+  }
+
+  const exercices = [
+    <Crosswords isCorrect={isCorrect} />,
+    <GapText isCorrect={isCorrect} />,
+    <MultipleChoice isCorrect={isCorrect} />,
+    <Crosswords isCorrect={isCorrect} />,
+    <GapText isCorrect={isCorrect} />,
+  ];
   const steps = [1, 2, 3, 4, 5];
   const [activeStep, setActiveStep] = React.useState(0);
   const [completed, setCompleted] = React.useState({});
@@ -67,9 +85,9 @@ export default function Test() {
           <Paper
             elevation={5}
             style={{
-              margin: '50px auto 20px auto ',
+              margin: '30px auto 20px auto ',
               width: '1000px',
-              height: '400px',
+              height: '500px',
             }}
           >
             <Box
@@ -118,11 +136,9 @@ export default function Test() {
             style={{
               margin: '50px auto 20px auto ',
               width: '1000px',
-              height: '400px',
+              height: '500px',
             }}
-          >
-            vorbi
-          </Paper>
+          ></Paper>
         </>
       )}
 
