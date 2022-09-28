@@ -15,9 +15,9 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 import Grid from '@mui/material/Grid';
+import UserStateButtons from '../components/UserStateButtons.js';
 
 export default function NavBar() {
-  const loggedIn = true;
   const pages = [
     { name: 'Home', route: '/' },
     { name: 'Programmiersprachen', route: '/programmiersprachen_uebersicht' },
@@ -159,7 +159,7 @@ export default function NavBar() {
             ))}
           </Box>
 
-          {loggedIn ? (
+          {'loggedStudent' ? (
             <>
               <Paper
                 color="white"
