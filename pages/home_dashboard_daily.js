@@ -28,8 +28,6 @@ export default function Test() {
   }
   return (
     <>
-          <div style={{ paddingBottom: '65px' }}>
-
       <NavBar></NavBar>
 
       <div style={{ marginBottom: '65px' }}>
