@@ -15,7 +15,7 @@ export default function LanguageWidget() {
       name: 'JavaScript',
       progress: 78,
       learningMark: 'Hello, World!',
-      href: '/hello_world',
+      route: '/hello_world',
     },
     { name: 'Python', progress: 65, learningMark: 'Tkinter' },
     { name: 'HTML', progress: 90, learningMark: 'Profiwissen' },
@@ -111,7 +111,7 @@ export default function LanguageWidget() {
                       variant="contained"
                       color="secondary"
                       size="medium"
-                      link={currentLanguages.link}
+                      href={currentLanguage.route}
                     >
                       {' '}
                       lernen
