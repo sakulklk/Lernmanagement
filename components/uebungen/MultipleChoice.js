@@ -41,7 +41,8 @@ export default function MultipleChoice(props) {
       () => Math.random() - 0.5
     );
     nextQuestion = false;
-  } else if (props.questionNumber !== 'undefined') {
+  } else if (typeof props.questionNumber !== 'undefined') {
+    console.log(props.questionNumber);
     currentQuestion = props.questionNumber;
     currentAnswers = questions[currentQuestion].answers.sort(
       () => Math.random() - 0.5
