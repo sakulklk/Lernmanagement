@@ -33,7 +33,6 @@ export default function RandomQuestionPicker() {
     <Crosswords isCorrect={isCorrect} />,
     <GapText isCorrect={isCorrect} />,
     <MultipleChoice isCorrect={isCorrect} />,
-    <MultipleChoiceSeperate isCorerct={isCorrect} />,
   ];
 
   let [randomNumber, setRandomNumber] = React.useState(
