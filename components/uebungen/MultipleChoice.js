@@ -35,8 +35,14 @@ export default function MultipleChoice(props) {
   const [answerChosen, setAnswerChosen] = useState(true);
   const [toggleQuestion, toggle] = useState(false);
 
-  if (nextQuestion == true) {
+  if (nextQuestion == true && typeof props.questionNumber == 'undefined') {
     currentQuestion = Math.floor(Math.random() * questions.length);
+    currentAnswers = questions[currentQuestion].answers.sort(
+      () => Math.random() - 0.5
+    );
+    nextQuestion = false;
+  } else if (props.questionNumber !== 'undefined') {
+    currentQuestion = props.questionNumber;
     currentAnswers = questions[currentQuestion].answers.sort(
       () => Math.random() - 0.5
     );
@@ -60,7 +66,14 @@ export default function MultipleChoice(props) {
   }
 
   return (
-    <div style={{ marginBottom: '65px' }}>
+    <div
+      style={{
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: 'auto',
+        marginBottom: 'auto',
+      }}
+    >
       <Container maxWidth="sm">
         <Paper elevation={2}>
           <Grid container spacing={4}>
@@ -127,6 +140,7 @@ export default function MultipleChoice(props) {
             {answerChosen ? <>Bitte wählen Sie eine Antwort aus!</> : <></>}
           </Grid>
           <Grid item xs={4} style={{ textAlign: 'center' }}>
+            {/*}{' '}
             <Button
               variant="outlined"
               onClick={() => {
@@ -139,6 +153,7 @@ export default function MultipleChoice(props) {
             >
               Nächste Frage
             </Button>
+            {*/}
           </Grid>
         </Paper>
       </Container>
