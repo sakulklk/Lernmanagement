@@ -11,7 +11,12 @@ import Typography from '@mui/material/Typography';
 export default function LanguageWidget() {
   const loggedIn = false;
   const currentLanguages = [
-    { name: 'JavaScript', progress: 78, learningMark: 'JSON' },
+    {
+      name: 'JavaScript',
+      progress: 78,
+      learningMark: 'JSON',
+      route: '/hello_world',
+    },
     { name: 'Python', progress: 65, learningMark: 'Tkinter' },
     { name: 'HTML', progress: 90, learningMark: 'Profiwissen' },
     { name: 'CSS', progress: 77, learningMark: 'Animationen' },
@@ -101,7 +106,12 @@ export default function LanguageWidget() {
                     xs={2}
                     style={{ textAlign: 'center', paddingLeft: '25px' }}
                   >
-                    <Button variant="contained" color="secondary" size="medium">
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      size="medium"
+                      href={currentLanguage.route}
+                    >
                       {' '}
                       lernen{' '}
                     </Button>

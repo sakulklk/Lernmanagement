@@ -12,15 +12,12 @@ export default function Languages() {
   const loggedIn = false;
 
   const languages = [
-    'JavaScript',
-    'Ruby',
-    'Python',
-    'C#',
-    'HTML',
-    'CSS',
-    'PHP',
-    'C++',
-    'Prolog',
+    { name: 'JavaScript', route: '/kapitelJS_na' },
+    { name: 'HTML', route: '/' },
+    { name: 'CSS', route: '/' },
+    { name: 'PHP', route: '/' },
+    { name: 'Python', route: '/' },
+    { name: 'C#', route: '/' },
   ];
   return (
     <>
@@ -52,11 +49,16 @@ export default function Languages() {
               <Grid container spacing={1}>
                 <Grid item xs style={{ textAlign: 'center' }}>
                   <Typography variant="subtitle1" fontWeight="bold">
-                    {language}
+                    {language.name}
                   </Typography>
                 </Grid>
                 <Grid item xs style={{ textAlign: 'center' }}>
-                  <Button variant="contained" color="secondary" size="small">
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    size="small"
+                    href={language.route}
+                  >
                     {' '}
                     lernen{' '}
                   </Button>
