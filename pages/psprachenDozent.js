@@ -103,6 +103,22 @@ export default function Test() {
             </Grid>
           ))}
         </Grid>
+        <Box sx={{ height: 320, transform: 'translateZ(0px)' }}>
+          <SpeedDial
+            ariaLabel="SpeedDial CRUD"
+            sx={{ position: 'sticke', height: 100 }}
+            icon={<SpeedDialIcon />}
+          >
+            {actions.map((action) => (
+              <SpeedDialAction
+                key={action.name}
+                icon={action.icon}
+                tooltipTitle={action.name}
+                href={action.route}
+              />
+            ))}
+          </SpeedDial>
+        </Box>
       </div>
       <Footer></Footer>
     </>
