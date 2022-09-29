@@ -14,17 +14,17 @@ export default function StatsJs() {
         </Grid>
         <Grid item xs={4}>
           <Typography variant="inherit" noWrap>
-            Studenten in den Kurs:
+            Studenten in dem Kurs:
           </Typography>
         </Grid>
         <Grid item xs={4}>
           <Typography variant="inherit" noWrap>
-            Vollstandig vertig:
+            Vollständig fertig:
           </Typography>
         </Grid>
         <Grid item xs={4}>
           <Typography variant="inherit" noWrap>
-            Prozent des Erfolgs bei Übungen:
+            Prozent des Erfolges bei Übungen:
           </Typography>
         </Grid>
 

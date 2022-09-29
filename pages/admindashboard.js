@@ -22,7 +22,7 @@ export default function Test() {
             <SideMenuAd> </SideMenuAd>
           </Grid>
           <Grid item xs={9}>
-            <h1>Lernstatistiken eure Kursen</h1>
+            <h1>Lernstatistiken Ihrer Kurse</h1>
             <JsAcc></JsAcc>
             <PythonAcc></PythonAcc>
           </Grid>

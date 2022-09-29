@@ -17,7 +17,7 @@ export default function Sidemenuad() {
       <MenuList>
         <MenuItem MenuItem component={Link} href="/admindashboard">
           <Typography variant="inherit" noWrap>
-            Lernstatistiken eure Vorlesungen
+            Lernstatistiken Ihrer Vorlesungen
           </Typography>
         </MenuItem>
         <Divider />
