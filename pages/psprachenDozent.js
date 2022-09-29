@@ -5,6 +5,10 @@ import LernsprachenKategorie from '../components/lernsprachen/LernsprachenKatego
 import Grid from '@mui/material/Grid';
 import UserStateButtons2 from '../components/UserStateButtons2.js';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import SpeedDial from '@mui/material/SpeedDial';
+import SpeedDialIcon from '@mui/material/SpeedDialIcon';
+import SpeedDialAction from '@mui/material/SpeedDialAction';
 
 export default function Test() {
   const Dozent = false;
