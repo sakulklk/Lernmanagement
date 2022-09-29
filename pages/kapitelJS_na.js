@@ -7,7 +7,7 @@ export default function KapitelJS() {
   return (
     <>
       <div style={{ paddingBottom: '75px' }}>
-        <NavBar status="logged" navOption="Nutzerdaten"></NavBar>
+        <NavBar status="notLogged" navOption="Nutzerdaten"></NavBar>
         <UserStateButtons2
           hrefOhneLogin="/kapitelJS_na"
           hrefLoginStudent="/kapitelJS_na.loggedIn"
