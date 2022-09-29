@@ -17,7 +17,7 @@ import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 import Grid from '@mui/material/Grid';
 import UserStateButtons from '../components/UserStateButtons.js';
 
-export default function NavBar() {
+export default function NavBar(props) {
   const pages = [
     { name: 'Home', route: '/' },
     { name: 'Programmiersprachen', route: '/programmiersprachen_uebersicht' },
@@ -159,7 +159,7 @@ export default function NavBar() {
             ))}
           </Box>
 
-          {'loggedStudent' ? (
+          {props.status == 'logged' ? (
             <>
               <Paper
                 color="white"

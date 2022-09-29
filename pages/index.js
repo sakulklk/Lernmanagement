@@ -16,21 +16,25 @@ import { userState } from '../components/UserStateButtons.js';
 
 export default function Home(props) {
   let [userState, setUserState] = React.useState('loggedStudent');
+  let [status, setStatus] = React.useState('logged');
 
   function notLogged() {
     setUserState((userState = 'notLogged'));
+    setStatus((status = 'notLogged'));
   }
   function loggedStudent() {
     setUserState((userState = 'loggedStudent'));
+    setStatus((status = 'logged'));
   }
   function loggedTeacher() {
     setUserState((userState = 'loggedTeacher'));
+    setStatus((status = 'logged'));
   }
 
   return (
     <>
       <div style={{ marginBottom: '65px' }}>
-        <NavBar status={userState}></NavBar>
+        <NavBar status={status}></NavBar>
         <UserStateButtons
           notLogged={notLogged}
           loggedStudent={loggedStudent}
