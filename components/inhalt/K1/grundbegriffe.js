@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import Divider from '@mui/material/Divider';
+import LockIcon from '@mui/icons-material/Lock';
 
 export default function Sidemenu() {
   return (
@@ -55,7 +56,7 @@ export default function Sidemenu() {
           <Grid item sm={5} md={5} lg={3}>
             <a href="/var_konst">
               <Button variant="text" endIcon={<ArrowForwardIosIcon />}>
-                <LockOpenIcon></LockOpenIcon> Variablen und Konstanten
+                <LockIcon></LockIcon> Variablen und Konstanten
               </Button>
             </a>
           </Grid>
