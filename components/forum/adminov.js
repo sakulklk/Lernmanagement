@@ -2,21 +2,20 @@ import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import Divider from '@material-ui/core/Divider';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
 import TextField from '@material-ui/core/TextField';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
-import Fab from '@material-ui/core/Fab';
+import Fab from '@mui/material/Fab';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import DeleteOutlined from '@mui/icons-material/DeleteOutlined';
 import AddToQueueIcon from '@mui/icons-material/AddToQueue';
 import IconButton from '@mui/material/IconButton';
-import SvgIcon from '@mui/material/SvgIcon';
 
 export default function Adminov() {
   return (
