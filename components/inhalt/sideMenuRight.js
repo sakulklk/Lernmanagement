@@ -38,7 +38,7 @@ export default function BoxSx() {
         <br />
         <b>Bitte gebe dein Feedback zu der Übung!</b>
         <br />
-        <a href="/forum">
+        <a href="/feedbackBogen">
           Hier geht es zum Feedback Bogen <ArrowForwardIcon></ArrowForwardIcon>
         </a>
       </Typography>
