@@ -9,13 +9,13 @@ import Popper from '@mui/material/Popper';
 import InfoPopper from './InfoPopper.js';
 import IconButton from '@mui/material/IconButton';
 
-export default function UserStateButtons2(props) {
+export default function UserStateButtonsForum(props) {
   return (
     <>
       <Grid container style={{ display: 'flex', justifyContent: 'end' }}>
         <Paper>
           <Grid container style={{ marginRight: '50px' }}>
-            <Grid item={3}>
+            <Grid item={4}>
               <Grid container>
                 <InfoPopper
                   text1="Untersuchen Sie hier die verschiedenen Ansichten der Prototyp-Webseite je nach Anmeldestatus."
@@ -36,13 +36,11 @@ export default function UserStateButtons2(props) {
                 </Typography>
               </Grid>
             </Grid>
-            <Grid item={3}>
-              <Button href={props.hrefOhneLogin}>Kein Login</Button>
-            </Grid>
-            <Grid item={3}>
+            <Grid item={4}>
               <Button href={props.hrefLoginStudent}>Login Student</Button>
             </Grid>
-            <Grid item={3}>
+
+            <Grid item={4}>
               <Button href={props.hrefLoginDozent}>Login Dozent</Button>
             </Grid>
           </Grid>

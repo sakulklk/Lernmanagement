@@ -4,14 +4,17 @@ import Overview from '../components/forum/overview.js';
 import Faqpost from '../components/forum/faqpost.js';
 import Fragenpost from '../components/forum/fragenpost.js';
 import Updatepost from '../components/forum/updatepost.js';
-import UserStateButtons2 from '../components/UserStateButtons2.js';
+import UserStateButtonsForum from '../components/UserStateButtonsForum.js';
 
 export default function Test() {
   return (
     <>
       <NavBar></NavBar>
       <div style={{ paddingBottom: '65px' }}>
-        <UserStateButtons2></UserStateButtons2>
+        <UserStateButtonsForum
+          hrefLoginStudent="/forum"
+          hrefLoginDozent="/forumadmin"
+        ></UserStateButtonsForum>
         <Overview> </Overview>
         <Faqpost></Faqpost>
         <Fragenpost></Fragenpost>

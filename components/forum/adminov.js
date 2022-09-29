@@ -32,11 +32,7 @@ export default function Adminov() {
             elevation={5}
             style={{ margin: '10px', padding: '10px', textAlign: 'center' }}
           >
-            <Button
-              variant="text"
-              href="./faqposts"
-              style={{ textAlign: 'center' }}
-            >
+            <Button variant="text" style={{ textAlign: 'center' }}>
               FAQ
             </Button>
           </Paper>
@@ -47,11 +43,7 @@ export default function Adminov() {
             elevation={5}
             style={{ margin: '10px', padding: '10px', textAlign: 'center' }}
           >
-            <Button
-              variant="text"
-              href="./fragenposts"
-              style={{ textAlign: 'center' }}
-            >
+            <Button variant="text" style={{ textAlign: 'center' }}>
               Fragen
             </Button>
           </Paper>
@@ -61,11 +53,7 @@ export default function Adminov() {
             elevation={5}
             style={{ margin: '10px', padding: '10px', textAlign: 'center' }}
           >
-            <Button
-              variant="text"
-              href="./updateposts"
-              style={{ textAlign: 'center' }}
-            >
+            <Button variant="text" style={{ textAlign: 'center' }}>
               Kommentare zu Updates
             </Button>
           </Paper>
@@ -149,12 +137,7 @@ export default function Adminov() {
                   <ListItemText align="left" secondary="Neu..."></ListItemText>
                 </Grid>
                 <Grid item xs={1} style={{ textAlign: 'center' }}>
-                  <Fab
-                    size="small"
-                    color="primary"
-                    aria-label="readmore"
-                    href="./post"
-                  >
+                  <Fab size="small" color="primary" aria-label="readmore">
                     <ArrowForwardIosIcon fontSize="small" />
                   </Fab>
                 </Grid>

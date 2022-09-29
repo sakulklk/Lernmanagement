@@ -21,15 +21,7 @@ export default function Overview() {
         <h3> Filters: </h3>
       </Grid>
       <Grid item xs={8} style={{ textAlign: 'center' }}></Grid>
-      <Grid item xs={2} style={{ textAlign: 'center' }}>
-        <Button
-          variant="text"
-          href="./forumadmin"
-          style={{ textAlign: 'center' }}
-        >
-          admin
-        </Button>
-      </Grid>
+      <Grid item xs={2} style={{ textAlign: 'center' }}></Grid>
 
       <Grid item xs={4} style={{ textAlign: 'center' }}>
         <Paper
