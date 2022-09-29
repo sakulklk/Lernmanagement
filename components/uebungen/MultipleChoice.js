@@ -51,7 +51,7 @@ export default function MultipleChoice(props) {
       setCorrect(true);
       setWrong(false);
       setAnswerChosen(false);
-      props.isCorrect(true);
+      // props.isCorrect(true);
     } else {
       setCorrect(false);
       setWrong(true);
@@ -126,7 +126,7 @@ export default function MultipleChoice(props) {
             {isWrong ? <Alert severity="error">Falsch!</Alert> : <></>}
             {answerChosen ? <>Bitte wählen Sie eine Antwort aus!</> : <></>}
           </Grid>
-          <Grid item xs={4} style={{ textAlign: 'center' }}>
+          {/* <Grid item xs={4} style={{ textAlign: 'center' }}>
             <Button
               variant="outlined"
               onClick={() => {
@@ -139,7 +139,7 @@ export default function MultipleChoice(props) {
             >
               Nächste Frage
             </Button>
-          </Grid>
+          </Grid> */}
         </Paper>
       </Container>
     </div>
