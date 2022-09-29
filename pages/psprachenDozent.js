@@ -4,6 +4,7 @@ import LernsprachenPaper from '../components/lernsprachen/LernsprachenPaper.js';
 import LernsprachenKategorie from '../components/lernsprachen/LernsprachenKategorie.js';
 import Grid from '@mui/material/Grid';
 import UserStateButtons2 from '../components/UserStateButtons2.js';
+import SpeedDial2 from '../components/SpeedDial2.js';
 import Typography from '@mui/material/Typography';
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
@@ -67,6 +68,7 @@ export default function Test() {
     <>
       <div style={{ marginBottom: '65px' }}>
         <NavBar status="logged" navOption="Kurs-Dashboard"></NavBar>
+        <SpeedDial2 />
         <UserStateButtons2
           hrefOhneLogin="/psprachenOhneLogin"
           hrefLoginStudent="/programmiersprachen_uebersicht"
