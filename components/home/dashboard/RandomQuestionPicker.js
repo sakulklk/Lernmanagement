@@ -64,7 +64,7 @@ export default function RandomQuestionPicker() {
       >
         {' '}
         <Grid container>
-          <Grid item xs={12} style={{ height: '90%' }}>
+          <Grid item xs={12} style={{ height: '110%' }}>
             {randomQuestions[randomNumber]}
           </Grid>
           <Grid item xs={12} style={{ display: 'flex', justifyContent: 'end' }}>
