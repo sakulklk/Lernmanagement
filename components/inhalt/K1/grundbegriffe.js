@@ -54,11 +54,11 @@ export default function Sidemenu() {
             </a>
           </Grid>
           <Grid item sm={5} md={5} lg={3}>
-            <a href="/var_konst">
-              <Button variant="text" endIcon={<ArrowForwardIosIcon />}>
-                <LockIcon></LockIcon> Variablen und Konstanten
-              </Button>
-            </a>
+            {/* <a href="/var_konst"> */}
+            <Button variant="text" endIcon={<ArrowForwardIosIcon />}>
+              <LockIcon></LockIcon> Variablen und Konstanten
+            </Button>
+            {/* </a> */}
           </Grid>
         </Grid>
       </div>
