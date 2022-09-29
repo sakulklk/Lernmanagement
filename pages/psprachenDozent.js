@@ -5,10 +5,6 @@ import LernsprachenKategorie from '../components/lernsprachen/LernsprachenKatego
 import Grid from '@mui/material/Grid';
 import UserStateButtons2 from '../components/UserStateButtons2.js';
 import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import SpeedDial from '@mui/material/SpeedDial';
-import SpeedDialIcon from '@mui/material/SpeedDialIcon';
-import SpeedDialAction from '@mui/material/SpeedDialAction';
 
 export default function Test() {
   const Dozent = false;
@@ -107,22 +103,6 @@ export default function Test() {
             </Grid>
           ))}
         </Grid>
-        <Box sx={{ height: 320, transform: 'translateZ(0px)' }}>
-          <SpeedDial
-            ariaLabel="SpeedDial CRUD"
-            sx={{ position: 'sticke', height: 100 }}
-            icon={<SpeedDialIcon />}
-          >
-            {actions.map((action) => (
-              <SpeedDialAction
-                key={action.name}
-                icon={action.icon}
-                tooltipTitle={action.name}
-                href={action.route}
-              />
-            ))}
-          </SpeedDial>
-        </Box>
       </div>
       <Footer></Footer>
     </>
