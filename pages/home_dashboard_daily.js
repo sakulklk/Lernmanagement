@@ -28,7 +28,7 @@ export default function Test() {
   }
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar status="logged" navOption="Nutzerdaten"></NavBar>
 
       <div style={{ marginBottom: '65px' }}>
         <Paper

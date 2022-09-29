@@ -79,7 +79,7 @@ export default function Test() {
   return (
     <>
       <div style={{ paddingBottom: '65px' }}>
-        <NavBar></NavBar>
+        <NavBar status="logged" navOption="Nutzerdaten"></NavBar>
 
         {activeStep != null ? (
           <>
@@ -107,6 +107,23 @@ export default function Test() {
                   ))}
                 </Stepper>
               </Box>
+              <Paper
+                elevation={5}
+                style={{
+                  margin: '50px auto',
+                  padding: '20px',
+                  width: '80%',
+                  textAlign: 'center',
+                  color: 'green',
+                }}
+              >
+                <Typography variant="h5">
+                  Hier soll eine "fünf gewinnt"-Challenge implementiert werden:
+                  Um diese Challenge antreten zu können, müssen mindestens zwei
+                  Unterkapitel (können aus unterschiedlichen Lernkategorien
+                  kommen) bearbeitet worden sein.
+                </Typography>
+              </Paper>
             </Paper>
             <Paper
               elevation={5}

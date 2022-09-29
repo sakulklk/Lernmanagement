@@ -5,6 +5,10 @@ import LernsprachenKategorie from '../components/lernsprachen/LernsprachenKatego
 import Grid from '@mui/material/Grid';
 import UserStateButtons2 from '../components/UserStateButtons2.js';
 import Typography from '@mui/material/Typography';
+import SpeedDial from '@mui/material/SpeedDial';
+import SpeedDialIcon from '@mui/material/SpeedDialIcon';
+import SpeedDialAction from '@mui/material/SpeedDialAction';
+import { styled } from '@mui/material/styles';
 
 export default function Test() {
   const Dozent = false;
@@ -62,7 +66,7 @@ export default function Test() {
   return (
     <>
       <div style={{ marginBottom: '65px' }}>
-        <NavBar status="logged" navOption="Nutzerdaten"></NavBar>
+        <NavBar status="logged" navOption="Kurs-Dashboard"></NavBar>
         <UserStateButtons2
           hrefOhneLogin="/psprachenOhneLogin"
           hrefLoginStudent="/programmiersprachen_uebersicht"

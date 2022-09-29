@@ -17,12 +17,15 @@ import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 import Grid from '@mui/material/Grid';
 import UserStateButtons from '../components/UserStateButtons.js';
 
-export default function NavBar() {
+export default function NavBar(props) {
   const pages = [
     { name: 'Home', route: '/' },
     { name: 'Programmiersprachen', route: '/programmiersprachen_uebersicht' },
     { name: 'Forum', route: '/forum' },
-    { name: 'Nutzerdaten', route: '/nutzerdaten_kontoinformationen' },
+    {
+      name: props.navOption,
+      route: '/nutzerdaten_kontoinformationen',
+    },
     { name: 'Chat', route: '/chat' },
   ];
   const settings = [
@@ -159,7 +162,7 @@ export default function NavBar() {
             ))}
           </Box>
 
-          {'loggedStudent' ? (
+          {props.status == 'logged' ? (
             <>
               <Paper
                 color="white"

@@ -60,7 +60,7 @@ export default function Footer({}) {
             justifyContent: 'center',
           }}
         >
-          <Link href="#" underline="none" color="white">
+          <Link href="/AGBDatenschutz" underline="none" color="white">
             Datenschutz und AGB
           </Link>
         </Grid>
@@ -76,7 +76,7 @@ export default function Footer({}) {
             justifyContent: 'center',
           }}
         >
-          <Link href="#" underline="none" color="white">
+          <Link href="/Impressum" underline="none" color="white">
             Impressum
           </Link>
         </Grid>

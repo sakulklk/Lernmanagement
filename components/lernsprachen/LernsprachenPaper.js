@@ -33,7 +33,7 @@ export default function LernsprachenPaper({
               noWrap
               style={{ textAlign: 'center', fontWeight: 'bold' }}
             >
-              {name}
+              <Button href="/kapitelJS_na.loggedIn">{name}</Button>
             </Typography>
           </Grid>
           <Grid item xs={2} style={{ alignSelf: 'center' }}>

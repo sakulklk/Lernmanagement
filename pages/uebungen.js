@@ -24,7 +24,7 @@ export default function Uebungen() {
     <body>
             <div style={{ paddingBottom: '65px' }}>
 
-      <NavBar></NavBar>
+      <NavBar status="logged" navOption="Nutzerdaten"></NavBar>
 
       <Button
         style={{ padding: '30px', margin: '10px' }}
