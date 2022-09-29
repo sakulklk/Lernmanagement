@@ -11,7 +11,7 @@ export default function KapitelJS() {
         <UserStateButtons2
           hrefOhneLogin="/kapitelJS_na"
           hrefLoginStudent="/kapitelJS_na.loggedIn"
-          hrefLoginDozent="/"
+          hrefLoginDozent="/kapitelJSD"
         ></UserStateButtons2>
         ; <Übersicht></Übersicht>
       </div>

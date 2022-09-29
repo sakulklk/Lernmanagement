@@ -31,9 +31,9 @@ const StyledSpeedDial = styled(SpeedDial)(({ theme }) => ({
 }));
 
 const actions = [
-  { icon: <DeleteIcon />, name: 'Copy' },
-  { icon: <AddCircleIcon />, name: 'Save' },
-  { icon: <UpgradeIcon />, name: 'Print' },
+  { icon: <DeleteIcon />, name: 'Löschne' },
+  { icon: <AddCircleIcon />, name: 'Hinzufügen' },
+  { icon: <UpgradeIcon />, name: 'Bearbeiten' },
 ];
 
 export default function PlaygroundSpeedDial() {
