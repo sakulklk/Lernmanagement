@@ -4,14 +4,14 @@ import Overview from '../components/forum/overview.js';
 import Faqpost from '../components/forum/faqpost.js';
 import Fragenpost from '../components/forum/fragenpost.js';
 import Updatepost from '../components/forum/updatepost.js';
-import UserStateButtons from '../components/UserStateButtons.js';
+import UserStateButtons2 from '../components/UserStateButtons2.js';
 
 export default function Test() {
   return (
     <>
       <NavBar></NavBar>
       <div style={{ paddingBottom: '65px' }}>
-        <UserStateButtons></UserStateButtons>
+        <UserStateButtons2></UserStateButtons2>
         <Overview> </Overview>
         <Faqpost></Faqpost>
         <Fragenpost></Fragenpost>
