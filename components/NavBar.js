@@ -231,7 +231,11 @@ export default function NavBar(props) {
               </Box>
             </>
           ) : (
-            <Button variant="outlined" style={{ backgroundColor: 'white' }}>
+            <Button
+              variant="outlined"
+              style={{ backgroundColor: 'white' }}
+              href="/signUp"
+            >
               Anmelden
             </Button>
           )}

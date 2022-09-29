@@ -16,16 +16,9 @@ export default function KapitelJSloggedIn() {
         <UserStateButtons2
           hrefOhneLogin="/kapitelJS_na"
           hrefLoginStudent="/kapitelJS_na.loggedIn"
-          hrefLoginDozent="/"
+          hrefLoginDozent="/kapitelJSD"
         ></UserStateButtons2>
-        <Breadcrumbs aria-label="breadcrumb">
-          <Link underline="hover" color="inherit" href="/">
-            Home
-          </Link>
-          <Link underline="hover" color="inherit" href="programmiersprachen.js">
-            Javascript Lernseite
-          </Link>
-        </Breadcrumbs>
+      
 
         <ÜbersichtLoggedIn></ÜbersichtLoggedIn>
       </div>
