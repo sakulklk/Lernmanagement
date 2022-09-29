@@ -20,7 +20,7 @@ export default function Test() {
       progress: 80,
       learningMark: 'Hello, World!',
       category: 'Webentwicklung',
-      link: '/hello_world',
+      link: '/kapitelJS_na',
     },
     {
       name: 'Python',
