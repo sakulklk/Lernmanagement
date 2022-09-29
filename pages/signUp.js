@@ -12,7 +12,7 @@ export default function Test() {
     <>
           <div style={{ paddingBottom: '65px' }}>
 
-      <NavBar></NavBar>
+      <NavBar status="notLogged" navOption="Nutzerdaten"></NavBar>
       <Grid container spacing={1}>
         <Grid item xs={6}>
           <SignUp id="signUp"></SignUp>
