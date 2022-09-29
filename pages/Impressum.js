@@ -18,8 +18,7 @@ export default function Test() {
           }}
         >
           <Typography variant="h5">
-            Hier sollen in Zukunft ein Kontaktformular eingeblendet werden,
-            sodass ein Nutzer Anliegen und Feedback schildern kann.
+            Hier sollen in Zukunft ein Impressum eingeblendet werden
           </Typography>
         </Paper>
       </div>
