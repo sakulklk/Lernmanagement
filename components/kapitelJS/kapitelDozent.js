@@ -581,6 +581,51 @@ export default function CustomizedAccordions() {
             </Button>
           </AccordionDetails>
         </Accordion>
+        <Accordion
+          expanded={expanded === 'panel9'}
+          onChange={handleChangePanel('panel9')}
+        >
+          <AccordionSummary aria-controls="panel9d-content" id="panel9d-header">
+            <Typography>10 - Übungen</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              <Box sx={{ width: '100%', typography: 'body1' }}>
+                <TabContext value={value}>
+                  <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                    <Tabs
+                      value={value}
+                      onChange={handleChangeTabs}
+                      variant="scrollable"
+                      scrollButtons
+                      allowScrollButtonsMobile
+                      aria-label="scrollable force tabs example"
+                    >
+                      <Tab label="Hello, World!" value="1" />
+                      <Tab label="Grundbegriffe" value="2" />
+                      <Tab label="Variablen und Konstanten" value="3" />
+                      <Tab label="Ein- und Ausgaben" value="4" />
+                      <Tab label="Datentypen" value="5" />
+                      <Tab label="Abfrage" value="6" />
+                    </Tabs>
+                  </Box>
+                  <TabPanel value="1">Inhalt</TabPanel>
+                  <TabPanel value="2">Inhalt </TabPanel>
+                  <TabPanel value="3">Inhalt </TabPanel>
+                  <TabPanel value="4">Inhalt </TabPanel>
+                  <TabPanel value="5">Inhalt </TabPanel>
+                  <TabPanel value="6">
+                    Übungen die weiterführen zum nächsten Kapitel{' '}
+                  </TabPanel>
+                </TabContext>
+              </Box>
+            </Typography>
+            <br />
+            <Button id="button" variant="contained">
+              Contained
+            </Button>
+          </AccordionDetails>
+        </Accordion>
       </div>
 
       <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1 }}>
