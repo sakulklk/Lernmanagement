@@ -7,7 +7,7 @@ export default function Test() {
     <>
           <div style={{ paddingBottom: '65px' }}>
 
-      <NavBar></NavBar>
+      <NavBar status="logged" navOption="Nutzerdaten"></NavBar>
       </div>
       <Footer></Footer>
     </>

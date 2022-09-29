@@ -6,33 +6,36 @@ import Sidemenu from '../components/nutzerdaten/Sidemenu.js';
 import SignedInSince from '../components/nutzerdaten/SignedInSince.js';
 import RecentlyLearnedLanguages from '../components/nutzerdaten/RecentlyLearnedLanguages.js';
 import LearningHistory from '../components/nutzerdaten/LearningHistory.js';
-
+import UserStateButtons2 from '../components/UserStateButtons2.js';
 export default function Test() {
   return (
     <body>
-            <div style={{ paddingBottom: '65px' }}>
-
-      <NavBar></NavBar>
-      <Box sx={{ p: 2 }}>
-        <Grid container spacing={1}>
-          <Grid item xs={3}>
-            <Sidemenu></Sidemenu>
-          </Grid>
-          <Grid item xs={9}>
-            <Grid container spacing={1}>
-              <Grid item xs={12}>
-                <SignedInSince></SignedInSince>
-              </Grid>
-              <Grid item xs={12}>
-                <RecentlyLearnedLanguages></RecentlyLearnedLanguages>
-              </Grid>
-              <Grid item xs={12}>
-                <LearningHistory></LearningHistory>
+      <div style={{ paddingBottom: '65px' }}>
+        <NavBar status="logged" navOption="Nutzerdaten"></NavBar>
+        <UserStateButtons2
+          hrefLoginStudent="/nutzerdaten_kontoinformationen"
+          hrefLoginDozent="/admindashboard"
+        ></UserStateButtons2>
+        <Box sx={{ p: 2 }}>
+          <Grid container spacing={1}>
+            <Grid item xs={3}>
+              <Sidemenu></Sidemenu>
+            </Grid>
+            <Grid item xs={9}>
+              <Grid container spacing={1}>
+                <Grid item xs={12}>
+                  <SignedInSince></SignedInSince>
+                </Grid>
+                <Grid item xs={12}>
+                  <RecentlyLearnedLanguages></RecentlyLearnedLanguages>
+                </Grid>
+                <Grid item xs={12}>
+                  <LearningHistory></LearningHistory>
+                </Grid>
               </Grid>
             </Grid>
           </Grid>
-        </Grid>
-      </Box>
+        </Box>
       </div>
       <Footer></Footer>
     </body>

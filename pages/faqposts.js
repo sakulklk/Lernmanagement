@@ -11,7 +11,7 @@ export default function Test() {
   return (
     <>
       <div style={{ paddingBottom: '65px' }}>
-        <NavBar></NavBar>
+        <NavBar  status="logged" navOption="Nutzerdaten"></NavBar>
         <UserStateButtonsForum></UserStateButtonsForum>
         <Overview> </Overview>
         <Faqpost></Faqpost>

@@ -62,7 +62,7 @@ export default function Test() {
   return (
     <>
       <div style={{ marginBottom: '65px' }}>
-        <NavBar status="logged"></NavBar>
+        <NavBar status="logged" navOption="Nutzerdaten"></NavBar>
         <UserStateButtons2
           hrefOhneLogin="/psprachenOhneLogin"
           hrefLoginStudent="/programmiersprachen_uebersicht"

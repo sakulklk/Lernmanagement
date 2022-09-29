@@ -52,7 +52,7 @@ export default function UserStateButtons2(props) {
               </Grid>
             </Grid>
             <Grid item={3}>
-              <Button href={props.hrefOhneLogin}>Ohne Login</Button>
+              <Button href={props.hrefOhneLogin}>Kein Login</Button>
             </Grid>
             <Grid item={3}>
               <Button href={props.hrefLoginStudent}>Login Student</Button>

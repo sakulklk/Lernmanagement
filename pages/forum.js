@@ -9,7 +9,7 @@ import UserStateButtonsForum from '../components/UserStateButtonsForum.js';
 export default function Test() {
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar status="logged" navOption="Nutzerdaten"></NavBar>
       <div style={{ paddingBottom: '65px' }}>
         <UserStateButtonsForum
           hrefLoginStudent="/forum"

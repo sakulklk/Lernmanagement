@@ -7,8 +7,11 @@ export default function Test() {
   return (
     <>
       <div style={{ paddingBottom: '65px' }}>
-        <NavBar></NavBar>
-        <UserStateButtonsForum hrefLoginStudent="/forum" hrefLoginDozent="/forumadmin"></UserStateButtonsForum>
+        <NavBar status="logged" navOption="Kurs-Dashboard"></NavBar>
+        <UserStateButtonsForum
+          hrefLoginStudent="/forum"
+          hrefLoginDozent="/forumadmin"
+        ></UserStateButtonsForum>
         <Adminov> </Adminov>
       </div>
       <Footer></Footer>

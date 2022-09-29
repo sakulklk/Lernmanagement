@@ -12,7 +12,7 @@ export default function KapitelJSloggedIn() {
     <>
           <div style={{ paddingBottom: '65px' }}>
 
-      <NavBar></NavBar>
+      <NavBar status="logged" navOption="Nutzerdaten"></NavBar>
       <Breadcrumbs aria-label="breadcrumb">
         <Link underline="hover" color="inherit" href="/">
           Home

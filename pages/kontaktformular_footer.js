@@ -6,7 +6,7 @@ export default function Test() {
     <>
           <div style={{ paddingBottom: '65px' }}>
 
-      <NavBar></NavBar>
+      <NavBar status="logged" navOption="Nutzerdaten"></NavBar>
       <p>Anliegen ? Feedback ? TODO:Kontaktformular</p>
       </div>
       <Footer></Footer>
