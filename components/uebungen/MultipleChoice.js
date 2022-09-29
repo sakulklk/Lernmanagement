@@ -34,6 +34,7 @@ export default function MultipleChoice(props) {
   const [isWrong, setWrong] = useState(false);
   const [answerChosen, setAnswerChosen] = useState(true);
   const [toggleQuestion, toggle] = useState(false);
+  const [answerID, setAnswerId] = useState('false');
 
   if (nextQuestion == true && typeof props.questionNumber == 'undefined') {
     currentQuestion = Math.floor(Math.random() * questions.length);
@@ -58,7 +59,10 @@ export default function MultipleChoice(props) {
       setCorrect(true);
       setWrong(false);
       setAnswerChosen(false);
-      // props.isCorrect(true);
+      if (typeof props.isCorrect == 'function') {
+        props.isCorrect(true);
+      }
+
     } else {
       setCorrect(false);
       setWrong(true);
@@ -90,10 +94,15 @@ export default function MultipleChoice(props) {
             <Divider />
             <Grid item xs={6} style={{ textAlign: 'center' }}>
               <Button
-                style={{ padding: '30px', margin: '10px' }}
+                sx={{
+                  padding: '30px',
+                  margin: '10px',
+                  background: answerID == 0 ? 'lightblue' : 'white',
+                }}
                 variant="outlined"
                 onClick={() => {
                   handleAnswer(answers[0], question.correct);
+                  setAnswerId(0);
                 }}
               >
                 {answers[0]}
@@ -101,11 +110,16 @@ export default function MultipleChoice(props) {
             </Grid>
             <Grid item xs={6} style={{ textAlign: 'center' }}>
               <Button
-                style={{ padding: '30px', margin: '10px' }}
+                sx={{
+                  padding: '30px',
+                  margin: '10px',
+                  background: answerID == 1 ? 'lightblue' : 'white',
+                }}
                 variant="outlined"
                 variant="outlined"
                 onClick={() => {
                   handleAnswer(answers[1], question.correct);
+                  setAnswerId(1);
                 }}
               >
                 {answers[1]}
@@ -113,21 +127,37 @@ export default function MultipleChoice(props) {
             </Grid>
             <Grid item xs={6} style={{ textAlign: 'center' }}>
               <Button
-                style={{ padding: '30px', margin: '10px' }}
+                sx={{
+                  padding: '30px',
+                  margin: '10px',
+                  background: answerID == 2 ? 'lightblue' : 'white',
+                }}
                 variant="outlined"
                 onClick={() => {
                   handleAnswer(answers[2], question.correct);
+                  setAnswerId(2);
                 }}
               >
                 {answers[2]}
               </Button>
             </Grid>
-            <Grid item xs={6} style={{ textAlign: 'center' }}>
+            <Grid
+              item
+              xs={6}
+              style={{
+                textAlign: 'center',
+              }}
+            >
               <Button
-                style={{ padding: '30px', margin: '10px' }}
+                sx={{
+                  padding: '30px',
+                  margin: '10px',
+                  background: answerID == 3 ? 'lightblue' : 'white',
+                }}
                 variant="outlined"
                 onClick={() => {
                   handleAnswer(answers[3], question.correct);
+                  setAnswerId(3);
                 }}
               >
                 {answers[3]}
@@ -136,8 +166,8 @@ export default function MultipleChoice(props) {
           </Grid>
           <Divider />
           <Grid item xs={8} style={{ textAlign: 'center' }}>
-            {isCorrect ? <Alert severity="success">Richtig!</Alert> : <></>}
-            {isWrong ? <Alert severity="error">Falsch!</Alert> : <></>}
+            {/*{isCorrect ? <Alert severity="success">Richtig!</Alert> : <></>}
+            {isWrong ? <Alert severity="error">Falsch!</Alert> : <></>}*/}
             {answerChosen ? <>Bitte wählen Sie eine Antwort aus!</> : <></>}
           </Grid>
           {/* <Grid item xs={4} style={{ textAlign: 'center' }}>
