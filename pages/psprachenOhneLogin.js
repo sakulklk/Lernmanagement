@@ -1,6 +1,6 @@
 import NavBar from '../components/NavBar.js';
 import Footer from '../components/Footer.js';
-import LernsprachenPaper from '../components/lernsprachen/LernsprachenPaper.js';
+import LernsprachenPaperOhneLogin from '../components/lernsprachen/LernsprachenPaperOhneLogin.js';
 import LernsprachenKategorie from '../components/lernsprachen/LernsprachenKategorie.js';
 import Grid from '@mui/material/Grid';
 import UserStateButtons2 from '../components/UserStateButtons2.js';
@@ -20,7 +20,7 @@ export default function Test() {
       progress: 80,
       learningMark: 'Hello, World!',
       category: 'Webentwicklung',
-      link: '/hello_world',
+      link: '/kapitelJS_na',
     },
     {
       name: 'Python',
@@ -62,7 +62,7 @@ export default function Test() {
   return (
     <>
       <div style={{ marginBottom: '65px' }}>
-        <NavBar status="logged" navOption="Nutzerdaten"></NavBar>
+        <NavBar status="notLogged" navOption="Nutzerdaten"></NavBar>
         <UserStateButtons2
           hrefOhneLogin="/psprachenOhneLogin"
           hrefLoginStudent="/programmiersprachen_uebersicht"
@@ -91,7 +91,7 @@ export default function Test() {
                     }}
                   >
                     {' '}
-                    <LernsprachenPaper
+                    <LernsprachenPaperOhneLogin
                       name={learningLanguage.name}
                       progress={learningLanguage.progress}
                       learningMark={learningLanguage.learningMark}

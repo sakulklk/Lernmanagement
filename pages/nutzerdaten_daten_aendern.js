@@ -9,12 +9,12 @@ import ChangeAccountInfo from '../components/nutzerdaten/ChangeAccountInfo.js';
 export default function Test() {
   return (
     <body>
-      <NavBar></NavBar>
+      <NavBar status="logged" navOption="Nutzerdaten"></NavBar>
       {/* <BasicBreadcrumbs2> </BasicBreadcrumbs2> */}
       <Box sx={{ p: 2 }}>
         <Grid container spacing={1}>
           <Grid item xs={3}>
-            <Sidemenu></Sidemenu>
+            <Sidemenu status="logged" navOption="Nutzerdaten"></Sidemenu>
           </Grid>
           <Grid item xs={9}>
             <ChangeAccountInfo></ChangeAccountInfo>

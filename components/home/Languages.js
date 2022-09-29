@@ -12,15 +12,12 @@ export default function Languages() {
   const loggedIn = false;
 
   const languages = [
-    'JavaScript',
-    'Ruby',
-    'Python',
-    'C#',
-    'HTML',
-    'CSS',
-    'PHP',
-    'C++',
-    'Prolog',
+    { name: 'JavaScript', route: '/kapitelJS_na' },
+    { name: 'HTML', route: '/' },
+    { name: 'CSS', route: '/' },
+    { name: 'PHP', route: '/' },
+    { name: 'Python', route: '/' },
+    { name: 'C#', route: '/' },
   ];
   return (
     <>
@@ -32,30 +29,36 @@ export default function Languages() {
           textAlign: 'center',
         }}
       >
-        <Typography variant="subtitle1">
+        <Typography variant="subtitle1" fontWeight="bold">
           Willkommen ! Tipp: Melde Dich an um hier immer deine aktuellen
-          Lernsprachen zu sehen. Unten kannst Du aus einer der populärsten
-          Programmiersprachen wählen oder du navigierst über das Menü zu allen
-          Sprachen.
+          Lernkategorien zu sehen. Unten kannst Du aus einer Liste der
+          populärsten Programmiersprachen wählen oder du navigierst über das
+          Menü zu allen Sprachen.
         </Typography>
       </Paper>
       <Paper
         elevation={5}
         style={{
           margin: ' auto',
-          width: '70%',
+          width: '30%',
         }}
       >
         <List>
-          
           {languages.map((language) => (
             <ListItem>
               <Grid container spacing={1}>
                 <Grid item xs style={{ textAlign: 'center' }}>
-                  <Typography variant="subtitle1">{language}</Typography>
+                  <Typography variant="subtitle1" fontWeight="bold">
+                    {language.name}
+                  </Typography>
                 </Grid>
                 <Grid item xs style={{ textAlign: 'center' }}>
-                  <Button variant="contained" color="secondary" size="small">
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    size="small"
+                    href={language.route}
+                  >
                     {' '}
                     lernen{' '}
                   </Button>

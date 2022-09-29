@@ -9,28 +9,13 @@ import Popper from '@mui/material/Popper';
 import InfoPopper from './InfoPopper.js';
 import IconButton from '@mui/material/IconButton';
 
-export default function UserStateButtons(props) {
-  let [userState, setUserState] = React.useState('loggedStudent');
-
-  function setNotLogged() {
-    setUserState((userState = 'notLogged'));
-    props.notLogged();
-  }
-  function setLoggedStudent() {
-    setUserState((userState = 'loggedStudent'));
-    props.loggedStudent();
-  }
-  function setLoggedTeacher() {
-    setUserState((userState = 'loggedTeacher'));
-    props.loggedTeacher();
-  }
-
+export default function UserStateButtonsForum(props) {
   return (
     <>
       <Grid container style={{ display: 'flex', justifyContent: 'end' }}>
         <Paper>
           <Grid container style={{ marginRight: '50px' }}>
-            <Grid item={3}>
+            <Grid item={4}>
               <Grid container>
                 <InfoPopper
                   text1="Untersuchen Sie hier die verschiedenen Ansichten der Prototyp-Webseite je nach Anmeldestatus."
@@ -51,14 +36,12 @@ export default function UserStateButtons(props) {
                 </Typography>
               </Grid>
             </Grid>
-            <Grid item={3}>
-              <Button onClick={setNotLogged}>Kein Login</Button>
+            <Grid item={4}>
+              <Button href={props.hrefLoginStudent}>Login Student</Button>
             </Grid>
-            <Grid item={3}>
-              <Button onClick={setLoggedStudent}>Login Student</Button>
-            </Grid>
-            <Grid item={3}>
-              <Button onClick={setLoggedTeacher}>Login Dozent</Button>
+
+            <Grid item={4}>
+              <Button href={props.hrefLoginDozent}>Login Dozent</Button>
             </Grid>
           </Grid>
         </Paper>

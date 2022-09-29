@@ -15,14 +15,17 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 import Grid from '@mui/material/Grid';
+import UserStateButtons from '../components/UserStateButtons.js';
 
-export default function NavBar() {
-  const loggedIn = true;
+export default function NavBar(props) {
   const pages = [
     { name: 'Home', route: '/' },
     { name: 'Programmiersprachen', route: '/programmiersprachen_uebersicht' },
     { name: 'Forum', route: '/forum' },
-    { name: 'Nutzerdaten', route: '/nutzerdaten_kontoinformationen' },
+    {
+      name: props.navOption,
+      route: '/nutzerdaten_kontoinformationen',
+    },
     { name: 'Chat', route: '/chat' },
   ];
   const settings = [
@@ -159,7 +162,7 @@ export default function NavBar() {
             ))}
           </Box>
 
-          {loggedIn ? (
+          {props.status == 'logged' ? (
             <>
               <Paper
                 color="white"

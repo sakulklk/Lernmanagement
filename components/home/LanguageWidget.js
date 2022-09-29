@@ -16,6 +16,7 @@ export default function LanguageWidget() {
       progress: 78,
       learningMark: 'Hello, World!',
       route: '/hello_world',
+
     },
     { name: 'Python', progress: 65, learningMark: 'Tkinter' },
     { name: 'HTML', progress: 90, learningMark: 'Profiwissen' },

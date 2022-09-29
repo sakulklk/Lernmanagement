@@ -14,7 +14,7 @@ export default function Test() {
     <>
           <div style={{ paddingBottom: '65px' }}>
 
-      <NavBar></NavBar>
+      <NavBar status="logged" navOption="Nutzerdaten"></NavBar>
       <Paper elevation={5} style={{ margin: '35px auto', width: '1000px' }}>
         <List>
           <ListItem

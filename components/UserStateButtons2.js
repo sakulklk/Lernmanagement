@@ -9,7 +9,7 @@ import Popper from '@mui/material/Popper';
 import InfoPopper from './InfoPopper.js';
 import IconButton from '@mui/material/IconButton';
 
-export default function UserStateButtons(props) {
+export default function UserStateButtons2(props) {
   let [userState, setUserState] = React.useState('loggedStudent');
 
   function setNotLogged() {
@@ -52,13 +52,13 @@ export default function UserStateButtons(props) {
               </Grid>
             </Grid>
             <Grid item={3}>
-              <Button onClick={setNotLogged}>Kein Login</Button>
+              <Button href={props.hrefOhneLogin}>Kein Login</Button>
             </Grid>
             <Grid item={3}>
-              <Button onClick={setLoggedStudent}>Login Student</Button>
+              <Button href={props.hrefLoginStudent}>Login Student</Button>
             </Grid>
             <Grid item={3}>
-              <Button onClick={setLoggedTeacher}>Login Dozent</Button>
+              <Button href={props.hrefLoginDozent}>Login Dozent</Button>
             </Grid>
           </Grid>
         </Paper>

@@ -26,7 +26,7 @@ export default function adminrechte() {
           <div style={{ paddingBottom: '65px' }}>
 
 
-      <NavBar></NavBar>{' '}
+      <NavBar status="logged" navOption="Nutzerdaten"></NavBar>{' '}
       <Box sx={{ p: 2 }}>
         <Grid container spacing={1}>
           <Grid item xs={3}>

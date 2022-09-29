@@ -8,7 +8,7 @@ export default function KapitelJS() {
     <>
 
       <div style={{ paddingBottom: '65px' }}>
-        <NavBar></NavBar>
+        <NavBar status="logged" navOption="Nutzerdaten"></NavBar>
         <ÜbersichtDozenten></ÜbersichtDozenten>
       </div>
       <Footer></Footer>

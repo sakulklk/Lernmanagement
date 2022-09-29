@@ -9,12 +9,13 @@ import IconButton from '@mui/material/IconButton';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Typography from '@mui/material/Typography';
 import Timer from 'react-compound-timer';
+import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
 
 export default function Test() {
-  let [timerStarted, setTimer] = React.useState(false);
+  let [timer, setTimer] = React.useState('no');
 
   function handleClick_StartTimer() {
-    setTimer(true);
+    setTimer((timer = 'startTimer'));
   }
 
   let [score, setScore] = React.useState(0);
@@ -39,83 +40,120 @@ export default function Test() {
       clearInterval(timer);
     };
   }, []);
+
   return (
     <>
-          <div style={{ paddingBottom: '65px' }}>
+      <div style={{ paddingBottom: '65px' }}>
+        <NavBar status="logged" navOption="Nutzerdaten"></NavBar>
 
-      <NavBar></NavBar>
-      <Paper
-        elevation={5}
-        style={{
-          margin: '30px auto 20px auto ',
-
-          width: '1000px',
-          height: '50px',
-          textAlign: 'center',
-        }}
-      >
-        <Typography
-          variant="h5"
-          style={{ fontWeight: 'bold', padding: 'auto', lineHeight: '2' }}
-        >
-          Score: {score}
-        </Typography>
-      </Paper>
-      <Paper
-        elevation={5}
-        style={{ margin: ' auto', width: '1000px', height: '400px' }}
-      >
-        <Box
-          sx={{
-            display: 'flex',
-            height: '100%',
-            justifyContent: 'center',
-            alignItems: 'center',
+        <Paper
+          elevation={5}
+          style={{
+            margin: ' auto',
+            marginTop: '30px',
+            width: '1000px',
+            height: '500px',
           }}
         >
-          <Timer initialTime={5500} direction="backward">
-            {() => (
-              <React.Fragment>
-                <Typography
-                  variant="h1"
-                  style={{
-                    fontWeight: 'bold',
-                  }}
-                >
-                  <Timer.Seconds />
-                </Typography>
-              </React.Fragment>
-            )}
-          </Timer>
-        </Box>
-        <LinearProgress
-          variant="determinate"
-          value={progress}
-          style={{ height: '10px' }}
-        />
-      </Paper>
-      <Paper
-        elevation={5}
-        style={{
-          margin: 'auto ',
-          marginTop: '20px',
-          width: '1000px',
-          height: '50px',
-          display: 'flex',
-          justifyContent: 'center',
-        }}
-      >
-        {' '}
-        <IconButton
-          aria-label="ArrowForwardIosIcon"
-          color="primary"
-          size="large"
-          onClick={handleClick_NextExercice}
+          {timer == 'startTimer' ? (
+            <>
+              <Box
+                sx={{
+                  display: 'flex',
+                  height: '100%',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                <Timer initialTime={5500} direction="backward">
+                  {() => (
+                    <React.Fragment>
+                      <Typography
+                        variant="h1"
+                        style={{
+                          fontWeight: 'bold',
+                        }}
+                      >
+                        <Timer.Seconds />
+                      </Typography>
+                    </React.Fragment>
+                  )}
+                </Timer>
+              </Box>
+            </>
+          ) : (
+            <Box
+              sx={{
+                display: 'flex',
+                height: '100%',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <Typography
+                variant="h6"
+                style={{
+                  fontWeight: 'bold',
+                }}
+              >
+                Wenn du die Sanduhr unten anklickst, startet der Timer. Viel
+                Erfolg !
+              </Typography>
+            </Box>
+          )}
+        </Paper>
+        <Paper
+          elevation={5}
+          style={{
+            margin: 'auto ',
+            marginTop: '20px',
+            width: '1000px',
+            height: '50px',
+            display: 'flex',
+            justifyContent: 'center',
+          }}
         >
-          <ArrowForwardIosIcon fontSize="large" />
-        </IconButton>
-      </Paper>
-</div>
+          {timer == 'startTimer' ? (
+            <IconButton
+              aria-label="ArrowForwardIosIcon"
+              color="primary"
+              size="large"
+              onClick={handleClick_NextExercice}
+            >
+              <ArrowForwardIosIcon fontSize="large" />
+            </IconButton>
+          ) : (
+            <IconButton
+              aria-label="HourglassEmptyIcon"
+              color="primary"
+              size="large"
+              onClick={handleClick_StartTimer}
+            >
+              <HourglassEmptyIcon fontSize="large" />
+            </IconButton>
+          )}
+        </Paper>
+
+        <Paper
+          elevation={5}
+          style={{
+            margin: '50px auto',
+            padding: '20px',
+            width: '80%',
+            textAlign: 'center',
+            color: 'green',
+          }}
+        >
+          <Typography variant="h5">
+            Hier soll eine "against time"-Challenge implementiert werden: Nachdem der
+            User einen zeitlichen Rahmen gewählt hat, sollen so viele Übungen
+            wir möglich korrekt bearbeitet werden. Diese werden innerhalb eines
+            Scores festgehalten. Um diese Challenge antreten zu können, müssen
+            mindestens zwei Unterkapitel (können aus unterschiedlichen
+            Lernkategorien kommen) bearbeitet worden sein.
+          </Typography>
+        </Paper>
+      </div>
       <Footer></Footer>
     </>
   );
