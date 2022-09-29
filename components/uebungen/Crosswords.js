@@ -155,13 +155,16 @@ function handleAnswer(correctGrid, answerGrid, props) {
     for (var x = 0; x < correctGrid[y].length; x++) {
       if (correctGrid[y][x].toUpperCase() != answerGrid[y][x].toUpperCase()) {
         console.log('false');
+        console.log(answerGrid);
         return false;
       }
     }
   }
-  if (typeof props.isCorrect() == 'function') {
-    isCorrect(true);
+  if (typeof props.isCorrect == 'function') {
+    console.log('calling isCorrect');
+    props.isCorrect(true);
   }
+  console.log('correct');
   return true;
 }
 
@@ -173,6 +176,7 @@ function handleInput(input, idRow, idColumn, props) {
     return false;
   }
   if (currentFilledGrid[idRow][idColumn] == ' ') {
+    console.log('1aaa');
     if (input.key.toUpperCase() != input.key.toLowerCase()) {
       currentFilledGrid[idRow][idColumn] = input.key;
       handleAnswer(currentCorrectGrid, currentFilledGrid, props);
