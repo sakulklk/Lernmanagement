@@ -3,16 +3,16 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import Divider from '@material-ui/core/Divider';
-import TextField from '@material-ui/core/TextField';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
+import TextField from '@mui/material/TextField';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
 import AddToQueueIcon from '@mui/icons-material/AddToQueue';
-import Fab from '@material-ui/core/Fab';
+import Fab from '@mui/material/Fab';
 
 export default function Overview() {
   return (
@@ -21,15 +21,7 @@ export default function Overview() {
         <h3> Filters: </h3>
       </Grid>
       <Grid item xs={8} style={{ textAlign: 'center' }}></Grid>
-      <Grid item xs={2} style={{ textAlign: 'center' }}>
-        <Button
-          variant="text"
-          href="./forumadmin"
-          style={{ textAlign: 'center' }}
-        >
-          admin
-        </Button>
-      </Grid>
+      <Grid item xs={2} style={{ textAlign: 'center' }}></Grid>
 
       <Grid item xs={4} style={{ textAlign: 'center' }}>
         <Paper
@@ -102,4 +94,3 @@ export default function Overview() {
     </Grid>
   );
 }
-

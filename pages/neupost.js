@@ -9,10 +9,9 @@ import Neu from '../components/forum/neu.js';
 export default function Test() {
   return (
     <>
-          <div style={{ paddingBottom: '65px' }}>
-
-      <NavBar></NavBar>
-      <Neu></Neu>
+      <div style={{ paddingBottom: '65px' }}>
+        <NavBar status="logged" navOption="Nutzerdaten"></NavBar>
+        <Neu></Neu>
       </div>
       <Footer></Footer>
     </>

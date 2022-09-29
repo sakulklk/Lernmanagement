@@ -159,7 +159,7 @@ export default function Chat() {
             <List className="messageArea">
               <ListItem key="1">
                 <Grid container direction="column" alignItems="flex-end">
-                  <Grid item xs={12}>
+                  <Grid item xs={9}>
                     <Paper
                       elevation={1}
                       style={{
@@ -172,7 +172,7 @@ export default function Chat() {
                       Hey, wie geht es euch?
                     </Paper>
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid item xs={9}>
                     <ListItemText
                       align="right"
                       secondary="09:30"
@@ -182,13 +182,13 @@ export default function Chat() {
               </ListItem>
               <ListItem key="2">
                 <Grid container>
-                  <Grid item xs={12}>
+                  <Grid item xs={9}>
                     <ListItemText
                       align="left"
                       primary="Evan Adams"
                     ></ListItemText>
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid item xs={9}>
                     <Paper
                       elevation={1}
                       style={{
@@ -202,7 +202,7 @@ export default function Chat() {
                       Stoff durchgelesen?
                     </Paper>
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid item xs={9}>
                     <ListItemText align="left" secondary="09:31"></ListItemText>
                   </Grid>
                 </Grid>
@@ -223,7 +223,7 @@ export default function Chat() {
                       wollen wir es zusammen machen? Josh bist du dabei?
                     </Paper>
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid item xs={9}>
                     <ListItemText
                       align="right"
                       secondary="10:30"
@@ -242,7 +242,7 @@ export default function Chat() {
                 />
               </Grid>
               <Grid xs={1} align="right">
-                <Fab color="primary" aria-label="add">
+                <Fab color="primary" aria-label="add" href="/chatSend">
                   <SendIcon />
                 </Fab>
               </Grid>

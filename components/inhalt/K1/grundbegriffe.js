@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import Divider from '@mui/material/Divider';
+import LockIcon from '@mui/icons-material/Lock';
 
 export default function Sidemenu() {
   return (
@@ -24,40 +25,40 @@ export default function Sidemenu() {
             }
             `}</style>
       <div className="content">
-        <h3>Scroll Down to See The Effect</h3>
+        <h2> Work in progress </h2>
+        <h3>Hier sollte das Thema Grundbegriffe stehen</h3>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-          lacus ex, sit amet blandit leo lobortis eget.
+          Dieser Bereich kann erst nach richtigem bearbeiten der vorherigen
+          Aufgaben erreicht werden. Es muss eine Funktion erstellt werden,
+          welche die richtige Auswertung mit dem Freischalten des nächsten
+          Kapitels ermöglicht. Außerdem muss das SideMenuRight "Auf dieser
+          Seite" dem Kapitel entsprechend immer geänder werden
         </p>
+        <Divider />
+        <br />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-          lacus ex, sit amet blandit leo lobortis eget.
+          Beim Klicken auf das nächste Kapitel passiert jetzt nichts. Es müssen
+          auf diese Seite noch Übungen implementiert werden und natürlich dann
+          auch die Freischalte-Funktion. Danach müssen die Inhalte exemplarisch
+          wie die der Seiten "Geschichte von JS" und "Hello, World!" sein.
         </p>
         <Divider />
         <br />
         <Grid container>
           <Grid item sm={7} md={7} lg={9}>
-
             <a href="/hello_world">
               <Button variant="text" startIcon={<ArrowBackIosIcon />}>
                 <LockOpenIcon></LockOpenIcon> Hello, World!
-
               </Button>
             </a>
           </Grid>
           <Grid item sm={5} md={5} lg={3}>
-
-            <a href="/var_konst">
-
-              <Button variant="text" endIcon={<ArrowForwardIosIcon />}>
-                <LockOpenIcon></LockOpenIcon> Variablen und Konstanten
-              </Button>
-            </a>
+            {/* <a href="/var_konst"> */}
+            <Button variant="text" endIcon={<ArrowForwardIosIcon />}>
+              <LockIcon></LockIcon> Variablen und Konstanten
+            </Button>
+            {/* </a> */}
           </Grid>
         </Grid>
       </div>
