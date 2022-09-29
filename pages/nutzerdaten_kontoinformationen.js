@@ -6,16 +6,16 @@ import Sidemenu from '../components/nutzerdaten/Sidemenu.js';
 import SignedInSince from '../components/nutzerdaten/SignedInSince.js';
 import RecentlyLearnedLanguages from '../components/nutzerdaten/RecentlyLearnedLanguages.js';
 import LearningHistory from '../components/nutzerdaten/LearningHistory.js';
-import UserStateButtons2 from '../components/UserStateButtons2.js';
+import UserStateButtonsForum from '../components/UserStateButtonsForum.js';
 export default function Test() {
   return (
     <body>
       <div style={{ paddingBottom: '65px' }}>
         <NavBar status="logged" navOption="Nutzerdaten"></NavBar>
-        <UserStateButtons2
+        <UserStateButtonsForum
           hrefLoginStudent="/nutzerdaten_kontoinformationen"
           hrefLoginDozent="/admindashboard"
-        ></UserStateButtons2>
+        ></UserStateButtonsForum>
         <Box sx={{ p: 2 }}>
           <Grid container spacing={1}>
             <Grid item xs={3}>
