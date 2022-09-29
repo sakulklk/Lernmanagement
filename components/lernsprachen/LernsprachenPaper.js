@@ -9,6 +9,7 @@ import BookmarkIcon from '@mui/icons-material/Bookmark';
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 
 export default function LernsprachenPaper({
+  status,
   name,
   progress,
   learningMark,
@@ -37,20 +38,24 @@ export default function LernsprachenPaper({
             </Typography>
           </Grid>
           <Grid item xs={2} style={{ alignSelf: 'center' }}>
-            {progress > 0 ? (
+            {status == 'notLogged' ? null : (
               <LinearProgress
                 variant="determinate"
                 value={progress}
                 style={{ height: '10px' }}
               />
-            ) : null}
+            )}
           </Grid>
           <Grid item xs={3} style={{ alignSelf: 'center' }}>
+            {status == "notLogged" ?  null: 
             <div>
-              {learningMark != null ? <BookmarkIcon color="primary" /> : null}
-            </div>
+           <BookmarkIcon /
+          </div>
 
-            {learningMark != null ? learningMark : null}
+          {learningMark != null ? learningMark : null}
+            : null
+            }
+            
           </Grid>
 
           <Grid item xs={2} style={{ alignSelf: 'center' }}>
