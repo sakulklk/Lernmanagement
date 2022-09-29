@@ -44,7 +44,9 @@ function handleAnswer(chosenAnswers, correctAnswers, props) {
       return false; //answers incorrect
     }
   }
-  props.isCorrect(true);
+  if (typeof props.isCorrect == 'function') {
+    props.isCorrect(true);
+  }
   return true;
 }
 

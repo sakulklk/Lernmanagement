@@ -159,7 +159,9 @@ function handleAnswer(correctGrid, answerGrid, props) {
       }
     }
   }
-  console.log('correct');
+  if (typeof props.isCorrect() == 'function') {
+    isCorrect(true);
+  }
   return true;
 }
 

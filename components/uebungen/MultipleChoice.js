@@ -59,7 +59,9 @@ export default function MultipleChoice(props) {
       setCorrect(true);
       setWrong(false);
       setAnswerChosen(false);
-      props.isCorrect(true);
+      if (typeof props.isCorrect == 'function') {
+        props.isCorrect(true);
+      }
     } else {
       setCorrect(false);
       setWrong(true);
