@@ -75,12 +75,13 @@ export default function SignIn() {
                 Sind Sie ein Teil von DHBW Lörrach?
               </a>
             </Typography>
-            </div>
+          </div>
           <Button
             type="submit"
             fullWidth
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
+            href="/"
           >
             Anmelden
           </Button>
