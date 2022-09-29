@@ -242,7 +242,7 @@ export default function Chat() {
                 />
               </Grid>
               <Grid xs={1} align="right">
-                <Fab color="primary" aria-label="add">
+                <Fab color="primary" aria-label="add" href="/chatSend">
                   <SendIcon />
                 </Fab>
               </Grid>
